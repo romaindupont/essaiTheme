@@ -1,0 +1,7 @@
+:root {
+	--color-principal: #233658;
+	--color-subMenu: #333;
+	--breakpoints-small: 767px;
+	--breakpoints-medium: 992px;
+	--breakpoints-large: 1200px;
+}

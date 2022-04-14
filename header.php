@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html <?php language_attributes(); ?> >
-<head>
-	<meta charset="<?php bloginfo('charset'); ?>">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<?php wp_head(); ?>
-</head>
-<header>
-	<h1>titre header</h1>
+<?php get_template_part('template-parts/header-start'); ?>
+<header class="main-header">
+	<img class="main-header__heading-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/veldt-logo.svg" alt="logo-veldt">
+
+<?php wp_nav_menu( 
+    array( 
+        'theme_location' => 'configurator-menu-desktop',
+				'container' => 'nav',
+				'container_class' => 'custom_menu_class'
+    ) 
+); ?>
 </header>

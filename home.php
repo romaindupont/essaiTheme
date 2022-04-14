@@ -1,3 +1,5 @@
 <?php get_header(); ?>
-	<h1>OK</h1>
+<main>
+	<h1>home</h1>
+</main>
 <?php get_footer(); ?>

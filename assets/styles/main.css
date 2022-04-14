@@ -1,0 +1,27 @@
+
+@import url('../styles/abstracts/_variables.css');
+@import url('../styles/abstracts/_functions.css');
+@import url('../styles/abstracts/_mixins.css');
+@import url('../styles/abstracts/_placeholders.css');
+
+@import url('../styles/base/_reset.css');
+@import url('../styles/base/_typography.css');
+@import url('../styles/layout/_navigation.css');
+@import url('../styles/layout/_header.css');
+@import url('../styles/layout/_footer.css');
+
+
+@import url('../styles/components/_buttons.css');
+
+@import url('../styles/pages/_home.css');
+@import url('../styles/pages/_contact.css');
+
+@import url('../styles/themes/_theme.css');
+
+
+.customize-support {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	width: 100vw;
+}
