@@ -18,6 +18,9 @@
 
 @import url('../styles/themes/_theme.css');
 
+body {
+	overflow-x: hidden;
+}
 
 .customize-support {
 	display: flex;

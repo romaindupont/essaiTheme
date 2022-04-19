@@ -2,11 +2,15 @@
 	display: flex;
 	align-items: center;
 	padding-top: 1rem;
-	padding-bottom: 20px;
+	padding-bottom: 0px;
 	flex-direction: column;
 	width: 100vw;
-	height: 20%;
+	/* height: 20%; */
 	border-top: 10px solid var(--color-principal);
+	position: fixed;
+	z-index: 40;
+	background-color: #fff;
+	transition: opacity 600ms ease-in-out;
 	/* border-bottom: 1.2px solid var(--color-border-bottom-header); */
 
 }
