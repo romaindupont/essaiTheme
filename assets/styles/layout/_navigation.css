@@ -62,7 +62,10 @@ nav > ul > li > ul {
 	animation: 500ms widthBorderAnimate;
 	z-index: 5;
 }
-
+.active:hover::after {
+	content:'';
+	animation: none !important;
+}
 .active::after {
 	content:'';
 	width: 100%;
