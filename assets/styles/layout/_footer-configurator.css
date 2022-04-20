@@ -1,0 +1,265 @@
+.sd-tabs {
+  display: flex;
+  margin: 0;
+  padding-top: 0.075rem;
+	position: relative;
+	justify-content: center;
+	width: 100vw;
+}
+.sd-tab-radio {
+  position: absolute;
+  opacity: 0;
+}
+
+.sd-tabs > .sd-tab-label {
+  display: flex;
+  align-items: center;
+  border-radius: 17px 17px 0 0;
+  position: relative;
+  z-index: 2;
+  max-height: var(--tabs-height);
+  cursor: pointer;
+  flex: 1;
+	justify-content: space-evenly;
+	top: -42px;
+}
+
+.sd-tabs > .sd-tab-label:hover {
+  z-index: 3;
+}
+
+.sd-tabs > .sd-tab-radio:checked .sd-tab-label {
+  z-index: 4;
+}
+
+.sd-tabs > .sd-tab-radio:not(:checked) + .sd-tab-label:not(:hover) {
+  color: var(--tabs-text-color);
+}
+.sd-tabs > .sd-tab-radio:not(:checked) + .sd-tab-label:not(:hover) > #onglet > .tab_on {
+  stroke:#808080;
+	fill: #f2f2f2;
+}
+svg#onglet {
+	width: 100%;
+}
+.sd-tabs > .sd-tab-radio:checked + .sd-tab-label:hover,
+.sd-tabs > .sd-tab-radio:checked + .sd-tab-label {
+  z-index: 101;
+	width: 300px;
+}
+
+.sd-tabs > .sd-tab-radio:not(:checked) + .sd-tab-label:hover::before {
+  opacity: 1;
+}
+.sd-tabs > .sd-tab-content {
+  flex-basis: 100%;
+  background-color: #fff;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100% - var(--tabs-height));
+  overflow: auto;
+	position: absolute;
+	height: 500px;
+	z-index: 100;
+	border: 3px solid #233658;
+}
+.sd-tabs > .break {
+  background-color: aqua;
+  flex-basis: 100%;
+}
+
+.sd-tabs > .sd-tab-radio:checked + .sd-tab-label + .sd-tab-content {
+  display: block;
+}
+.sd-tabs > .sd-tab-label .sd-tab-desc {
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  position: absolute;
+  font-size: 1rem;
+	color: #233658;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: normal;
+	top: 10px;
+	width: 100%;
+}
+
+.sd-tabs > .sd-tab-label .sd-tab-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  width: 15px;
+  padding: 2px 3px;
+}
+.sd-tabs > .sd-tab-label .sd-tab-icon:not(.sd-tab-close) {
+  width: 20px;
+}
+.sd-tabs > .sd-tab-label[icon-only] .sd-tab-icon:not(.sd-tab-close) {
+  width: 24px;
+  margin: 0 auto;
+}
+.sd-tabs > .sd-tab-label .sd-tab-close:hover {
+  background-color: #4c4c4c33;
+}
+.sd-tabs > .sd-tab-label .sd-tab-close {
+  margin-left: auto;
+}
+
+@media (min-width: 600px) {
+  .sd-tab-content {
+    order: 999;
+  }
+  .sd-tabs {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .sd-tab-label {
+		max-width: 300px;
+  }
+}
+.tab_on{
+	fill:transparent;
+	stroke:#233658;
+	stroke-miterlimit:10;
+}
+.tab_on {
+	stroke-width: 2px;
+	fill: transparent;
+	stroke:#233658;
+	stroke-miterlimit:10;
+}
+.tab_off{
+	fill:#F2F2F2;
+	stroke:#808080;
+	stroke-miterlimit:10;
+}
+footer.footer-configurator {
+  bottom: 60px;
+  position: absolute;
+}
+.eye_on{
+	fill:#233658;
+}
+.eye_off{
+	fill:#939598;
+}
+svg#eye, #eye {
+	width: 10%;
+	position: absolute;
+	right: 53px;
+	top: 10px;
+}
+
+label.sd-tab-label.label1 {
+	left: 100px;
+}
+
+label.sd-tab-label.label2 {
+	position: relative;
+}
+
+label.sd-tab-label.label3 {
+	position: relative;
+	left: -100px;
+	z-index: 0;
+}
+
+.sd-tabs > .sd-tab-radio:not(:checked) + .sd-tab-label > #eye_on {
+	opacity: 0.4;
+}
+
+svg#down {
+	width: 40px;
+	position: absolute;
+	bottom: -55px;
+	z-index: 110;
+	height: 40px;
+	left: 15px;
+	transform: rotate(180deg);
+	cursor: pointer;
+	transition: all 1s ease-in-out;
+}
+#down:hover {
+	transition: all 1s ease-in-out;
+	transform: rotate(0deg);
+}
+.down{
+	fill:#233658;
+}
+.tab_on{
+  fill:#ffffff;
+  stroke:#233658;
+  stroke-miterlimit:10;
+}
+.tab_off{
+  fill:#F2F2F2;
+  stroke:#808080;
+  stroke-miterlimit:10;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 768px) {
+	.sd-tabs > .sd-tab-label {
+		top: -38px;
+	}
+}
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+/* Styles */
+}
+""
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+	.sd-tabs > .sd-tab-label {
+		top: -40px;
+	}
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}

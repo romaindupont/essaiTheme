@@ -73,7 +73,7 @@ nav > ul > li > ul {
   position: absolute;
   background: var(--color-principal);
   bottom: -20px;
-	left: 0;
+	right: 0;
 	z-index: 6;
 }
 @keyframes widthBorderAnimate {
@@ -112,7 +112,7 @@ nav > ul > li > ul {
 	grid-auto-rows: minmax(50px, 50px);
 	border-bottom: 1.2px solid var(--color-border-bottom-header);
 }
-.menu-depth-1 > li a{
+.menu-depth-1 > li a {
 	color: var(--color-principal);
 	text-transform: uppercase;
 	font-weight: 600;

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="onglet" x="0px" y="0px" viewBox="0 0 222 52.4" xml:space="preserve">
+<style type="text/css">
+	.tab_on{fill:#ffffff;stroke:#233658;stroke-miterlimit:10;}
+</style>
+<path class="tab_on" id="on" d="M221,41.2c-11,0-20-9-20-20v0c0-11-9-20-20-20H41c-11,0-20,9-20,20v0c0,11-9,20-20,20"></path>
+</svg>

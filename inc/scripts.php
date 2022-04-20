@@ -31,6 +31,33 @@ function veldt_theme_enqueue_scripts() {
 		'20220413',
 		true
 	);
+	if(is_page('configurator')){
+		wp_enqueue_script(
+			'veldt-configurator-script',
+			get_theme_file_uri('dist/js/configurator.js'),
+			[],
+			'20220413',
+			true
+		);
+		wp_enqueue_style(
+			'veldt-configurator-style',
+			get_theme_file_uri('assets/styles/pages/_configurator.css'),
+			[],
+			'20220413'
+		); 
+		wp_enqueue_style(
+			'veldt-configurator-style-header',
+			get_theme_file_uri('assets/styles/layout/_header-configurator.css'),
+			[],
+			'20220413'
+		); 
+		wp_enqueue_style(
+			'veldt-configurator-style-footer',
+			get_theme_file_uri('assets/styles/layout/_footer-configurator.css'),
+			[],
+			'20220413'
+		); 
+	}
 }
 
 add_action( 'wp_enqueue_scripts', 'veldt_theme_enqueue_scripts', 20);
