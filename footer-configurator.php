@@ -9,8 +9,11 @@
 		<input class="sd-tab-radio" name="tabs" tabindex="1" type="radio" id="tabone" checked="checked"/>
 		<label class="sd-tab-label label1" for="tabone">
 		<svg version="1.1" id="onglet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 300 45" xml:space="preserve">
-		<path class="tab_on" id="on" d="M300,46h-30c-11,0-20-9-20-20v0c0-11-9-20-20-20H70c-11,0-20,9-20,20v0c0,11-9,20-20,20H0"/>
+	 viewBox="0 0 300 45" style="enable-background:new 0 0 300 45;" xml:space="preserve">
+<path class="st0" d="M300,43h-30c-11,0-20-9-20-20l0,0c0-11-9-20-20-20H70c-11,0-20,9-20,20l0,0c0,11-9,20-20,20H0v2h300V43z"/>
+<path class="tab_on" id="on" d="M300,43h-30c-11,0-20-9-20-20l0,0c0-11-9-20-20-20H70c-11,0-20,9-20,20l0,0c0,11-9,20-20,20H0"/>
+<path class="st0" d="M264.3,43.1c-75.4,0.1-150.8,0.2-226.2,0.3v-1.3c74.5,0,149-0.1,223.6-0.1c0.3,0.2,0.7,0.4,1.1,0.5
+	C263.2,42.7,263.8,42.9,264.3,43.1z"/>
 </svg>
 
 			<div class="sd-tab-desc">Helmet</div>

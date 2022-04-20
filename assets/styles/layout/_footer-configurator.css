@@ -39,9 +39,9 @@
   stroke:#808080;
 	fill: #f2f2f2;
 }
-svg#onglet {
+/* svg#onglet {
 	width: 100%;
-}
+} */
 .sd-tabs > .sd-tab-radio:checked + .sd-tab-label:hover,
 .sd-tabs > .sd-tab-radio:checked + .sd-tab-label {
   z-index: 101;
@@ -107,8 +107,9 @@ svg#onglet {
 .sd-tabs > .sd-tab-label .sd-tab-close {
   margin-left: auto;
 }
-
-@media (min-width: 600px) {
+.st0{fill:#FFFFFF;}
+.st1{fill:#FFFFFF;stroke:#233658;stroke-miterlimit:10;}
+/* @media (min-width: 600px) {
   .sd-tab-content {
     order: 999;
   }
@@ -119,7 +120,7 @@ svg#onglet {
   .sd-tab-label {
 		max-width: 300px;
   }
-}
+} */
 .tab_on{
 	fill:transparent;
 	stroke:#233658;
@@ -204,14 +205,28 @@ svg#down {
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 768px) {
+  #onglet {
+    width: 85%;
+  }
 	.sd-tabs > .sd-tab-label {
-		top: -38px;
+		top: -26px;
 	}
+  label.sd-tab-label.label1 {
+    left: 88px;
+  }
+  label.sd-tab-label.label3 {
+    left: -88px;
+  }
 }
 /* Smartphones (landscape) ----------- */
 @media only screen 
 and (min-width : 321px) {
-/* Styles */
+  #onglet {
+    width: 85%;
+  }
+	.sd-tabs > .sd-tab-label {
+		top: -25px;
+	}
 }
 
 /* Smartphones (portrait) ----------- */
@@ -219,47 +234,114 @@ and (min-width : 321px) {
 and (max-width : 320px) {
 /* Styles */
 }
-""
+
 /* iPads (portrait and landscape) ----------- */
 @media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) {
+and (min-width : 768px) {
+/*   #onglet {
+    width: 85%;
+  } */
+	.sd-tabs > .sd-tab-label {
+		top: -30px;
+	}
+  label.sd-tab-label.label1 {
+    left: 100px;
+  }
+  label.sd-tab-label.label3 {
+    left: -100px;
+  }
+  .sd-tab-content {
+    order: 999;
+  }
+  .sd-tabs {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .sd-tab-label {
+		max-width: 300px;
+  }
+}
+@media only screen 
+and (min-width : 793px) {
+  #onglet {
+    width: 100%;
+  }
+	.sd-tabs > .sd-tab-label {
+		top: -38px;
+	}
+}
+@media only screen 
+and (min-width : 824px) {
+	.sd-tabs > .sd-tab-label {
+		top: -39px;
+	}
+}
+@media only screen 
+and (min-width : 857px) {
 	.sd-tabs > .sd-tab-label {
 		top: -40px;
 	}
 }
-
-/* iPads (landscape) ----------- */
 @media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape) {
-/* Styles */
+and (min-width : 872px) {
+	.sd-tabs > .sd-tab-label {
+		top: -41px;
+	}
 }
-
-/* iPads (portrait) ----------- */
 @media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) {
-/* Styles */
+and (min-width : 887px) {
+	.sd-tabs > .sd-tab-label {
+		top: -42px;
+	}
 }
-
+@media only screen 
+and (min-width : 1024px) {
+  .sd-tabs > .sd-tab-label {
+		top: -42px;
+	}
+  label.sd-tab-label.label1 {
+    left: 100px;
+  }
+  label.sd-tab-label.label3 {
+    left: -100px;
+  }
+  .sd-tab-content {
+    order: 999;
+  }
+  .sd-tabs {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .sd-tab-label {
+		max-width: 300px;
+  }
+}
 /* Desktops and laptops ----------- */
 @media only screen 
 and (min-width : 1224px) {
-/* Styles */
+  .sd-tab-content {
+    order: 999;
+  }
+  .sd-tabs {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .sd-tab-label {
+		max-width: 300px;
+  }
+  .sd-tabs > .sd-tab-label {
+		top: -42px;
+	}
+  label.sd-tab-label.label1 {
+    left: 100px;
+  }
+  label.sd-tab-label.label3 {
+    left: -100px;
+  }
 }
 
 /* Large screens ----------- */
 @media only screen 
 and (min-width : 1824px) {
-/* Styles */
-}
-
-/* iPhone 4 ----------- */
-@media
-only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
 /* Styles */
 }
