@@ -17,6 +17,7 @@
 		configurator.labelOne = document.querySelector('.label1');
 		configurator.labelTwo = document.querySelector('.label2');
 		configurator.labelThree = document.querySelector('.label3');
+		configurator.screen = window.screen.width;
   },
 	OpenCloseMenu: function() {
     configurator.menu.addEventListener('click', configurator.handleMenuOpen);
@@ -61,113 +62,30 @@
 		}
   },
 	tabsOpenClose: function() {
+		/* if(configurator.screen >= 800) { */
 		configurator.checkboxInput.forEach(tab => tab.addEventListener('change', () => {
 			const checkInput = document.querySelector('.sd-tab-radio:checked + .sd-tab-label > #onglet');
 			const notCheckInput = document.querySelectorAll('.sd-tab-radio:not(:checked) + .sd-tab-label > #onglet');
-			console.log(tab, checkInput,notCheckInput)
 			if (tab.checked) {
 				if(checkInput.querySelector('#off')) {
 					checkInput.innerHTML=`
-					<path class="st0" d="M300,43h-30c-11,0-20-9-20-20l0,0c0-11-9-20-20-20H70c-11,0-20,9-20,20l0,0c0,11-9,20-20,20H0v2h300V43z"/>
-<path class="tab_on" id="on" d="M300,43h-30c-11,0-20-9-20-20l0,0c0-11-9-20-20-20H70c-11,0-20,9-20,20l0,0c0,11-9,20-20,20H0"/>
-<path class="st0" d="M264.3,43.1c-75.4,0.1-150.8,0.2-226.2,0.3v-1.3c74.5,0,149-0.1,223.6-0.1c0.3,0.2,0.7,0.4,1.1,0.5
-	C263.2,42.7,263.8,42.9,264.3,43.1z"/>
+						<path class="st0" d="M300,43h-30c-11,0-20-9-20-20l0,0c0-11-9-20-20-20H70c-11,0-20,9-20,20l0,0c0,11-9,20-20,20H0v2h300V43z"/>
+						<path class="tab_on" id="on" d="M300,43h-30c-11,0-20-9-20-20l0,0c0-11-9-20-20-20H70c-11,0-20,9-20,20l0,0c0,11-9,20-20,20H0"/>
+						<path class="st0" d="M264.3,43.1c-75.4,0.1-150.8,0.2-226.2,0.3v-1.3c74.5,0,149-0.1,223.6-0.1c0.3,0.2,0.7,0.4,1.1,0.5
+						C263.2,42.7,263.8,42.9,264.3,43.1z"/>
 					 `
 				}
 			}
 			notCheckInput.forEach(check =>  {
 				if(check.querySelector('#on')) {
 					check.innerHTML=`
-					<path class="tab_off" id="off" d="M300,46c0,0-50,0-50,0V23c0-11-9-20-20-20L70,3c-11,0-20,9-20,20v20c0,0-50,0-50,0"/>
+						<path class="tab_off" id="off" d="M300,46c0,0-50,0-50,0V23c0-11-9-20-20-20L70,3c-11,0-20,9-20,20v20c0,0-50,0-50,0"/>
 					`
 				}
 			})
-		}))
-  },
-	handleTabsChange: function(e, tab) {
-		
-  },
-  // Responsable de la structure du form
-   /*createForm: function() {
-    const formElement = document.createElement('form');
-    formElement.className='form';
-    formElement.addEventListener('submit',app.handleFormSubmit);
-    //const todoElement = document.getElementById('todo');
-    app.todoElement.appendChild(formElement);
-    app.inputElement = document.createElement('input');
-    app.inputElement.className='form-field';
-    app.inputElement.setAttribute('type', 'text');
-    app.inputElement.placeholder='Ajouter une tâche';
-    formElement.appendChild(app.inputElement);
-  },
-  // responsable de la structure du compteur
-  createCounter:function() {
-    app.h1Element = document.createElement('h1');
-    app.h1Element.className='counter';
-    app.setCounterValue();
-    app.todoElement.appendChild(app.h1Element);
-  },
-  // responsable de la structure de la liste
-  createList:function() {
-    app.ulElement = document.createElement('ul');
-    app.ulElement.className='list';
-    app.todoElement.appendChild(app.ulElement);
-    app.state.forEach((currentTask)=> {
-      app.createListItem(app.ulElement, currentTask);
-    });
-  },
-  // responsable de la structure d'un élemente de la liste
-  createListItem:function(parent, task) {
-    const liElement = document.createElement('li');
-    parent.appendChild(liElement);
-    const labelElement = document.createElement('label');
-    labelElement.className='list-item';
-    
-    labelElement.textContent=task.title;
-    liElement.appendChild(labelElement);
-    const checkboxElement = document.createElement('input');
-    checkboxElement.type='checkbox';
-    checkboxElement.addEventListener('change', () => {
-      task.done = !task.done;
-      app.init();
-    });
-    labelElement.prepend(checkboxElement);
-    if(task.done) {
-      labelElement.classList.add('list-item--off');
-
-
-      checkboxElement.checked=true;
-    }
-  },
-  handleFormSubmit:function(event) {
-    event.preventDefault();
-    // dorénavant lorsque j'ai besoin de modifié ce qui s'affiche dans l'appli je vais modifier l'état de l'appli dans un premier temps, c'est ma source de vérité, c'est de laà que doit partir la représentation de mon application
-    app.state.push({
-      title: app.inputElement.value,
-      done: false,
-    });
-    // apres modif de l'état je regenere l'interface
-    app.init();
-    // vider le champs
-    app.inputElement.value='';
-    
-
-  },
-  // change la valeur affichée dans le compteur
-  setCounterValue: function() {
-    
-    const undoneTasks = app.state.filter((task) => !task.done);
-    const counter = undoneTasks.length;
-    if (counter === 0) {
-      app.h1Element.textContent = `Aucune tache en cours`;
-    }
-    else if (counter === 1) {
-      app.h1Element.textContent = `Une tache en cours`;
-    }
-    else {
-      app.h1Element.textContent = `${counter} taches en cours`;
-    }
-  }, */
+			}))
+  	/* } */
+	},
 };
 
 
