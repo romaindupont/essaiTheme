@@ -53,7 +53,6 @@ margin-right: 4rem;
 color: #233658;
 font-size: 1.5rem;
 font-weight: 900;
-margin-right: 2rem;
 padding: 1rem 1rem;
 
 }
@@ -204,7 +203,7 @@ and (max-device-width : 768px) {
 		align-items: none;
 		margin-right: 0;
 		position: absolute;
-		bottom: 0;
+		bottom: 40%;
 		width: 100vw;
 		justify-content: none;
     align-items: none;
@@ -227,6 +226,9 @@ and (max-device-width : 768px) {
 	}
 	.first_menu-configurator-nav > #menu-main-menu > .menu-item > a{
 		font-size: 1.5rem;
+	}
+	.header-configurator-right-priceZone-price {
+    margin-right: 0rem;
 	}
 }
 
@@ -266,6 +268,9 @@ and (max-device-width : 1024px) {
 	}
 	.first_menu-configurator-nav > #menu-main-menu > .menu-item > a{
 		font-size: 2rem;
+	}
+	.header-configurator-right-priceZone-price {
+    margin-right: 0rem;
 	}
 }
 

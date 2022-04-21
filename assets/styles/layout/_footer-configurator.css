@@ -132,6 +132,9 @@
 .sd-tabs > .sd-tab-radio:checked + .sd-tab-label + .sd-tab-content {
   display: block;
 }
+.sd-tabs > .sd-tab-radio:not(:checked) + .sd-tab-label .sd-tab-desc {
+	color: #939598;
+}
 .sd-tabs > .sd-tab-label .sd-tab-desc {
   display: block;
   margin: 7px 5px 5px 2px;
@@ -139,8 +142,10 @@
   text-overflow: ellipsis;
   overflow: hidden;
   position: relative;
-  font-size: 0.75rem;
+  font-size: 1rem;
   flex: 1 1 0%;
+	text-transform: uppercase;
+	font-weight: 600;
 }
 .sd-tabs > .sd-tab-label .sd-tab-icon {
   display: flex;
@@ -191,11 +196,10 @@ footer.footer-configurator {
 	fill:#939598;
 }
 svg#eye, #eye {
-	
 	position: absolute;
 }
 
-.sd-tabs > .sd-tab-radio:not(:checked) + .sd-tab-label > #eye_on {
+.sd-tabs > .sd-tab-radio:not(:checked) + .sd-tab-label > #eye {
 	opacity: 0.4;
 }
 
@@ -218,7 +222,23 @@ svg#down {
 .down{
 	fill:#233658;
 }
-
+svg#export {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	cursor: pointer;
+	z-index: 10;
+}
+svg#menu_option {
+	display: none;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	cursor: pointer;
+	z-index: 10;
+	top: 50px;
+	right: 15px;
+}
 
 @media (min-width : 320px) {
 	.sd-tabs > .sd-tab-label::after,
@@ -243,6 +263,13 @@ svg#down {
     margin-left: 0;
 	}
 	svg#down {
+		display: none;
+	}
+	svg#export {
+		top: -98%;
+		right: 15px;
+	}
+	svg#menu_option {
 		display: none;
 	}
 }
@@ -291,6 +318,13 @@ svg#down {
 	}
 	.openIt {
 		bottom: -30% !important;
+	}
+	svg#export {
+		top: -10px;
+		right: 15px;
+	}
+	svg#menu_option {
+		display: block;
 	}
 }
 @media (min-width : 1024px) {
