@@ -79,11 +79,20 @@ button.header-configurator-right-priceZone-buy {
 .first_menu-configurator-nav > #menu-main-menu > li {
 	margin-bottom: 3rem;
 }
-.first_menu-configurator-nav > #menu-main-menu > .mark1::after {
+.first_menu-configurator-nav > #menu-main-menu > .mark1::after,
+.first_menu-configurator-nav > #menu-main-menu > .mark2::after {
 	content: '';
 	background-image: url('../../images/caret_right.svg');
-	
+	width: 40px;
+	position: absolute;
+	top: -10px;
+	height: 40px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	/* background-position: bottom; */
+	right: -100px;
 }
+	
 .first_menu-configurator-nav > #menu-main-menu > .mark1 > .menu-depth-1,  .first_menu-configurator-nav > #menu-main-menu > .mark2 > .menu-depth-1{
 	display: none;
 	height: 100vh;
@@ -216,8 +225,6 @@ and (max-device-width : 768px) {
     width: 30%;
 	}
 	.first_menu-configurator-nav-title > #closeLogo {
-    width: 80px;
-    height: 80px;
 		right: 50px;
 	}
 	.first_menu-configurator-nav > #menu-main-menu {
@@ -230,18 +237,17 @@ and (max-device-width : 768px) {
 	.header-configurator-right-priceZone-price {
     margin-right: 0rem;
 	}
-}
-
-/* Smartphones (landscape) ----------- */
-@media only screen 
-and (min-width : 321px) {
-/* Styles */
-}
-
-/* Smartphones (portrait) ----------- */
-@media only screen 
-and (max-width : 320px) {
-/* Styles */
+	.first_menu-configurator-nav > #menu-main-menu > .mark1 > .menu-depth-1,  .first_menu-configurator-nav > #menu-main-menu > .mark2 > .menu-depth-1 {
+		background: #fff;
+		width: 100vw;
+		z-index: 10;
+		left: 0;
+		margin: 1rem 2rem;
+		top: -10px;
+	}
+	.closeMenu {
+		right: 100px;
+	}
 }
 
 /* iPads (portrait and landscape) ----------- */
@@ -249,7 +255,7 @@ and (max-width : 320px) {
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) {
 	.header-configurator-left-menu {
-		width: 10%;
+		width: 15%;
 	}
 	.first_menu-configurator {
 		width: 100vw;
@@ -261,6 +267,7 @@ and (max-device-width : 1024px) {
 	.first_menu-configurator-nav-title > #closeLogo {
     width: 80px;
     height: 80px;
+		right: 50px;
 	}
 	.first_menu-configurator-nav > #menu-main-menu {
 		align-content: space-evenly;
@@ -271,6 +278,26 @@ and (max-device-width : 1024px) {
 	}
 	.header-configurator-right-priceZone-price {
     margin-right: 0rem;
+	}
+	.first_menu-configurator-nav > #menu-main-menu > .mark1 > .menu-depth-1,  .first_menu-configurator-nav > #menu-main-menu > .mark2 > .menu-depth-1 {
+		background: #fff;
+		width: 100vw;
+		z-index: 10;
+		left: 0;
+		margin: 1rem 2rem;
+		top: -10px;
+	}
+	.closeMenu {
+		right: 100px;
+	}
+	.first_menu-configurator-nav > #menu-main-menu > .mark1 > .menu-depth-1 > li a, .first_menu-configurator-nav > #menu-main-menu > .mark2 > .menu-depth-1 > li a {
+    font-size: 1.7rem;
+	}
+	.first_menu-configurator-nav > #menu-main-menu > .mark1 > .menu-depth-1 > li ul > li a, .first_menu-configurator-nav > #menu-main-menu > .mark2 > .menu-depth-1 > li ul > li a {
+		font-size: 1rem;
+	}
+	.personnalize {
+    text-align: right;
 	}
 }
 

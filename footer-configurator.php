@@ -37,7 +37,9 @@
 				<path class="eye-on" id="on" d="M15.6,0.6c-8.3,0-15,6.7-15,15s6.7,15,15,15s15-6.7,15-15S23.9,0.6,15.6,0.6z M15.6,20.4c-5,0-9.1-4.8-9.1-4.8  s1.5-1.7,3.7-3.1l2.1,2.1c-0.1,0.3-0.2,0.6-0.2,1c0,1.9,1.6,3.5,3.5,3.5c0.3,0,0.7-0.1,1-0.2l1.2,1.2C17.1,20.3,16.3,20.4,15.6,20.4  z M13.9,16.2l1,1C14.5,17.1,14.1,16.7,13.9,16.2z M21,21.8L9.4,10.1l0.8-0.8L21.8,21L21,21.8z M16.2,13.9c0.5,0.2,0.8,0.6,1,1  L16.2,13.9z M21,18.7l-2.1-2.1c0.1-0.3,0.2-0.6,0.2-1c0-1.9-1.6-3.5-3.5-3.5c-0.3,0-0.7,0.1-1,0.2l-1.2-1.2c0.7-0.2,1.4-0.3,2.2-0.3  c5,0,9.1,4.8,9.1,4.8S23.3,17.3,21,18.7z"></path>
 			</svg>
 		</label>
-		<div class="sd-tab-content" tabindex="1"></div>
+		<div class="sd-tab-content" tabindex="1">
+			<?php get_template_part('template-parts/configurator-helmet'); ?>
+		</div>
 		<input class="sd-tab-radio" tabindex="1" name="tabs" type="radio" id="tabtwo"/>
 		<label class="sd-tab-label label2" for="tabtwo">
 					<div class="sd-tab-desc">Chinguard</div>
@@ -51,7 +53,9 @@
 				</g>
 		</svg>
 		</label>
-		<div class="sd-tab-content" tabindex="1"></div>
+		<div class="sd-tab-content" tabindex="1">
+			<?php get_template_part('template-parts/configurator-chinguard'); ?>	
+		</div>
 		<input class="sd-tab-radio" tabindex="1" name="tabs" type="radio" id="tabthree"/>
 		<label class="sd-tab-label label3" for="tabthree">
 			<div class="sd-tab-desc">Visor</div>
@@ -65,6 +69,8 @@
 				</g>
 		</svg>
 		</label>
-		<div class="sd-tab-content" tabindex="1"></div>
+		<div class="sd-tab-content" tabindex="1">
+			<?php get_template_part('template-parts/configurator-visor'); ?>	
+		</div>
 	</div>
 </footer>

@@ -29,7 +29,7 @@
 	<div class="first_menu-configurator">
 		<div class="first_menu-configurator-nav-title">
 		<img class="configurator-header__heading-menu" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/veldt-logo.svg" alt="logo-veldt">
-		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="closeLogo" class="closeLogo" x="0px" y="0px" viewBox="0 0 41 41" style="enable-background:new 0 0 41 41;" xml:space="preserve">
+		<svg version="1.1" id="closeLogo" class="closeLogo" viewBox="0 0 41 41">
 			<polygon class="cross" points="28.3,14.1 26.9,12.7 20.5,19.1 14.1,12.7 12.7,14.1 19.1,20.5 12.7,26.9 14.1,28.3 20.5,21.9   26.9,28.3 28.3,26.9 21.9,20.5 "></polygon>
 		</svg>
 		</div>

@@ -1,3 +1,4 @@
+
 const configurator = {
    init: function() {
     configurator.initElements();
@@ -5,6 +6,7 @@ const configurator = {
 		configurator.subMenuOpenClose();
 		configurator.tabsOpenClose();
 		configurator.clicOnEye();
+		configurator.jsonFileImport();
     
   },
   initElements: function() {
@@ -13,13 +15,25 @@ const configurator = {
 		configurator.close = document.querySelector('.closeLogo');
 		configurator.subMenu = document.querySelectorAll('.first_menu-configurator-nav > #menu-main-menu > .menu-item > a');
 		configurator.closeSubMenu = document.querySelectorAll('.closeMenu');
-		configurator.checkboxInput = document.querySelectorAll('.sd-tab-radio');
+		configurator.checkboxInput = document.querySelector('.sd-tab-radio:checked');
 		configurator.labelOne = document.querySelector('.label1');
 		configurator.labelTwo = document.querySelector('.label2');
 		configurator.labelThree = document.querySelector('.label3');
 		configurator.footerConfigurator = document.querySelector('.footer-configurator');
 		configurator.downButton = document.querySelector('#down');
 		configurator.eyes = document.querySelectorAll('#eye');
+		configurator.SubMenuMark1 = document.querySelector('.mark1 > ul');
+		configurator.SubMenuMark2 = document.querySelector('.mark2 > ul');
+		configurator.linkActiveMark1 = document.querySelector('.mark1 > a');
+		configurator.linkActiveMark2 = document.querySelector('.mark2 > a');
+		configurator.dataJson;
+  },
+	jsonFileImport: function() {
+		const json = 'http://localhost:8080/essai/content/themes/veldt/dist/json/helmetElement.json';
+    fetch(json)
+			.then(response => response.json())
+			.then(data => configurator.dataJson = data.helmetElement/* console.log(Object.keys(data.helmetElement).length,Object.keys(data.helmetElement)[1] */ /* ) */)
+			.catch(error => console.log(error));
   },
 	OpenCloseMenu: function() {
     configurator.menu.addEventListener('click', configurator.handleMenuOpen);
@@ -32,6 +46,10 @@ const configurator = {
 	handleMenuClose: function() {
 		configurator.firstMenu.style.visibility === 'visible' ? configurator.firstMenu.style.left = '-100%' : configurator.firstMenu.style.left = '0';
 		configurator.firstMenu.style.visibility === 'visible' ? configurator.firstMenu.style.transition = 'left 600ms ease-in-out' : '';
+		configurator.SubMenuMark1.style.display = 'none';
+		configurator.SubMenuMark2.style.display = 'none';
+		configurator.linkActiveMark2.classList.remove('active');
+		configurator.linkActiveMark1.classList.remove('active');
   },
 	subMenuOpenClose: function() {
 		configurator.subMenu.forEach(element => {
@@ -42,25 +60,21 @@ const configurator = {
 		});
   },
 	handleSubMenuOpenClose: function(e) {
-		const SubMenuMark1 = document.querySelector('.mark1 > ul');
-		const SubMenuMark2 = document.querySelector('.mark2 > ul');
-		const linkActiveMark1 = document.querySelector('.mark1 > a');
-		const linkActiveMark2 = document.querySelector('.mark2 > a');
 		if(e.path[0].innerHTML === 'Mark 1') {
-			SubMenuMark1.style.display = SubMenuMark1.style.display === 'flex' ? 'none' : 'flex';
-			SubMenuMark2.style.display = SubMenuMark2.style.display === 'none' ? '' : 'none';
-			SubMenuMark1.style.display === 'flex' ? linkActiveMark1.classList.add('active') : linkActiveMark1.classList.remove('active');
-			SubMenuMark1.style.display === 'flex' ? linkActiveMark2.classList.remove('active') : linkActiveMark2.classList.remove('active');
+			configurator.SubMenuMark1.style.display = configurator.SubMenuMark1.style.display === 'flex' ? 'none' : 'flex';
+			configurator.SubMenuMark2.style.display = configurator.SubMenuMark2.style.display === 'none' ? '' : 'none';
+			configurator.SubMenuMark1.style.display === 'flex' ? configurator.linkActiveMark1.classList.add('active') : configurator.linkActiveMark1.classList.remove('active');
+			configurator.SubMenuMark1.style.display === 'flex' ? configurator.linkActiveMark2.classList.remove('active') : configurator.linkActiveMark2.classList.remove('active');
 		}
 		if(e.path[0].innerHTML === 'Mark 2') {
-			SubMenuMark2.style.display = SubMenuMark2.style.display === 'flex' ? 'none' : 'flex';
-			SubMenuMark1.style.display = SubMenuMark1.style.display === 'none' ? '' : 'none';
-			SubMenuMark2.style.display === 'flex' ? linkActiveMark2.classList.add('active') : linkActiveMark2.classList.remove('active');
-			SubMenuMark2.style.display === 'flex' ? linkActiveMark1.classList.remove('active') : linkActiveMark1.classList.remove('active');
+			configurator.SubMenuMark2.style.display = configurator.SubMenuMark2.style.display === 'flex' ? 'none' : 'flex';
+			configurator.SubMenuMark1.style.display = configurator.SubMenuMark1.style.display === 'none' ? '' : 'none';
+			configurator.SubMenuMark2.style.display === 'flex' ? configurator.linkActiveMark2.classList.add('active') : configurator.linkActiveMark2.classList.remove('active');
+			configurator.SubMenuMark2.style.display === 'flex' ? configurator.linkActiveMark1.classList.remove('active') : configurator.linkActiveMark1.classList.remove('active');
 		}
 		if(e.path[0].className === 'closeMenu') {
-			SubMenuMark2.style.display = SubMenuMark2.style.display === 'none' ? '' : 'none';
-			SubMenuMark1.style.display = SubMenuMark1.style.display === 'none' ? '' : 'none';
+			configurator.SubMenuMark2.style.display = configurator.SubMenuMark2.style.display === 'none' ? '' : 'none';
+			configurator.SubMenuMark1.style.display = configurator.SubMenuMark1.style.display === 'none' ? '' : 'none';
 		}
   },
 	tabsOpenClose: function() {
@@ -68,6 +82,8 @@ const configurator = {
   },
 	handleOpenCloseTabs: function() {
 		configurator.footerConfigurator.classList.toggle('openIt');
+		console.log(configurator.dataJson)
+
 	},
 	clicOnEye: function() {
 		configurator.eyes.forEach(eye => eye.addEventListener('click', 

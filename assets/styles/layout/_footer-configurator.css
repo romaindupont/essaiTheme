@@ -239,7 +239,20 @@ svg#menu_option {
 	top: 50px;
 	right: 15px;
 }
+.infos {
+	display: none;
+}
 
+.elementChoice {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.direction {
+	width: 40px;
+	height: 40px;
+	margin-top: 1rem;
+}
 @media (min-width : 320px) {
 	.sd-tabs > .sd-tab-label::after,
 	.sd-tabs > .sd-tab-label::before {
@@ -272,6 +285,9 @@ svg#menu_option {
 	svg#menu_option {
 		display: none;
 	}
+	.infos{
+		display: block;
+	}
 }
 @media (min-width: 576px) { 
 	.sd-tabs > .sd-tab-label::after,
@@ -286,13 +302,13 @@ svg#menu_option {
 	}
 	footer.footer-configurator {
     bottom: -50%;
+	}
 }
- }
 
 @media (min-width : 768px) {
 	footer.footer-configurator {
     bottom: -50%;
-}
+	}
 	.sd-tabs > .sd-tab-label::after,
 	.sd-tabs > .sd-tab-label::before {
 		width: 50%;
@@ -346,6 +362,18 @@ svg#menu_option {
 		bottom: -40% !important;
 		transition: all 1s ease-in-out;
 	}
+	.infos{
+		display: none;
+	}
+	.openIt > div > div > .helmet {
+		display: block !important;
+	}
+	.openIt > div > div > .chinguard {
+		display: block !important;
+	}
+	.openIt > div > div > .visor {
+		display: block !important;
+	}
 }
 @media (min-width : 1224px) {
 	footer.footer-configurator {
@@ -367,4 +395,44 @@ svg#menu_option {
 @media only screen 
 and (min-width : 1824px) {
 /* Styles */
+}
+
+/* Config helmet */
+
+.aeration {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	top: 50px;
+}
+
+.aerationDisplay {
+	text-transform: uppercase;
+	color: #233658;
+	padding-top: -1rem;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.aerationWithout {
+	margin-right: 10rem;
+}
+.aerationWithout:hover {
+	background: #233658;
+	color: #fff;
+}
+.aerationWith:hover {
+		background: #233658;
+		color: #fff;
+}
+
+.aerationWithout, .aerationWith {	
+	border: 1px solid #233658;
+	border-radius: 25px 25px 25px 25px;
+	padding: 10px 1rem;
+	width: 75px;
+	text-align: center;
+	cursor: pointer;
+
 }
