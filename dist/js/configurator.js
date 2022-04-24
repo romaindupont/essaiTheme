@@ -6,8 +6,7 @@ const configurator = {
 		configurator.subMenuOpenClose();
 		configurator.tabsOpenClose();
 		configurator.clicOnEye();
-		configurator.jsonFileImport();
-    
+		configurator.jsonFileImport(); 
   },
   initElements: function() {
     configurator.menu = document.querySelector('.header-configurator-left-menu');
@@ -26,13 +25,16 @@ const configurator = {
 		configurator.SubMenuMark2 = document.querySelector('.mark2 > ul');
 		configurator.linkActiveMark1 = document.querySelector('.mark1 > a');
 		configurator.linkActiveMark2 = document.querySelector('.mark2 > a');
+		configurator.buttonChoice = document.querySelectorAll('.buttonChoice');
+		configurator.elementName = document.querySelector('.elementPicker');
+		configurator.elementNumber = document.querySelector('.numberStep');
 		configurator.dataJson;
   },
 	jsonFileImport: function() {
-		const json = 'http://localhost:8080/essai/content/themes/veldt/dist/json/helmetElement.json';
+		const json = 'http://localhost:80/essai/content/themes/veldt/dist/json/helmetElement.json';
     fetch(json)
 			.then(response => response.json())
-			.then(data => configurator.dataJson = data.helmetElement/* console.log(Object.keys(data.helmetElement).length,Object.keys(data.helmetElement)[1] */ /* ) */)
+			.then(data => configurator.dataJson = data/* console.log(Object.keys(data.helmetElement).length,Object.keys(data.helmetElement)[1] */ /* ) */)
 			.catch(error => console.log(error));
   },
 	OpenCloseMenu: function() {
@@ -82,7 +84,11 @@ const configurator = {
   },
 	handleOpenCloseTabs: function() {
 		configurator.footerConfigurator.classList.toggle('openIt');
-		console.log(configurator.dataJson)
+		configurator.initHelmetTitleElement();
+		configurator.buttonChoice.forEach(button => button.addEventListener('click', (e) => {
+			configurator.buttonChoice.forEach(button => button.classList.remove('activeButton'))
+			e.target.classList.toggle('activeButton');
+		}))
 
 	},
 	clicOnEye: function() {
@@ -112,6 +118,16 @@ const configurator = {
 		}
 		));
 	},
+	initHelmetTitleElement: function() {
+		for(let i = 0; i<Object.keys(configurator.dataJson.helmetElement).length;i++){
+			let obj = Object.keys(configurator.dataJson.helmetElement)[i];
+			let titre =  configurator.dataJson.helmetElement[`${obj}`].title;
+			let phpFile =  configurator.dataJson.helmetElement[`${obj}`].phpFile;
+			let helpMessage =  configurator.dataJson.helmetElement[`${obj}`].helpMessage;
+
+			console.log(obj, titre, phpFile, helpMessage);
+		}
+	}
 };
 
 

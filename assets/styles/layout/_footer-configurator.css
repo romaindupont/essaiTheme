@@ -252,6 +252,7 @@ svg#menu_option {
 	width: 40px;
 	height: 40px;
 	margin-top: 1rem;
+  cursor: pointer;
 }
 @media (min-width : 320px) {
 	.sd-tabs > .sd-tab-label::after,
@@ -345,7 +346,7 @@ svg#menu_option {
 }
 @media (min-width : 1024px) {
 	footer.footer-configurator {
-    bottom: -70%;
+    bottom: -60%;
 		transition: all 1s ease-in-out;
 	}
 	.sd-tabs > .sd-tab-label::after,
@@ -377,7 +378,7 @@ svg#menu_option {
 }
 @media (min-width : 1224px) {
 	footer.footer-configurator {
-    bottom: -70%;
+    bottom: -60%;
 	}
 	.sd-tabs > .sd-tab-label::after,
 	.sd-tabs > .sd-tab-label::before {
@@ -415,24 +416,26 @@ and (min-width : 1824px) {
 	display: flex;
 	justify-content: center;
 }
-.aerationWithout {
-	margin-right: 10rem;
-}
-.aerationWithout:hover {
+
+.buttonChoice:hover {
 	background: #233658;
 	color: #fff;
 }
-.aerationWith:hover {
+.buttonChoice:hover {
 		background: #233658;
 		color: #fff;
 }
 
-.aerationWithout, .aerationWith {	
+.buttonChoice, .buttonChoice {	
 	border: 1px solid #233658;
 	border-radius: 25px 25px 25px 25px;
 	padding: 10px 1rem;
 	width: 75px;
 	text-align: center;
 	cursor: pointer;
-
+  margin: 1rem; 
+}
+.activeButton {
+  background: #233658;
+  color: #fff;
 }

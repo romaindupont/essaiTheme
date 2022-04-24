@@ -1,0 +1,85 @@
+{
+	"helmetElement" :{
+		"aeration": {
+			"title": "aeration",
+			"phpFile": "aeration",
+			"helpMessage" : "Choose if you want aeration or not"
+			},
+		"screw and rivets": {
+			"title": "screw and rivets",
+			"phpFile":"screw",
+			"helpMessage" : "Choose screw and rivets position"
+		},
+		"pattern": {
+			"title": "pattern",
+			"phpFile":"pattern",
+			"helpMessage" : "Choose the pattern style you want"
+		},
+		"main-color": {
+			"title": "main color",
+			"phpFile":"main-color",
+			"helpMessage" : "Choose the main color"
+		},
+		"pattern-color": {
+			"title": "pattern color",
+			"phpFile": "pattern-color",
+			"helpMessage" : "Choose the pattern color and finishing"
+		},
+		"varnish": {
+			"title": "varnish",
+			"phpFile":"varnish",
+			"helpMessage" : "Choose the finishing varnish"
+		},
+		"right-number": {
+			"title": "right number",
+			"phpFile":"right-number",
+			"helpMessage" : "Apply a number on right of the helmet, chosse the number and the style"
+		},
+		"left-number": {
+			"title": "left number",
+			"phpFile":"left-number",
+			"helpMessage" : "Apply a number on left of the helmet, chosse the number and the style"
+		},
+		"back-number": {
+			"title": "back number",
+			"phpFile":"back-number",
+			"helpMessage" : "Apply a number on back of the helmet, chosse the number and the style"
+		},
+		"logo": {
+			"title": "logo",
+			"phpFile":"logo",
+			"helpMessage" : "Choose between several Logo your best one and select the color"
+		},
+		"interior": {
+			"title": "interior",
+			"phpFile":"phpFile",
+			"helpMessage" : "Choose the material interior for your helmet"
+		},
+		"rush": {
+			"title": "rush",
+			"phpFile":"rush",
+			"helpMessage" : "Choose color and rush material"
+		},
+		"metal-parts": {
+			"title": "metal parts",
+			"phpFile":"metal-parts",
+			"helpMessage" : "Choose the color of the metal parts"
+		},
+		"zippers": {
+			"title": "zippers",
+			"phpFile":"zippers",
+			"helpMessage" : "Choose the zippers between two technologies"
+		},
+		"engraving": {
+			"title": "engraving",
+			"phpFile":"engraving",
+			"helpMessage" : "Choose the message behind"
+		},
+		"size": {
+			"title": "size and certification",
+			"phpFile":"size",
+			"helpMessage" : "Choose the helmet size and the certification"
+		}	
+	}
+
+}

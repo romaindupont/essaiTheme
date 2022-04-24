@@ -1,6 +1,6 @@
 <div class="aeration">
 		<div class="aerationDisplay">
-			<span class="aerationWithout">Without</span>
-			<span class="aerationWith">With</span>
+			<span class="aerationWithout buttonChoice">Without</span>
+			<span class="aerationWith buttonChoice">With</span>
 		</div>
 	</div>
