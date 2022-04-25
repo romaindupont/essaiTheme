@@ -39,7 +39,7 @@ const configurator = {
 		configurator.numberArrayPosition = 0;
   },
 	jsonFileImport: function() {
-		const json = 'http://localhost:8080/essai/content/themes/veldt/dist/json/helmetElement.json';
+		const json = 'http://localhost:80/essai/content/themes/veldt/dist/json/helmetElement.json';
     fetch(json)
 			.then(response => response.json())
 			.then(data => {
@@ -141,7 +141,7 @@ const configurator = {
 			configurator.helpMessageHelmet.push(configurator.dataJson.helmetElement[`${obj}`].helpMessage);
 		}
 		configurator.elementName.innerHTML = configurator.titreArrayHelmet[0] +  "<span class='number'>" + (configurator.numberArrayPosition + 1) + '/'+ configurator.titreArrayHelmet.length + "</span>";
-		const parts = `http://localhost:8080/essai/content/themes/veldt/template-parts/configurator-helmet-step/${configurator.phpFileHelmet[configurator.numberArrayPosition]}.php`;
+		const parts = `http://localhost:80/essai/content/themes/veldt/template-parts/configurator-helmet-step/${configurator.phpFileHelmet[configurator.numberArrayPosition]}.php`;
     fetch(parts)
 			.then(response => response.text())
 			.then(data => {
@@ -176,7 +176,7 @@ const configurator = {
 			configurator.numberArrayPosition = 0;
 		}
 		configurator.elementName.innerHTML = configurator.titreArrayHelmet[configurator.numberArrayPosition] +  "<span class='number'>" + (configurator.numberArrayPosition + 1) + '/'+ configurator.titreArrayHelmet.length + "</span>";
-		const parts = `http://localhost:8080/essai/content/themes/veldt/template-parts/configurator-helmet-step/${configurator.phpFileHelmet[configurator.numberArrayPosition]}.php`;
+		const parts = `http://localhost:80/essai/content/themes/veldt/template-parts/configurator-helmet-step/${configurator.phpFileHelmet[configurator.numberArrayPosition]}.php`;
     fetch(parts)
 			.then(response => response.text())
 			.then(data => {
