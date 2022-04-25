@@ -7,6 +7,7 @@ const configurator = {
 		configurator.tabsOpenClose();
 		configurator.clicOnEye();
 		configurator.jsonFileImport(); 
+		configurator.slider();
   },
   initElements: function() {
     configurator.menu = document.querySelector('.header-configurator-left-menu');
@@ -26,15 +27,25 @@ const configurator = {
 		configurator.linkActiveMark1 = document.querySelector('.mark1 > a');
 		configurator.linkActiveMark2 = document.querySelector('.mark2 > a');
 		configurator.buttonChoice = document.querySelectorAll('.buttonChoice');
+		configurator.screwChoice = document.querySelectorAll('.allScrew');
 		configurator.elementName = document.querySelector('.elementPicker');
 		configurator.elementNumber = document.querySelector('.numberStep');
+		configurator.leftChoice = document.querySelector('.leftChoice');
+		configurator.rightChoice = document.querySelector('.rightChoice');
 		configurator.dataJson;
+		configurator.titreArrayHelmet = [];
+		configurator.phpFileHelmet = [];
+		configurator.helpMessageHelmet = [];
+		configurator.numberArrayPosition = 0;
   },
 	jsonFileImport: function() {
-		const json = 'http://localhost:80/essai/content/themes/veldt/dist/json/helmetElement.json';
+		const json = 'http://localhost:8080/essai/content/themes/veldt/dist/json/helmetElement.json';
     fetch(json)
 			.then(response => response.json())
-			.then(data => configurator.dataJson = data/* console.log(Object.keys(data.helmetElement).length,Object.keys(data.helmetElement)[1] */ /* ) */)
+			.then(data => {
+				configurator.dataJson = data;
+				configurator.initHelmetTitleElement();
+			})
 			.catch(error => console.log(error));
   },
 	OpenCloseMenu: function() {
@@ -83,13 +94,17 @@ const configurator = {
 		configurator.downButton.addEventListener('click', configurator.handleOpenCloseTabs);
   },
 	handleOpenCloseTabs: function() {
-		configurator.footerConfigurator.classList.toggle('openIt');
-		configurator.initHelmetTitleElement();
+		configurator.footerConfigurator.classList.toggle('openIt');	
+	},
+	buttonChoiceListener: function() {
 		configurator.buttonChoice.forEach(button => button.addEventListener('click', (e) => {
 			configurator.buttonChoice.forEach(button => button.classList.remove('activeButton'))
 			e.target.classList.toggle('activeButton');
-		}))
-
+		}));
+		configurator.screwChoice.forEach(image => image.addEventListener('click', (e) => {
+			configurator.screwChoice.forEach(image => image.classList.remove('activeImage'))
+			image.classList.toggle('activeImage');
+		}));
 	},
 	clicOnEye: function() {
 		configurator.eyes.forEach(eye => eye.addEventListener('click', 
@@ -119,15 +134,59 @@ const configurator = {
 		));
 	},
 	initHelmetTitleElement: function() {
-		for(let i = 0; i<Object.keys(configurator.dataJson.helmetElement).length;i++){
+		for(let i = 0; i<Object.keys(configurator.dataJson.helmetElement).length;i++) {
 			let obj = Object.keys(configurator.dataJson.helmetElement)[i];
-			let titre =  configurator.dataJson.helmetElement[`${obj}`].title;
-			let phpFile =  configurator.dataJson.helmetElement[`${obj}`].phpFile;
-			let helpMessage =  configurator.dataJson.helmetElement[`${obj}`].helpMessage;
-
-			console.log(obj, titre, phpFile, helpMessage);
+			configurator.titreArrayHelmet.push(configurator.dataJson.helmetElement[`${obj}`].title);
+			configurator.phpFileHelmet.push(configurator.dataJson.helmetElement[`${obj}`].phpFile);
+			configurator.helpMessageHelmet.push(configurator.dataJson.helmetElement[`${obj}`].helpMessage);
 		}
-	}
+		configurator.elementName.innerHTML = configurator.titreArrayHelmet[0] +  "<span class='number'>" + (configurator.numberArrayPosition + 1) + '/'+ configurator.titreArrayHelmet.length + "</span>";
+		const parts = `http://localhost:8080/essai/content/themes/veldt/template-parts/configurator-helmet-step/${configurator.phpFileHelmet[configurator.numberArrayPosition]}.php`;
+    fetch(parts)
+			.then(response => response.text())
+			.then(data => {
+				document.querySelector('.template').innerHTML = data;
+				configurator.buttonChoice = document.querySelectorAll('.buttonChoice');
+				configurator.buttonChoiceListener();
+
+			})
+			.catch(error => console.log(error));
+	},
+	slider: function() {
+		configurator.leftChoice.addEventListener('click', configurator.changeNameSlider);
+		configurator.rightChoice.addEventListener('click', configurator.changeNameSlider);
+	},
+	changeNameSlider: function(e) {
+		let sens;
+		if(e.target.classList[0] === 'leftChoice') {
+			sens = -1;
+			configurator.changeSliderTitle(sens);
+		} 
+		if(e.target.classList[0] === 'rightChoice') {
+			sens = 1;
+ 			configurator.changeSliderTitle(sens);
+		}
+  },
+	changeSliderTitle: function(sens) {
+		configurator.numberArrayPosition = configurator.numberArrayPosition + sens;
+		if (configurator.numberArrayPosition < 0) {
+			configurator.numberArrayPosition = configurator.titreArrayHelmet.length - 1;
+		}
+    if (configurator.numberArrayPosition > configurator.titreArrayHelmet.length - 1) {
+			configurator.numberArrayPosition = 0;
+		}
+		configurator.elementName.innerHTML = configurator.titreArrayHelmet[configurator.numberArrayPosition] +  "<span class='number'>" + (configurator.numberArrayPosition + 1) + '/'+ configurator.titreArrayHelmet.length + "</span>";
+		const parts = `http://localhost:8080/essai/content/themes/veldt/template-parts/configurator-helmet-step/${configurator.phpFileHelmet[configurator.numberArrayPosition]}.php`;
+    fetch(parts)
+			.then(response => response.text())
+			.then(data => {
+				document.querySelector('.template').innerHTML = data;
+				configurator.buttonChoice = document.querySelectorAll('.buttonChoice');
+				configurator.screwChoice = document.querySelectorAll('.allScrew');
+				configurator.buttonChoiceListener();
+			})
+			.catch(error => console.log(error));
+	},
 };
 
 

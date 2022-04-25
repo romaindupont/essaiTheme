@@ -4,5 +4,7 @@
 		<h3 class="elementPicker">Elements <span class="numberStep"></span></h3>	
 		<img class="rightChoice direction" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/arrow_right.svg" alt="right direction">
 	</div>
-		<?php get_template_part('template-parts/configurator-helmet-step/aeration'); ?>	
+	<div class="template">
+		
+	</div>
 </div>

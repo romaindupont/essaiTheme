@@ -243,17 +243,7 @@ svg#menu_option {
 	display: none;
 }
 
-.elementChoice {
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-}
-.direction {
-	width: 40px;
-	height: 40px;
-	margin-top: 1rem;
-  cursor: pointer;
-}
+
 @media (min-width : 320px) {
 	.sd-tabs > .sd-tab-label::after,
 	.sd-tabs > .sd-tab-label::before {
@@ -288,6 +278,16 @@ svg#menu_option {
 	}
 	.infos{
 		display: block;
+	}
+	.direction {
+		margin: 1rem 2rem;
+	}
+	.elementPicker {
+		text-align: left;
+	}
+	.allScrew {
+		width: 15%;
+		margin: 0.5rem; 
 	}
 }
 @media (min-width: 576px) { 
@@ -375,6 +375,16 @@ svg#menu_option {
 	.openIt > div > div > .visor {
 		display: block !important;
 	}
+	.direction {
+		margin: 1rem 5rem;
+	}
+	.elementPicker {
+		text-align: center;
+	}
+	.allScrew {
+		width: 5%;
+		margin: 1rem; 
+	}
 }
 @media (min-width : 1224px) {
 	footer.footer-configurator {
@@ -400,7 +410,7 @@ and (min-width : 1824px) {
 
 /* Config helmet */
 
-.aeration {
+.aeration, .pickerScrew {
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -411,7 +421,6 @@ and (min-width : 1824px) {
 .aerationDisplay {
 	text-transform: uppercase;
 	color: #233658;
-	padding-top: -1rem;
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -438,4 +447,72 @@ and (min-width : 1824px) {
 .activeButton {
   background: #233658;
   color: #fff;
+}
+
+
+
+.elementChoice {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.direction {
+	width: 40px;
+	height: 40px;
+  cursor: pointer;
+}
+.elementPicker {
+	width: 400px;
+	font-size: 1rem;
+	text-transform: uppercase;
+	font-weight: 600;
+	color: var(--color-principal);
+}
+.number {
+	margin-left: 2rem;
+}
+
+.allScrew {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	cursor: pointer;
+}
+.allScrew:hover > .textAction {
+	visibility: visible;
+	}
+.allScrew:hover > .textAction::after {
+	content: "";
+	height: 4px;
+	position: absolute;
+	bottom: -10px;
+	background: #233658;
+	left: 0;
+	animation: widthLine 200ms forwards ease-in-out;
+}
+.activeImage > .textAction {
+	visibility: visible !important;
+	}
+.activeImage > .textAction::after {
+	content: "";
+	height: 4px;
+	position: absolute;
+	bottom: -10px;
+	background: #233658;
+	left: 0;
+	width: 100%;
+}
+.allScrew > .textAction {
+	text-align: center;
+	visibility: hidden;
+}
+
+@keyframes widthLine {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 100%;
+	}
+	
 }
