@@ -52,7 +52,7 @@
 		},
 		"interior": {
 			"title": "interior",
-			"phpFile":"phpFile",
+			"phpFile":"interior",
 			"helpMessage" : "Choose the material interior for your helmet"
 		},
 		"rush": {

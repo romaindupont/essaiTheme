@@ -27,11 +27,14 @@ const configurator = {
 		configurator.linkActiveMark1 = document.querySelector('.mark1 > a');
 		configurator.linkActiveMark2 = document.querySelector('.mark2 > a');
 		configurator.buttonChoice = document.querySelectorAll('.buttonChoice');
+		configurator.sizeButtonChoice = document.querySelectorAll('.SizebuttonChoice');
 		configurator.screwChoice = document.querySelectorAll('.allScrew');
+		configurator.roundColor = document.querySelectorAll('.roundColor');
 		configurator.elementName = document.querySelector('.elementPicker');
 		configurator.elementNumber = document.querySelector('.numberStep');
 		configurator.leftChoice = document.querySelector('.leftChoice');
 		configurator.rightChoice = document.querySelector('.rightChoice');
+		configurator.buttonAdd = document.querySelector('.buttonAdd');
 		configurator.dataJson;
 		configurator.titreArrayHelmet = [];
 		configurator.phpFileHelmet = [];
@@ -39,7 +42,7 @@ const configurator = {
 		configurator.numberArrayPosition = 0;
   },
 	jsonFileImport: function() {
-		const json = 'http://localhost:80/essai/content/themes/veldt/dist/json/helmetElement.json';
+		const json = 'http://192.168.1.101:8080/essai/content/themes/veldt/dist/json/helmetElement.json';
     fetch(json)
 			.then(response => response.json())
 			.then(data => {
@@ -105,6 +108,18 @@ const configurator = {
 			configurator.screwChoice.forEach(image => image.classList.remove('activeImage'))
 			image.classList.toggle('activeImage');
 		}));
+		configurator.roundColor.forEach(image => image.addEventListener('click', (e) => {
+			configurator.roundColor.forEach(image => image.classList.remove('activeColor'))
+			image.classList.toggle('activeColor');
+		}));
+		configurator.sizeButtonChoice.forEach(button => button.addEventListener('click', (e) => {
+			configurator.sizeButtonChoice.forEach(button => button.classList.remove('activeButton'))
+			e.target.classList.toggle('activeButton');
+		}));
+		configurator.buttonAdd.addEventListener('click', (e) => {
+			const numberWindows = document.querySelector('.numberWindows');
+			numberWindows.style.display = 'flex';
+		})
 	},
 	clicOnEye: function() {
 		configurator.eyes.forEach(eye => eye.addEventListener('click', 
@@ -141,7 +156,7 @@ const configurator = {
 			configurator.helpMessageHelmet.push(configurator.dataJson.helmetElement[`${obj}`].helpMessage);
 		}
 		configurator.elementName.innerHTML = configurator.titreArrayHelmet[0] +  "<span class='number'>" + (configurator.numberArrayPosition + 1) + '/'+ configurator.titreArrayHelmet.length + "</span>";
-		const parts = `http://localhost:80/essai/content/themes/veldt/template-parts/configurator-helmet-step/${configurator.phpFileHelmet[configurator.numberArrayPosition]}.php`;
+		const parts = `http://192.168.1.101:8080/essai/content/themes/veldt/template-parts/configurator-helmet-step/${configurator.phpFileHelmet[configurator.numberArrayPosition]}.php`;
     fetch(parts)
 			.then(response => response.text())
 			.then(data => {
@@ -176,13 +191,16 @@ const configurator = {
 			configurator.numberArrayPosition = 0;
 		}
 		configurator.elementName.innerHTML = configurator.titreArrayHelmet[configurator.numberArrayPosition] +  "<span class='number'>" + (configurator.numberArrayPosition + 1) + '/'+ configurator.titreArrayHelmet.length + "</span>";
-		const parts = `http://localhost:80/essai/content/themes/veldt/template-parts/configurator-helmet-step/${configurator.phpFileHelmet[configurator.numberArrayPosition]}.php`;
+		const parts = `http://192.168.1.101:8080/essai/content/themes/veldt/template-parts/configurator-helmet-step/${configurator.phpFileHelmet[configurator.numberArrayPosition]}.php`;
     fetch(parts)
 			.then(response => response.text())
 			.then(data => {
 				document.querySelector('.template').innerHTML = data;
 				configurator.buttonChoice = document.querySelectorAll('.buttonChoice');
 				configurator.screwChoice = document.querySelectorAll('.allScrew');
+				configurator.roundColor = document.querySelectorAll('.roundColor');
+				configurator.buttonAdd = document.querySelector('.buttonAdd');
+				configurator.sizeButtonChoice = document.querySelectorAll('.SizebuttonChoice');
 				configurator.buttonChoiceListener();
 			})
 			.catch(error => console.log(error));

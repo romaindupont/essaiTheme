@@ -241,6 +241,7 @@ svg#menu_option {
 }
 .infos {
 	display: none;
+	width: 100vw;
 }
 
 
@@ -286,8 +287,15 @@ svg#menu_option {
 		text-align: left;
 	}
 	.allScrew {
-		width: 15%;
-		margin: 0.5rem; 
+		width: 50px;
+    margin: 0.5rem;
+    height: 50px;
+	}
+	.buttonChoice {	
+		margin: 0; 
+	}
+	.pattern::-webkit-scrollbar, .colorList::-webkit-scrollbar, .colorListType::-webkit-scrollbar {
+		height: 3px;
 	}
 }
 @media (min-width: 576px) { 
@@ -382,8 +390,19 @@ svg#menu_option {
 		text-align: center;
 	}
 	.allScrew {
-		width: 5%;
+		width: 80px;
+    margin: 0.5rem;
+    height: 80px;
+	}
+	.buttonChoice {	
 		margin: 1rem; 
+	}
+	.pattern::-webkit-scrollbar, .colorList::-webkit-scrollbar, .colorListType::-webkit-scrollbar, .sizeChoice::-webkit-scrollbar, .certifChoice::-webkit-scrollbar {
+		height: 5px;
+	}
+	.pattern {
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 }
 @media (min-width : 1224px) {
@@ -409,15 +428,61 @@ and (min-width : 1824px) {
 }
 
 /* Config helmet */
-
-.aeration, .pickerScrew, .pattern {
+.template {
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+/* 	width: 100%; */
+	margin: 1rem;
+}
+.pickerScrew, .varnish, .metalParts {
+	justify-content: center;
+}
+.aeration, .pickerScrew, .pattern, .shellColor, .varnish, .metalParts {
 	width: 100%;
 	display: flex;
-	justify-content: center;
+	/* justify-content: center; */
 	position: relative;
 	top: 50px;
+	height: 100%;
+}
+.pattern, .colorList {
+	overflow-x: scroll;
+	overflow-y: hidden;
+	display: flex;
+}
+.colorListType, .sizeChoice, .certifChoice {
+	overflow-x: scroll;
+	overflow-y: hidden;
+	margin-top: 1rem;
+	display: flex;
+	justify-content: center;
 }
 
+/* .pattern::-webkit-scrollbar, .colorList::-webkit-scrollbar, .colorListType::-webkit-scrollbar {
+	height: 3px;
+} */
+
+.pattern::-webkit-scrollbar-button:horizontal:increment {
+/* 	background-image: url('../../images/fleche.svg');
+	background-size: cover;
+	background-repeat: no-repeat; */
+}
+.pattern::-webkit-scrollbar-button:horizontal:decrement {
+/* 	background-image: url('../../images/fleche.svg');
+	transform: rotate(-45deg);
+	background-size: cover;
+	background-repeat: no-repeat; */
+}
+.chooseStyleNumber {
+	margin-top: 1rem;
+	display: flex;
+	justify-content: center;
+}
+.pattern::-webkit-scrollbar-thumb, .colorList::-webkit-scrollbar-thumb/* , .colorListType::-webkit-scrollbar-thumb */ {
+	background-color: #233658;
+	border-radius: 10px;
+}
 .aerationDisplay {
 	text-transform: uppercase;
 	color: #233658;
@@ -426,30 +491,34 @@ and (min-width : 1824px) {
 	justify-content: center;
 }
 
-.buttonChoice:hover {
+.buttonChoice:hover, .SizebuttonChoice:hover {
 	background: #233658;
 	color: #fff;
 }
-.buttonChoice:hover {
-		background: #233658;
-		color: #fff;
-}
 
-.buttonChoice, .buttonChoice {	
+.buttonChoice, .buttonAdd, .SizebuttonChoice {	
 	border: 1px solid #233658;
 	border-radius: 25px 25px 25px 25px;
 	padding: 10px 1rem;
-	width: 75px;
 	text-align: center;
 	cursor: pointer;
-  margin: 1rem; 
+}
+.buttonChoice, .SizebuttonChoice {
+  color: #233658;
+}
+.buttonAdd {
+	background: #233658;
+  color: #fff;
+	margin: 1rem;
+}
+.numberChoice {
+	display: flex;
+	justify-content: center;
 }
 .activeButton {
   background: #233658;
   color: #fff;
 }
-
-
 
 .elementChoice {
 	display: flex;
@@ -477,6 +546,7 @@ and (min-width : 1824px) {
 	flex-direction: column;
 	position: relative;
 	cursor: pointer;
+	align-items: center;
 }
 .allScrew:hover > .textAction {
 	visibility: visible;
@@ -515,4 +585,205 @@ and (min-width : 1824px) {
 		width: 100%;
 	}
 	
+}
+.carbon {
+	background: linear-gradient(320deg, rgba(187,187,187,1) 0%, rgba(43,29,26,1) 5%,rgba(187,187,187,1) 10%, rgba(43,29,26,1) 15%,rgba(187,187,187,1) 20%, rgba(43,29,26,1) 25%,rgba(187,187,187,1) 30%, rgba(43,29,26,1) 35%,rgba(187,187,187,1) 40%, rgba(43,29,26,1) 45%,rgba(187,187,187,1) 50%, rgba(43,29,26,1) 55%,rgba(187,187,187,1) 60%, rgba(43,29,26,1) 65%,rgba(187,187,187,1) 70%, rgba(43,29,26,1) 75%,rgba(187,187,187,1) 80%, rgba(43,29,26,1) 85%,rgba(187,187,187,1) 90%, rgba(43,29,26,1) 95%,rgba(187,187,187,1) 100%);
+}
+.white {
+	background: #fff;
+	border: 1px solid rgb(229,229,229);
+}
+.black {
+background: #000;
+}
+.coolGrey {
+ background: #9ea1a2;
+}
+.EstateBlue {
+ background: #1c355e;
+}
+.pirateGrey {
+ background: #636569;
+}
+.duskBlue {
+ background: #7ba0c4;
+}
+.doubleCream {
+ background: #f6dfa4;
+}
+.rallyBlue {
+ background: #0069a7;
+}
+.yellowIris {
+ background: #f3efa1;
+}
+.icebergGreen {
+ background: #9baeab;
+}
+.blazingYellow {
+ background: #fde021;
+}
+.greenDouble {
+ background: #9dd4ca;
+}
+.blazingOrange {
+ background: #ffad5f;
+}
+.limeGreen {
+ background: #61a60e;
+}
+.vermillion {
+ background: #ff5c35;
+}
+.greenGables {
+ background: #163029;
+}
+.orchidPink {
+ background: #fdbbcb;
+}
+.camel {
+ background: #ad7f66;
+}
+.plumPurple {
+ background: #60269e;
+}
+.brownStone {
+ background: #5e3c32;
+}
+.cayenneRed {
+ background: #f5333f;
+}
+.iridescentBlue {
+	background: linear-gradient(320deg, rgba(0,0,196,1) 0%, rgba(151,24,196,1) 35%, rgba(55,110,179,1) 65%, rgba(0,0,196,1) 100%);;
+}
+.chinesesRed {
+ background: #c10230;
+}
+.iridescentPink {
+	background: linear-gradient(320deg, rgba(61,180,177,1) 0%, rgba(211,153,255,1) 28%, rgba(253,175,255,1) 50%, rgba(211,153,255,1) 75%, rgba(61,180,177,1) 100%);
+}
+.fluoYellow {
+ background: #ffe800;
+}
+.fluoPink {
+ background: #ff40b4;
+}
+.copperFoil {
+	background: linear-gradient(320deg, rgba(43, 29, 26, 1) 0%, rgba(255,141,0,1) 50%, rgba(184,115,51,1) 75%, rgba(68,55,12,1) 100%);
+}
+.goldFoil {
+	background: linear-gradient(320deg, rgba(43, 29, 26, 1) 0%, rgba(255,252,0,1) 50%, rgba(212,175,55,1) 75%, rgba(68,55,12,1) 100%);
+}
+.silverFoil {
+	background: linear-gradient(320deg, rgba(45,45,45,1) 0%, rgba(255,255,255,1) 50%, rgba(192,192,192,1) 75%, rgba(5,5,5,1) 100%);
+}
+.titan {
+	background: #8d847e;
+}
+.colorP {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.roundColor {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	cursor: pointer;
+	margin: 1rem;
+}
+.roundColor:hover + .textAction {
+	visibility: visible;
+	position: relative;
+}
+.roundColor:hover + .textAction::after {
+	content: "";
+	width: 100%;
+	height: 4px;
+	position: absolute;
+	bottom: -6px;
+	background: #233658;
+	left: 0;
+	animation: widthLine 200ms forwards ease-in-out;
+	}
+.roundColor + .textAction {
+	text-align: center;
+	visibility: hidden;
+	width: 100%;
+}
+
+.activeColor {
+	position: relative;
+}
+.activeColor::after {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 1px solid #233856;
+	content: '';
+	position: absolute;
+	top: -6px;
+	left: -6px;
+}
+
+.activeColor + .textAction {
+	visibility: visible !important;
+	}
+.activeColor + .textAction::after {
+	content: "";
+	height: 4px;
+	position: absolute;
+	bottom: -10px;
+	background: #233658;
+	left: 0;
+	width: 100%;
+}
+
+.numberWindows {
+	display: none;
+	background: #fff;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 100px;
+	flex-direction: column;
+	align-items: center;
+}
+
+.infosNumber {
+	width: 400px;
+	font-size: 1rem;
+	text-transform: uppercase;
+	font-weight: 600;
+	color: var(--color-principal);
+	text-align: center;
+	margin-top: 0.5rem;
+}
+.chooseWindows {
+	display: flex;
+	flex-direction: column;
+}
+.chooseWindows_input {
+	display: flex;
+	flex-direction: column;
+	margin: 0.5rem 1rem;
+}
+input#numberSelection {
+	height: 40px;
+	text-align: center;
+}
+.selectButtonNumber {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 1rem;
+}
+
+.selectButtonNumber > svg {
+	width: 40px;
+	height: 40px;
+}
+.allScrew > svg {
+	width: 50px;
+	height: 50px;
 }
