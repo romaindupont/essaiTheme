@@ -404,10 +404,13 @@ svg#menu_option {
 		flex-wrap: wrap;
 		justify-content: center;
 	}
+	.inputVisorChoice {
+		justify-content: center;
+	}
 }
 @media (min-width : 1224px) {
 	footer.footer-configurator {
-    bottom: -60%;
+    bottom: -80%;
 	}
 	.sd-tabs > .sd-tab-label::after,
 	.sd-tabs > .sd-tab-label::before {
@@ -457,6 +460,7 @@ and (min-width : 1824px) {
 	margin-top: 1rem;
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 }
 
 /* .pattern::-webkit-scrollbar, .colorList::-webkit-scrollbar, .colorListType::-webkit-scrollbar {
@@ -502,6 +506,7 @@ and (min-width : 1824px) {
 	padding: 10px 1rem;
 	text-align: center;
 	cursor: pointer;
+	text-transform: uppercase;
 }
 .buttonChoice, .SizebuttonChoice {
   color: #233658;
@@ -556,7 +561,7 @@ and (min-width : 1824px) {
 	height: 4px;
 	position: absolute;
 	bottom: -10px;
-	background: #233658;
+	background: var(--color-principal);
 	left: 0;
 	animation: widthLine 200ms forwards ease-in-out;
 }
@@ -568,7 +573,7 @@ and (min-width : 1824px) {
 	height: 4px;
 	position: absolute;
 	bottom: -10px;
-	background: #233658;
+	background: var(--color-principal);
 	left: 0;
 	width: 100%;
 }
@@ -702,7 +707,7 @@ background: #000;
 	height: 4px;
 	position: absolute;
 	bottom: -6px;
-	background: #233658;
+	background: var(--color-principal);
 	left: 0;
 	animation: widthLine 200ms forwards ease-in-out;
 	}
@@ -734,7 +739,7 @@ background: #000;
 	height: 4px;
 	position: absolute;
 	bottom: -10px;
-	background: #233658;
+	background: var(--color-principal);
 	left: 0;
 	width: 100%;
 }
@@ -786,4 +791,39 @@ input#numberSelection {
 .allScrew > svg {
 	width: 50px;
 	height: 50px;
+}
+
+.inputVisorChoice {
+	width: 100vw;
+	position: relative;
+	display: flex;
+	margin: 1rem 0;
+	justify-content: center;
+}
+
+.inputVisor {
+	position: absolute;
+	opacity: 0;
+}
+
+.frame {
+	display: none;
+	justify-content: center;
+}
+.long_visor_page, .short_visor_page, .peak_visor_page {
+	display: none;
+	margin: 1rem 5px;
+	justify-content: center;
+	width: 100%;
+}
+.peak_visor_page {
+	flex-direction: column;
+}
+
+.peak_visor_page > .colorListType {
+	flex-wrap: wrap;
+}
+
+.menu_option {
+	display: none;
 }

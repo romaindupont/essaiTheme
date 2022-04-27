@@ -56,9 +56,9 @@
 			"helpMessage" : "Choose the material interior for your helmet"
 		},
 		"rush": {
-			"title": "rush",
-			"phpFile":"rush",
-			"helpMessage" : "Choose color and rush material"
+			"title": "trim",
+			"phpFile":"trim",
+			"helpMessage" : "Choose color and trim material"
 		},
 		"metal-parts": {
 			"title": "metal parts",
@@ -80,6 +80,48 @@
 			"phpFile":"size",
 			"helpMessage" : "Choose the helmet size and the certification"
 		}	
+	},
+	"chinguardElement" : {
+		"aeration": {
+			"title": "aeration",
+			"phpFile": "aeration",
+			"helpMessage" : "Choose if you want aeration or not"
+			},
+			"pattern": {
+				"title": "pattern",
+				"phpFile":"pattern",
+				"helpMessage" : "Choose the pattern style you want"
+			},
+			"main-color": {
+				"title": "main color",
+				"phpFile":"main-color",
+				"helpMessage" : "Choose the main color"
+			},
+			"pattern-color": {
+				"title": "pattern color",
+				"phpFile": "pattern-color",
+				"helpMessage" : "Choose the pattern color and finishing"
+			},
+			"varnish": {
+				"title": "varnish",
+				"phpFile":"varnish",
+				"helpMessage" : "Choose the finishing varnish"
+			},
+			"interior": {
+				"title": "interior",
+				"phpFile":"interior",
+				"helpMessage" : "Choose the material interior for your helmet"
+			},
+			"rush": {
+				"title": "trim",
+				"phpFile":"trim",
+				"helpMessage" : "Choose color and trim material"
+			},
+			"metal-parts": {
+				"title": "metal parts",
+				"phpFile":"metal-parts",
+				"helpMessage" : "Choose the color of the metal parts"
+			}
 	}
 
 }

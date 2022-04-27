@@ -212,7 +212,7 @@ and (max-device-width : 768px) {
 		align-items: none;
 		margin-right: 0;
 		position: absolute;
-		bottom: 40%;
+		bottom: 50%;
 		width: 100vw;
 		justify-content: none;
     align-items: none;

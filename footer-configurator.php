@@ -73,4 +73,5 @@
 			<?php get_template_part('template-parts/configurator-visor'); ?>	
 		</div>
 	</div>
+	<div class="menu_option"></div>
 </footer>

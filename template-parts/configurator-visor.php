@@ -1,3 +1,3 @@
 <div class="infos visor">
-	visor
+	<div class="template"></div>
 </div>
