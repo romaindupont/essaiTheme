@@ -1,5 +1,5 @@
 <?php get_header('configurator'); ?>
-<main class="configurator">
+<main class="configurator" id="configurator">
 
 </main>
 <?php get_footer('configurator'); ?>

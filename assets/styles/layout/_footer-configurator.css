@@ -799,6 +799,9 @@ input#numberSelection {
 	bottom: 80vh;
 	z-index: 94;
 }
+.openMenuOption {
+	bottom: 50vh;
+}
 
 .menu_option > #closeOption {
 	width: 40px;

@@ -57,10 +57,11 @@ const configurator = {
 		configurator.logoMenuOption = document.querySelector('#menu_option');
 		configurator.menuOption = document.querySelector('.menu_option');
 		configurator.logoCloseMenuOption = document.querySelector('#closeOption'); 
-		
+		configurator.localHosting = 'localhost';
+		/* configurator.localHosting = '192.168.1.101:8080'; */
   },
 	jsonFileImport: function() {
-		const json = 'http://192.168.1.101:8080/essai/content/themes/veldt/dist/json/helmetElement.json';
+		const json = `http://${configurator.localHosting}/essai/content/themes/veldt/dist/json/helmetElement.json`;
     fetch(json)
 			.then(response => response.json())
 			.then(data => {
@@ -120,6 +121,7 @@ const configurator = {
   },
 	handleOpenCloseTabs: function() {
 		configurator.footerConfigurator.classList.toggle('openIt');	
+		configurator.menuOption.classList.toggle('openMenuOption');
 	},
 	buttonChoiceListener: function() {
 		configurator.buttonChoice.forEach(button => button.addEventListener('click', (e) => {
@@ -195,8 +197,9 @@ const configurator = {
 			configurator.helpMessageHelmet.push(configurator.dataJson.helmetElement[`${obj}`].helpMessage);
 		}
 		configurator.elementName.innerHTML = configurator.titreArrayHelmet[0] +  "<span class='number'>" + (configurator.numberArrayPosition + 1) + '/'+ configurator.titreArrayHelmet.length + "</span>";
-		const parts = `http://192.168.1.101:8080/essai/content/themes/veldt/template-parts/configurator-helmet-step/${configurator.phpFileHelmet[configurator.numberArrayPosition]}.php`;
-    fetch(parts)
+/* 		const parts = `http://192.168.1.101:8080/essai/content/themes/veldt/template-parts/configurator-helmet-step/${configurator.phpFileHelmet[configurator.numberArrayPosition]}.php`;
+ */		const parts = `http://${configurator.localHosting}/essai/content/themes/veldt/template-parts/configurator-helmet-step/${configurator.phpFileHelmet[configurator.numberArrayPosition]}.php`;	
+		fetch(parts)
 			.then(response => response.text())
 			.then(data => {
 				document.querySelector('.template').innerHTML = data;
@@ -214,7 +217,7 @@ const configurator = {
 			configurator.helpMessageChin.push(configurator.dataJson.chinguardElement[`${obj}`].helpMessage);
 		}
 		configurator.chinguardElementName.innerHTML = configurator.titreArrayChin[0] +  "<span class='number'>" + (configurator.numberArrayPosition + 1) + '/'+ configurator.titreArrayChin.length + "</span>";
-		const parts = `http://192.168.1.101:8080/essai/content/themes/veldt/template-parts/configurator-chinguard-step/${configurator.phpFileChin[configurator.numberArrayPosition]}.php`;
+		const parts = `http://${configurator.localHosting}/essai/content/themes/veldt/template-parts/configurator-chinguard-step/${configurator.phpFileChin[configurator.numberArrayPosition]}.php`;
     fetch(parts)
 			.then(response => response.text())
 			.then(data => {
@@ -226,7 +229,7 @@ const configurator = {
 			.catch(error => console.log(error));
 	},
 	initVisorElement: function() {
-		const parts = `http://192.168.1.101:8080/essai/content/themes/veldt/template-parts/configurator-visor-step/visor.php`;
+		const parts = `http://${configurator.localHosting}/essai/content/themes/veldt/template-parts/configurator-visor-step/visor.php`;
     fetch(parts)
 			.then(response => response.text())
 			.then(data => {
@@ -273,7 +276,7 @@ const configurator = {
 				configurator.numberArrayPosition = 0;
 			}
 			configurator.elementName.innerHTML = configurator.titreArrayHelmet[configurator.numberArrayPosition] +  "<span class='number'>" + (configurator.numberArrayPosition + 1) + '/'+ configurator.titreArrayHelmet.length + "</span>";
-			const parts = `http://192.168.1.101:8080/essai/content/themes/veldt/template-parts/configurator-helmet-step/${configurator.phpFileHelmet[configurator.numberArrayPosition]}.php`;
+			const parts = `http://${configurator.localHosting}/essai/content/themes/veldt/template-parts/configurator-helmet-step/${configurator.phpFileHelmet[configurator.numberArrayPosition]}.php`;
 			fetch(parts)
 				.then(response => response.text())
 				.then(data => {
@@ -295,7 +298,7 @@ const configurator = {
 					configurator.numberArrayPosition = 0;
 				}
 				configurator.chinguardElementName.innerHTML = configurator.titreArrayChin[configurator.numberArrayPosition] +  "<span class='number'>" + (configurator.numberArrayPosition + 1) + '/'+ configurator.titreArrayChin.length + "</span>";
-				const parts = `http://192.168.1.101:8080/essai/content/themes/veldt/template-parts/configurator-chinguard-step/${configurator.phpFileChin[configurator.numberArrayPosition]}.php`;
+				const parts = `http://${configurator.localHosting}/essai/content/themes/veldt/template-parts/configurator-chinguard-step/${configurator.phpFileChin[configurator.numberArrayPosition]}.php`;
 				fetch(parts)
 					.then(response => response.text())
 					.then(data => {
