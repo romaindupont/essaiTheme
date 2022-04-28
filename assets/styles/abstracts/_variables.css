@@ -1,8 +1,34 @@
 :root {
 	--color-principal: #233658;
+	--color-second: #fff;
 	--color-subMenu: #333;
 	--color-border-bottom-header: #c9c9c9;
 	--breakpoints-small: 767px;
 	--breakpoints-medium: 992px;
 	--breakpoints-large: 1200px;
+	--background-menu : #fff;
+	--header-background: #fff;
+	--menu-border-color: #f1f1f2;
+	--button-config-color:#fff;
+	--button-config-bg-color:#233658;
+	--price-config-color:#233658;
+	--comments-price-config-color: #726f6f; 
+	--background-page-config: #f2f2f2;
+	--main-bg-color-light: rgba(255, 255, 255);
+	--tabs-hover-color : #fff;
+	--tabs-text-color: rgb(88, 92, 95);
+	--tabs-height: 2.2rem;
+	--tabs-selected-text-color: rgb(47, 48, 49);
+	--tabs-selected-bg-color: var(--main-bg-color-light);
+	--tabs-header-bg-color: rgb(231, 234, 236);
+  --tabs-bg-color: var(--tabs-header-bg-color);
+	--tabs-hover-bg-color: rgb(240, 243, 245);
+	--tabs-hover-text-color: rgb(88, 92, 95);
+	--tabs-border-color: #233658;
+	--tabs-content: #fff;
+	--tabs-notChecked-color: #939598;
+	--eye-off-fillColor: #939598;
+	--main-fillSvg-color: #233658;
+	--scrollbar-bg-color:#233658;
 }
+

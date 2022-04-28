@@ -24,13 +24,15 @@ function veldt_theme_enqueue_scripts() {
 		[],
 		'20220413'
 	);  */
+	if(!is_page('configurator')){
 	wp_enqueue_script(
 		'veldt-script',
-		get_theme_file_uri('dist/main.js'),
+		get_theme_file_uri('dist/js/menu.js'),
 		[],
 		'20220413',
 		true
 	);
+}
 	if(is_page('configurator')){
 		wp_enqueue_script(
 			'veldt-configurator-script',

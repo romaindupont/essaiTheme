@@ -1,32 +1,9 @@
-:root {
-  /** * THEME LIGHT */
-  --main-bg-color-light: rgba(255, 255, 255);
-  /* tabs colors */
-  --tabs-header-bg-color: rgb(231, 234, 236);
-  --tabs-bg-color: var(--tabs-header-bg-color);
-  --tabs-selected-bg-color: var(--main-bg-color-light);
-  --tabs-hover-bg-color: rgb(240, 243, 245);
-  --tabs-text-color: rgb(88, 92, 95);
-  --tabs-hover-text-color: rgb(88, 92, 95);
-  --tabs-selected-text-color: rgb(47, 48, 49);
-  --tabs-height: 2.2rem;
-  /** * THEME DARK */
-  --main-bg-color-dark: rgb(49, 53, 57);
-  /* tabs colors */
-  --dark-tabs-header-bg-color: rgb(31, 32, 35);
-  --dark-tabs-bg-color: var(--main-bg-color-dark);
-  --dark-tabs-selected-bg-color: var(--dark-tabs-header-bg-color);
-  --dark-tabs-hover-bg-color: #25282b;
-  --dark-tabs-text-color: rgb(134, 136, 138);
-  --dark-tabs-hover-text-color: rgb(255, 255, 255);
-  --dark-tabs-selected-text-color: rgb(221, 226, 231);
-}
 .sd-tabs {
   display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
   margin: 0;
-  background: #f2f2f2;
+  background: var(--background-page-config);
   padding-top: 0.075rem;
   position: relative;
   height: 100%;
@@ -53,7 +30,7 @@
 	text-align: center;
 }
 .sd-tabs > .sd-tab-label:hover {
-	background: #fff;
+	background: var(--tabs-hover-color);
 	box-shadow: -8px 0px 0 -7px rgb(0 0 0 / 25%);
 	color: var(--tabs-text-color);
 	border-top: 2px solid rgba(0, 0, 0, 0.25);
@@ -87,7 +64,7 @@
 }
 .sd-tabs > .sd-tab-radio:checked + .sd-tab-label::before {
 	border-radius: 0 0 15px 0;
-	border-bottom: 3px solid #233658;
+	border-bottom: 3px solid var(--tabs-border-color);
   opacity: 1;
 }
 .sd-tabs > .sd-tab-radio:checked + .sd-tab-label::before {
@@ -95,7 +72,7 @@
 }
 .sd-tabs > .sd-tab-radio:checked + .sd-tab-label::after {
   border-radius: 0 0 0 15px;
-	border-bottom: 3px solid #233658;
+	border-bottom: 3px solid var(--tabs-border-color);
   opacity: 1;
 }
 .sd-tabs > .sd-tab-radio:checked + .sd-tab-label::after {
@@ -104,9 +81,9 @@
 .sd-tabs > .sd-tab-radio:checked + .sd-tab-label {
   background-color: var(--tabs-selected-bg-color);
   color: var(--tabs-selected-text-color);
-	border-top: 2px solid #233658;
-  border-left: 2px solid #233658;
-  border-right: 2px solid #233658;
+	border-top: 2px solid var(--tabs-border-color);
+  border-left: 2px solid var(--tabs-border-color);
+  border-right: 2px solid var(--tabs-border-color);
 	border-radius: 14px 14px 0 0;
   z-index: 4;
 }
@@ -117,23 +94,20 @@
 .sd-tabs > .sd-tab-content {
   flex-basis: 100%;
   display: none;
-  background-color: white;
+  background-color: var(--tabs-content);
   box-shadow: inset 0px 0px 0 1px var(--tabs-selected-bg-color);
   flex-direction: column;
   border-radius: 0 0 5px 5px;
   overflow: auto;
 	height: 600px;
-	border-top: 3px solid #233658;
+	border-top: 3px solid var(--tabs-border-color);
 }
-.sd-tabs > .break {
-  background-color: aqua;
-  flex-basis: 100%;
-}
+
 .sd-tabs > .sd-tab-radio:checked + .sd-tab-label + .sd-tab-content {
   display: block;
 }
 .sd-tabs > .sd-tab-radio:not(:checked) + .sd-tab-label .sd-tab-desc {
-	color: #939598;
+	color: var(--tabs-notChecked-color);
 }
 .sd-tabs > .sd-tab-label .sd-tab-desc {
   display: block;
@@ -190,10 +164,10 @@ footer.footer-configurator {
 	width: 100vw;
 }
 .eye_on{
-	fill:#233658;
+	fill:var(--main-fillSvg-color);
 }
 .eye_off{
-	fill:#939598;
+	fill:var(--eye-off-fillColor);
 }
 svg#eye, #eye {
 	position: absolute;
@@ -206,7 +180,7 @@ svg#eye, #eye {
 svg#down {
 	position: absolute;
 	width: 40px;
-	z-index: 110;
+	z-index: 94;
 	height: 40px;
 	transform: rotate(180deg);
 	cursor: pointer;
@@ -220,7 +194,7 @@ svg#down {
 	transform: rotate(0deg);
 }
 .down{
-	fill:#233658;
+	fill:var(--main-fillSvg-color);
 }
 svg#export {
 	width: 40px;
@@ -257,7 +231,7 @@ svg#menu_option {
 		right: -10%;
 	}
 	footer.footer-configurator {
-    bottom: -30%;
+    bottom: -40%;
 	}
 	svg#eye, #eye {
 		right: 45px;
@@ -271,7 +245,7 @@ svg#menu_option {
 		display: none;
 	}
 	svg#export {
-		top: -98%;
+		top: -82%;
 		right: 15px;
 	}
 	svg#menu_option {
@@ -287,15 +261,21 @@ svg#menu_option {
 		text-align: left;
 	}
 	.allScrew {
-		width: 50px;
+		width: 60px;
     margin: 0.5rem;
-    height: 50px;
+    height: 60px;
 	}
 	.buttonChoice {	
 		margin: 0; 
 	}
 	.pattern::-webkit-scrollbar, .colorList::-webkit-scrollbar, .colorListType::-webkit-scrollbar {
 		height: 3px;
+	}
+	label.sd-tab-label.label2 {
+    left: -1px;
+	}
+	label.sd-tab-label.label3 {
+		left: -2px;
 	}
 }
 @media (min-width: 576px) { 
@@ -435,7 +415,6 @@ and (min-width : 1824px) {
 	justify-content: center;
 	display: flex;
 	flex-direction: column;
-/* 	width: 100%; */
 	margin: 1rem;
 }
 .pickerScrew, .varnish, .metalParts {
@@ -444,7 +423,6 @@ and (min-width : 1824px) {
 .aeration, .pickerScrew, .pattern, .shellColor, .varnish, .metalParts {
 	width: 100%;
 	display: flex;
-	/* justify-content: center; */
 	position: relative;
 	top: 50px;
 	height: 100%;
@@ -463,45 +441,31 @@ and (min-width : 1824px) {
 	flex-wrap: wrap;
 }
 
-/* .pattern::-webkit-scrollbar, .colorList::-webkit-scrollbar, .colorListType::-webkit-scrollbar {
-	height: 3px;
-} */
-
-.pattern::-webkit-scrollbar-button:horizontal:increment {
-/* 	background-image: url('../../images/fleche.svg');
-	background-size: cover;
-	background-repeat: no-repeat; */
-}
-.pattern::-webkit-scrollbar-button:horizontal:decrement {
-/* 	background-image: url('../../images/fleche.svg');
-	transform: rotate(-45deg);
-	background-size: cover;
-	background-repeat: no-repeat; */
-}
 .chooseStyleNumber {
 	margin-top: 1rem;
 	display: flex;
 	justify-content: center;
 }
 .pattern::-webkit-scrollbar-thumb, .colorList::-webkit-scrollbar-thumb/* , .colorListType::-webkit-scrollbar-thumb */ {
-	background-color: #233658;
+	background-color: var(--scrollbar-bg-color);
 	border-radius: 10px;
 }
 .aerationDisplay {
 	text-transform: uppercase;
-	color: #233658;
+	color: var(--color-principal);
 	width: 100%;
 	display: flex;
 	justify-content: center;
 }
 
 .buttonChoice:hover, .SizebuttonChoice:hover {
-	background: #233658;
-	color: #fff;
+  background:var(--color-second);
+  color: var(--color-principal);
+	border: 3px solid var(--color-principal);
+
 }
 
 .buttonChoice, .buttonAdd, .SizebuttonChoice {	
-	border: 1px solid #233658;
 	border-radius: 25px 25px 25px 25px;
 	padding: 10px 1rem;
 	text-align: center;
@@ -509,11 +473,12 @@ and (min-width : 1824px) {
 	text-transform: uppercase;
 }
 .buttonChoice, .SizebuttonChoice {
-  color: #233658;
+  color: var(--tabs-text-color);
+	border: 3px solid var(--color-border-bottom-header);
 }
 .buttonAdd {
-	background: #233658;
-  color: #fff;
+	background:  var(--color-principal);
+  color:  var(--color-second);
 	margin: 1rem;
 }
 .numberChoice {
@@ -521,8 +486,9 @@ and (min-width : 1824px) {
 	justify-content: center;
 }
 .activeButton {
-  background: #233658;
-  color: #fff;
+  background:var(--color-second);
+  color: var(--color-principal);
+	border: 3px solid var(--color-principal);
 }
 
 .elementChoice {
@@ -724,7 +690,7 @@ background: #000;
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
-	border: 1px solid #233856;
+	border: 1px solid var(--color-principal);
 	content: '';
 	position: absolute;
 	top: -6px;
@@ -746,7 +712,7 @@ background: #000;
 
 .numberWindows {
 	display: none;
-	background: #fff;
+	background: var(--color-second);
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -826,4 +792,19 @@ input#numberSelection {
 
 .menu_option {
 	display: none;
+	background: #fff;
+	width: 100vw;
+	height: 50vh;
+	position: absolute;
+	bottom: 80vh;
+	z-index: 94;
+}
+
+.menu_option > #closeOption {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
 }

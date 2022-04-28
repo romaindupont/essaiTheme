@@ -1,5 +1,5 @@
 body {
-	background-color: #f2f2f2;
+	background-color: var(--background-page-config);
 	overflow-y: hidden;
 }
 .configurator-header {
@@ -31,37 +31,36 @@ body {
 	flex-direction: column;
 }
 .header-configurator-left-title-2 {
-color: #726f6f;
-font-size: 1.3rem;
-text-transform: uppercase;
-font-weight: 700;
+	color: var(--comments-price-config-color);
+	font-size: 1.3rem;
+	text-transform: uppercase;
+	font-weight: 700;
 }
 .header-configurator-right {
-width: 50vw;
-height: 15vh;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-end;
-margin-right: 4rem;
+	width: 50vw;
+	height: 15vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+	margin-right: 4rem;
 }
 .header-configurator-right-priceZone {
 	display: flex;
 	align-items: center;
 }
 .header-configurator-right-priceZone-price {
-color: #233658;
-font-size: 1.5rem;
-font-weight: 900;
-padding: 1rem 1rem;
-
+	color: var(--price-config-color);
+	font-size: 1.5rem;
+	font-weight: 900;
+	padding: 1rem 1rem;
 }
 button.header-configurator-right-priceZone-buy {
-	background: #233658;
+	background: var(--button-config-bg-color);
 	border-radius: 25px;
 	padding: 0.5rem 1.2rem;
 	text-transform: uppercase;
-	color: #fff;
+	color: var(--button-config-color);
 	font-size: 1rem;
 	cursor: pointer;
 	letter-spacing: 0.2rem;
@@ -69,7 +68,6 @@ button.header-configurator-right-priceZone-buy {
 .first_menu-configurator-nav {
   width: 100%;
   height: 100vh;
-  /* margin-top: 3rem; */
 }
 .first_menu-configurator-nav > #menu-main-menu {
 	display: grid;
@@ -89,7 +87,6 @@ button.header-configurator-right-priceZone-buy {
 	height: 40px;
 	background-repeat: no-repeat;
 	background-size: contain;
-	/* background-position: bottom; */
 	right: -100px;
 }
 	
@@ -100,9 +97,18 @@ button.header-configurator-right-priceZone-buy {
 	width: 25vw;
 	position: fixed;
 	top: 0;
-	left: 20%;
+	left: -200%;
 	margin: 0;
 	padding: 0;
+	animation: menuMobileSubAppear 1s forwards ease-in-out;
+}
+@keyframes menuMobileSubAppear {
+	0% {
+		left: -50%;
+	}
+	100% {
+		left: 20%;
+	}
 }
 .first_menu-configurator-nav > #menu-main-menu > .mark1 > .menu-depth-1 > .SubmenuTitle,
 .first_menu-configurator-nav > #menu-main-menu > .mark1 > .menu-depth-1 > .helmetImage,
@@ -155,13 +161,13 @@ button.header-configurator-right-priceZone-buy {
   display: flex;
 	visibility: visible;
   position: absolute;
-  background: white;
+  background: var(--background-menu);
   z-index: 99;
   top: 0;
   left: -25%;
   width: 20%;
   height: 100vh;
-  border-right: 2px solid #f1f1f2;
+  border-right: 2px solid var(--menu-border-color);
 	flex-direction: column;
 	transition: left 600ms ease-in-out;
 }
@@ -212,7 +218,7 @@ and (max-device-width : 768px) {
 		align-items: none;
 		margin-right: 0;
 		position: absolute;
-		bottom: 50%;
+		bottom: 40%;
 		width: 100vw;
 		justify-content: none;
     align-items: none;
@@ -229,21 +235,27 @@ and (max-device-width : 768px) {
 	}
 	.first_menu-configurator-nav > #menu-main-menu {
 		align-content: space-evenly;
-		justify-items: center;
-	}
-	.first_menu-configurator-nav > #menu-main-menu > .menu-item > a{
-		font-size: 1.5rem;
+		justify-items: flex-start;
 	}
 	.header-configurator-right-priceZone-price {
     margin-right: 0rem;
 	}
 	.first_menu-configurator-nav > #menu-main-menu > .mark1 > .menu-depth-1,  .first_menu-configurator-nav > #menu-main-menu > .mark2 > .menu-depth-1 {
-		background: #fff;
+		background: var(--background-menu);
 		width: 100vw;
 		z-index: 10;
-		left: 0;
-		margin: 1rem 2rem;
+		left: -200%;
+		padding: 1rem 2rem;
 		top: -10px;
+		animation: menuMobileSubAppear 1s forwards ease-in-out;
+	}
+	@keyframes menuMobileSubAppear {
+		0% {
+			left: -200%;
+		}
+		100% {
+			left: 0;
+		}
 	}
 	.closeMenu {
 		right: 100px;
@@ -280,13 +292,13 @@ and (max-device-width : 1024px) {
     margin-right: 0rem;
 	}
 	.first_menu-configurator-nav > #menu-main-menu > .mark1 > .menu-depth-1,  .first_menu-configurator-nav > #menu-main-menu > .mark2 > .menu-depth-1 {
-		background: #fff;
+		background: var(--background-menu);
 		width: 100vw;
 		z-index: 10;
 		left: 0;
 		margin: 1rem 2rem;
 		top: -10px;
-	}
+	}	
 	.closeMenu {
 		right: 100px;
 	}
@@ -299,39 +311,4 @@ and (max-device-width : 1024px) {
 	.personnalize {
     text-align: right;
 	}
-}
-
-/* iPads (landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape) {
-/* Styles */
-}
-
-/* iPads (portrait) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) {
-/* Styles */
-}
-
-/* Desktops and laptops ----------- */
-@media only screen 
-and (min-width : 1224px) {
-/* Styles */
-}
-
-/* Large screens ----------- */
-@media only screen 
-and (min-width : 1824px) {
-/* Styles */
-}
-
-/* iPhone 4 ----------- */
-@media
-only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-/* Styles */
 }

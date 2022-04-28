@@ -54,6 +54,9 @@ const configurator = {
 		configurator.phpFileHelmet = [];
 		configurator.helpMessageHelmet = [];
 		configurator.numberArrayPosition = 0;
+		configurator.logoMenuOption = document.querySelector('#menu_option');
+		configurator.menuOption = document.querySelector('.menu_option');
+		configurator.logoCloseMenuOption = document.querySelector('#closeOption'); 
 		
   },
 	jsonFileImport: function() {
@@ -71,6 +74,8 @@ const configurator = {
 	OpenCloseMenu: function() {
     configurator.menu.addEventListener('click', configurator.handleMenuOpen);
 		configurator.close.addEventListener('click', configurator.handleMenuClose);
+		configurator.logoMenuOption.addEventListener('click',(e) => configurator.menuOption.style.display = 'grid');
+		configurator.logoCloseMenuOption.addEventListener('click',(e) => configurator.menuOption.style.display = 'none');
   },
 	handleMenuOpen: function() {
     configurator.firstMenu.style.visibility = configurator.firstMenu.style.visibility === 'visible' ? 'visible' : 'visible';
