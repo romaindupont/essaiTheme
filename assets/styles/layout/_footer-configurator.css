@@ -217,8 +217,44 @@ svg#menu_option {
 	display: none;
 	width: 100vw;
 }
-
-
+.info_logo {
+	position: absolute;
+	display: none;
+}
+.popupHelp {
+	display: none;
+	position: fixed;
+	width: 25%;
+	height: 10%;
+	background: #726f6f;;
+	bottom: 30%;
+	z-index: 101;
+	box-shadow: 0px 0px 5px 1px black;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border-radius: 15px;
+	color: #fff;
+}
+.popupHelp > #popupHelp_closeLogo {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	cursor: pointer;
+}
+.crossWhite {
+	fill: #fff;
+}
+.messagesHelp {
+	text-align: center;
+	margin-top: 1.4rem;
+	text-transform: uppercase;
+	font-size: 0.7rem;
+	font-style: italic;
+	width: 100%;
+	flex-wrap: wrap;
+}
 @media (min-width : 320px) {
 	.sd-tabs > .sd-tab-label::after,
 	.sd-tabs > .sd-tab-label::before {
@@ -268,7 +304,7 @@ svg#menu_option {
 	.buttonChoice {	
 		margin: 0; 
 	}
-	.pattern::-webkit-scrollbar, .colorList::-webkit-scrollbar, .colorListType::-webkit-scrollbar {
+	.patternList::-webkit-scrollbar, .colorList::-webkit-scrollbar, .colorListType::-webkit-scrollbar {
 		height: 3px;
 	}
 	label.sd-tab-label.label2 {
@@ -277,6 +313,15 @@ svg#menu_option {
 	label.sd-tab-label.label3 {
 		left: -2px;
 	}
+	.info_logo {
+		display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -110px;
+    left: 40px;
+	}
+
 }
 @media (min-width: 576px) { 
 	.sd-tabs > .sd-tab-label::after,
@@ -377,15 +422,27 @@ svg#menu_option {
 	.buttonChoice {	
 		margin: 1rem; 
 	}
-	.pattern::-webkit-scrollbar, .colorList::-webkit-scrollbar, .colorListType::-webkit-scrollbar, .sizeChoice::-webkit-scrollbar, .certifChoice::-webkit-scrollbar {
+	.patternList::-webkit-scrollbar, .colorList::-webkit-scrollbar, .colorListType::-webkit-scrollbar, .sizeChoice::-webkit-scrollbar, .certifChoice::-webkit-scrollbar {
 		height: 5px;
 	}
-	.pattern {
+	.patternList {
 		flex-wrap: wrap;
 		justify-content: center;
 	}
 	.inputVisorChoice {
 		justify-content: center;
+	}
+	.info_logo {
+		display: none;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+		top: 58px;
+    left: 200px;
+    z-index: 51;
+	}
+	.logoAppear {
+		display: block;
 	}
 }
 @media (min-width : 1224px) {
@@ -417,21 +474,22 @@ and (min-width : 1824px) {
 	flex-direction: column;
 	margin: 1rem;
 }
-.pickerScrew, .varnish, .metalParts {
+.pickerScrew, .varnishList, .metalParts {
 	justify-content: center;
 }
-.aeration, .pickerScrew, .pattern, .shellColor, .varnish, .metalParts {
+.aerationList, .pickerScrew, .patternList, .shellColor, .varnishList, .metalParts {
 	width: 100%;
 	display: flex;
 	position: relative;
 	top: 50px;
 	height: 100%;
 }
-.pattern, .colorList {
+.patternList, .colorList {
 	overflow-x: scroll;
 	overflow-y: hidden;
 	display: flex;
 }
+
 .colorListType, .sizeChoice, .certifChoice {
 	overflow-x: scroll;
 	overflow-y: hidden;
@@ -446,7 +504,7 @@ and (min-width : 1824px) {
 	display: flex;
 	justify-content: center;
 }
-.pattern::-webkit-scrollbar-thumb, .colorList::-webkit-scrollbar-thumb/* , .colorListType::-webkit-scrollbar-thumb */ {
+.patternList::-webkit-scrollbar-thumb, .colorList::-webkit-scrollbar-thumb/* , .colorListType::-webkit-scrollbar-thumb */ {
 	background-color: var(--scrollbar-bg-color);
 	border-radius: 10px;
 }
@@ -789,7 +847,16 @@ input#numberSelection {
 .peak_visor_page > .colorListType {
 	flex-wrap: wrap;
 }
-
+.menu_option > div {
+	height: 100%;
+}
+.menu_option > div > div {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	height: 70%;
+	column-gap: 1.5rem;
+}
 .menu_option {
 	display: none;
 	background: #fff;
@@ -798,11 +865,29 @@ input#numberSelection {
 	position: absolute;
 	bottom: 80vh;
 	z-index: 94;
+	grid-template-columns: repeat(3, 1fr);
+	align-items: start;
+	justify-items: center;
+	padding: 1rem 0;
 }
 .openMenuOption {
 	bottom: 50vh;
 }
-
+.menu_option > div > h3 {
+	text-transform: uppercase;
+	color: #233658;
+	font-size: 1rem;
+	margin-bottom: 1rem;
+	font-weight: 600;
+}
+.menu_option > div > div > p {
+	text-transform: uppercase;
+	color: var(--tabs-notChecked-color);
+	font-size: 0.8rem;
+	margin-bottom: 0.5rem;
+	font-weight: 600;
+	cursor: pointer;
+}
 .menu_option > #closeOption {
 	width: 40px;
 	height: 40px;

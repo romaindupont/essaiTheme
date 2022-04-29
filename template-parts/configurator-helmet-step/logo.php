@@ -3,7 +3,7 @@
 	<span class="buttonChoice">White</span>
 	<span class="buttonChoice">Black</span>
 </div>
-<div class="pattern">
+<div class="patternList">
 	<div class="allScrew">
 		<svg version="1.1" id="logo_boxed-multiply"	viewBox="0 0 70 70">
 			<g>
@@ -98,7 +98,7 @@
 						<polygon points="40.9,27.2 38.8,27.2 35,36.8 31.2,27.2 29.1,27.2 31.5,33.2 21.9,37 22.6,38.8 32.2,34.9 34,39.5 36,39.5 
 							37.8,34.9 47.4,38.8 48.1,37 38.5,33.2 			"/>
 					</g>
-					<defs>
+				<!-- 	<defs>
 						<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="21.9" y="27.2" width="26.2" height="12.2">
 								<feColorMatrix  type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" color-interpolation-filters="sRGB" result="source"/>
 						</filter>
@@ -137,7 +137,7 @@
 							c0-6.1,4.9-11,11-11c3.2,0,6.5,1.7,8.7,4.5l2.1,2.6l2.1-2.6c2.2-2.8,5.5-4.5,8.7-4.5c6.1,0,11,4.9,11,11
 							C56.8,27.3,57.7,38.3,35,53.3z"/>
 					</g>
-				</g>
+				</g> -->
 			</g>
 			</svg>
 		<span class="textAction">Heart</span>
@@ -226,7 +226,7 @@
 						<polygon points="390,-190.6 388,-190.6 384.2,-180.9 380.3,-190.6 378.3,-190.6 380.7,-184.6 371.1,-180.8 371.8,-179 
 							381.4,-182.9 383.2,-178.3 385.1,-178.3 387,-182.9 396.6,-179 397.3,-180.8 387.7,-184.6 			"/>
 					</g>
-					<defs>
+				<!-- 	<defs>
 						<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="371.1" y="-190.6" width="26.2" height="12.2">
 							
 								<feColorMatrix  type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" color-interpolation-filters="sRGB" result="source"/>
@@ -269,7 +269,7 @@
 							c0-6.1,4.9-11,11-11c3.2,0,6.5,1.7,8.7,4.5l2.1,2.6l2.1-2.6c2.2-2.8,5.5-4.5,8.7-4.5c6.1,0,11,4.9,11,11
 							C406-190.5,406.8-179.5,384.2-164.5z"/>
 					</g>
-				</g>
+				</g> -->
 			</g>
 			</svg>
 		<span class="textAction">Multiply</span>
@@ -373,8 +373,8 @@
 						<polygon points="390,-190.6 388,-190.6 384.2,-180.9 380.3,-190.6 378.3,-190.6 380.7,-184.6 371.1,-180.8 371.8,-179 
 							381.4,-182.9 383.2,-178.3 385.1,-178.3 387,-182.9 396.6,-179 397.3,-180.8 387.7,-184.6 			"/>
 					</g>
-					<defs>
-						<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="371.1" y="-190.6" width="26.2" height="12.2">
+					<!--<defs>
+						 <filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="371.1" y="-190.6" width="26.2" height="12.2">
 							
 								<feColorMatrix  type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" color-interpolation-filters="sRGB" result="source"/>
 						</filter>
@@ -416,7 +416,7 @@
 							c0-6.1,4.9-11,11-11c3.2,0,6.5,1.7,8.7,4.5l2.1,2.6l2.1-2.6c2.2-2.8,5.5-4.5,8.7-4.5c6.1,0,11,4.9,11,11
 							C406-190.5,406.8-179.5,384.2-164.5z"/>
 					</g>
-				</g>
+				</g> -->
 			</g>
 			</svg>
 		<span class="textAction">Plus</span>

@@ -1,4 +1,4 @@
-<div class="pattern">
+<div class="patternList">
 	<div class="allScrew">
 		<svg version="1.1" id="chin_band"	viewBox="0 0 56 21">
 			<style type="text/css">

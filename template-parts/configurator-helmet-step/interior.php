@@ -1,4 +1,4 @@
-<div class="varnish">
+<div class="varnishList">
 	<div class="allScrew">
 		<svg class="interiorSvg" version="1.1" id="suede_blue" viewBox="0 0 60 60">
 			<style type="text/css">

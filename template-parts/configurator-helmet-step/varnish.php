@@ -1,4 +1,4 @@
-<div class="varnish">
+<div class="varnishList">
 	<div class="allScrew">
 		<svg version="1.1" id="glossy_varnish" viewBox="0 0 43 60">
 			<style type="text/css">

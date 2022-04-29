@@ -57,8 +57,14 @@ const configurator = {
 		configurator.logoMenuOption = document.querySelector('#menu_option');
 		configurator.menuOption = document.querySelector('.menu_option');
 		configurator.logoCloseMenuOption = document.querySelector('#closeOption'); 
-		configurator.localHosting = 'localhost';
-		/* configurator.localHosting = '192.168.1.101:8080'; */
+		configurator.logoHelp = document.querySelector('.info_logo'); 
+		configurator.messagesHelp = document.querySelector('.messagesHelp'); 
+		configurator.popupHelp = document.querySelector('.popupHelp'); 
+		configurator.popupHelp_closeLogo = document.querySelector('.popupHelp_closeLogo'); 
+		configurator.menuOptionElement = document.querySelectorAll('.menu_option > div > div > p');
+		
+		/* configurator.localHosting = 'localhost'; */
+		configurator.localHosting = '192.168.1.101:8080';
   },
 	jsonFileImport: function() {
 		const json = `http://${configurator.localHosting}/essai/content/themes/veldt/dist/json/helmetElement.json`;
@@ -77,6 +83,8 @@ const configurator = {
 		configurator.close.addEventListener('click', configurator.handleMenuClose);
 		configurator.logoMenuOption.addEventListener('click',(e) => configurator.menuOption.style.display = 'grid');
 		configurator.logoCloseMenuOption.addEventListener('click',(e) => configurator.menuOption.style.display = 'none');
+		configurator.logoHelp.addEventListener('click', () => configurator.popupHelp.style.display = 'block');
+		configurator.popupHelp_closeLogo.addEventListener('click', () => configurator.popupHelp.style.display = 'none');
   },
 	handleMenuOpen: function() {
     configurator.firstMenu.style.visibility = configurator.firstMenu.style.visibility === 'visible' ? 'visible' : 'visible';
@@ -122,6 +130,7 @@ const configurator = {
 	handleOpenCloseTabs: function() {
 		configurator.footerConfigurator.classList.toggle('openIt');	
 		configurator.menuOption.classList.toggle('openMenuOption');
+		configurator.logoHelp.classList.toggle('logoAppear');
 	},
 	buttonChoiceListener: function() {
 		configurator.buttonChoice.forEach(button => button.addEventListener('click', (e) => {
@@ -140,11 +149,11 @@ const configurator = {
 			configurator.sizeButtonChoice.forEach(button => button.classList.remove('activeButton'))
 			e.target.classList.toggle('activeButton');
 		}));
-		if(configurator.buttonAdd) {
+		if (configurator.buttonAdd) {
 			configurator.buttonAdd.addEventListener('click', (e) => {
 				const numberWindows = document.querySelector('.numberWindows');
 				numberWindows.style.display = 'flex';
-			})
+			});
 		};
 		configurator.frameChoice.forEach(image => image.addEventListener('click', (e) => {
 			configurator.frameChoice.forEach(image => image.classList.remove('activeImage'))
@@ -160,7 +169,68 @@ const configurator = {
 		}));
 		configurator.inputVisor.forEach(radioButton => radioButton.addEventListener('change', (e) => {
 			configurator.visorPage(e);
-		}))
+		}));
+		configurator.menuOptionElement.forEach(button => button.addEventListener('click', configurator.menuOptionClicAction));
+	},
+	menuOptionClicAction: function(e) {
+		let parts = '';
+		let template = document.querySelector('.template');
+		if (configurator.footerConfigurator.classList[1]) {
+			configurator.menuOption.style.display = 'none';
+			if (e.path[1].className === 'divHelmetp') {
+				configurator.tabOne.checked = true;
+				configurator.tabTwo.checked = false;
+				configurator.numberArrayPosition = configurator.phpFileHelmet.indexOf(e.target.classList.value)
+				configurator.elementName.innerHTML = configurator.titreArrayHelmet[configurator.numberArrayPosition] + "<span class='number'>" + (configurator.numberArrayPosition + 1) + '/'+ configurator.titreArrayHelmet.length + "</span>";
+				configurator.messagesHelp.textContent = configurator.helpMessageHelmet[configurator.numberArrayPosition];
+				parts = `http://${configurator.localHosting}/essai/content/themes/veldt/template-parts/configurator-helmet-step/${e.target.classList.value}.php`;
+				template = document.querySelector('.helmet > .template');
+			}
+			if (e.path[1].className === 'divChinp') {
+				configurator.tabOne.checked = false;
+				configurator.tabTwo.checked = true;
+				configurator.numberArrayPosition = configurator.phpFileChin.indexOf(e.target.classList.value)
+				configurator.chinguardElementName.innerHTML = configurator.titreArrayChin[configurator.numberArrayPosition] + "<span class='number'>" + (configurator.numberArrayPosition + 1) + '/' + configurator.titreArrayChin.length + "</span>";
+				configurator.messagesHelp.textContent = configurator.helpMessageChin[configurator.numberArrayPosition];
+				parts = `http://${configurator.localHosting}/essai/content/themes/veldt/template-parts/configurator-chinguard-step/${e.target.classList.value}.php`;
+				template = document.querySelector('.chinguard > .template');
+			}
+		}
+		else {
+			configurator.menuOption.style.display = 'none';
+			configurator.menuOption.classList.toggle('openMenuOption');
+			configurator.footerConfigurator.classList.toggle('openIt');	
+			if (e.path[1].className === 'divHelmetp') {
+				configurator.tabOne.checked = true;
+				configurator.tabTwo.checked = false;
+				configurator.numberArrayPosition = configurator.phpFileHelmet.indexOf(e.target.classList.value)
+				configurator.elementName.innerHTML = configurator.titreArrayHelmet[configurator.numberArrayPosition] + "<span class='number'>" + (configurator.numberArrayPosition + 1) + '/'+ configurator.titreArrayHelmet.length + "</span>";
+				configurator.messagesHelp.textContent = configurator.helpMessageHelmet[configurator.numberArrayPosition];
+				parts = `http://${configurator.localHosting}/essai/content/themes/veldt/template-parts/configurator-helmet-step/${e.target.classList.value}.php`;
+				template = document.querySelector('.helmet > .template');
+			}
+			if (e.path[1].className === 'divChinp') {
+				configurator.tabOne.checked = false;
+				configurator.tabTwo.checked = true;
+				configurator.numberArrayPosition = configurator.phpFileChin.indexOf(e.target.classList.value)
+				configurator.chinguardElementName.innerHTML = configurator.titreArrayChin[configurator.numberArrayPosition] + "<span class='number'>" + (configurator.numberArrayPosition + 1) + '/' + configurator.titreArrayChin.length + "</span>";
+				configurator.messagesHelp.textContent = configurator.helpMessageChin[configurator.numberArrayPosition];
+				parts = `http://${configurator.localHosting}/essai/content/themes/veldt/template-parts/configurator-chinguard-step/${e.target.classList.value}.php`;
+				template = document.querySelector('.chinguard > .template');
+			}
+		}
+		fetch(parts)
+			.then(response => response.text())
+			.then(data => {
+				template.innerHTML = data;
+				configurator.buttonChoice = document.querySelectorAll('.buttonChoice');
+				configurator.screwChoice = document.querySelectorAll('.allScrew');
+				configurator.roundColor = document.querySelectorAll('.roundColor');
+				configurator.buttonAdd = document.querySelector('.buttonAdd');
+				configurator.sizeButtonChoice = document.querySelectorAll('.SizebuttonChoice');
+				configurator.buttonChoiceListener();
+			})
+			.catch(error => console.log(error));	
 	},
 	clicOnEye: function() {
 		configurator.eyes.forEach(eye => eye.addEventListener('click', 
@@ -196,16 +266,31 @@ const configurator = {
 			configurator.phpFileHelmet.push(configurator.dataJson.helmetElement[`${obj}`].phpFile);
 			configurator.helpMessageHelmet.push(configurator.dataJson.helmetElement[`${obj}`].helpMessage);
 		}
+		const divHelmet = document.createElement("div");
+		divHelmet.classList.add('divHelmetList');
+		configurator.menuOption.appendChild(divHelmet);
+		const h3 = document.createElement("h3");
+		h3.textContent = `Helmet (${configurator.titreArrayHelmet.length} steps)`
+		divHelmet.appendChild(h3);
+		const divPHelmet = document.createElement("div");
+		divPHelmet.classList.add('divHelmetp');
+		divHelmet.appendChild(divPHelmet);
+		for(let j = 0; j < configurator.titreArrayHelmet.length; j++) {
+			configurator.titreArrayHelmet[j];
+			const p = document.createElement("p");
+			p.classList.add(configurator.phpFileHelmet[j]);
+			p.textContent = (j+1) + ' ' + '-' + ' ' + configurator.titreArrayHelmet[j];
+			divPHelmet.appendChild(p);
+		}
 		configurator.elementName.innerHTML = configurator.titreArrayHelmet[0] +  "<span class='number'>" + (configurator.numberArrayPosition + 1) + '/'+ configurator.titreArrayHelmet.length + "</span>";
-/* 		const parts = `http://192.168.1.101:8080/essai/content/themes/veldt/template-parts/configurator-helmet-step/${configurator.phpFileHelmet[configurator.numberArrayPosition]}.php`;
- */		const parts = `http://${configurator.localHosting}/essai/content/themes/veldt/template-parts/configurator-helmet-step/${configurator.phpFileHelmet[configurator.numberArrayPosition]}.php`;	
+		configurator.messagesHelp.textContent =  configurator.helpMessageHelmet[configurator.numberArrayPosition];
+		const parts = `http://${configurator.localHosting}/essai/content/themes/veldt/template-parts/configurator-helmet-step/${configurator.phpFileHelmet[configurator.numberArrayPosition]}.php`;	
 		fetch(parts)
 			.then(response => response.text())
 			.then(data => {
 				document.querySelector('.template').innerHTML = data;
 				configurator.buttonChoice = document.querySelectorAll('.buttonChoice');
 				configurator.buttonChoiceListener();
-
 			})
 			.catch(error => console.log(error));
 	},
@@ -216,7 +301,24 @@ const configurator = {
 			configurator.phpFileChin.push(configurator.dataJson.chinguardElement[`${obj}`].phpFile);
 			configurator.helpMessageChin.push(configurator.dataJson.chinguardElement[`${obj}`].helpMessage);
 		}
+		const divChin = document.createElement("div");
+		divChin.classList.add('divChinList');
+		configurator.menuOption.appendChild(divChin);
+		const h3 = document.createElement("h3");
+		h3.textContent = `Chinguard (${configurator.titreArrayChin.length} steps)`
+		divChin.appendChild(h3);
+		const divPChin = document.createElement("div");
+		divPChin.classList.add('divChinp');
+		divChin.appendChild(divPChin);
+		for(let j = 0; j < configurator.titreArrayChin.length; j++) {
+			configurator.titreArrayChin[j];
+			const p = document.createElement("p");
+			p.classList.add(configurator.phpFileChin[j]);
+			p.textContent = (j+1) + ' ' + '-' + ' ' + configurator.titreArrayChin[j];
+			divPChin.appendChild(p);
+		}
 		configurator.chinguardElementName.innerHTML = configurator.titreArrayChin[0] +  "<span class='number'>" + (configurator.numberArrayPosition + 1) + '/'+ configurator.titreArrayChin.length + "</span>";
+		configurator.messagesHelp.textContent =  configurator.helpMessageChin[configurator.numberArrayPosition];
 		const parts = `http://${configurator.localHosting}/essai/content/themes/veldt/template-parts/configurator-chinguard-step/${configurator.phpFileChin[configurator.numberArrayPosition]}.php`;
     fetch(parts)
 			.then(response => response.text())
@@ -224,11 +326,17 @@ const configurator = {
 				document.querySelector('.chinguard > .template').innerHTML = data;
 				configurator.buttonChoice = document.querySelectorAll('.buttonChoice');
 				configurator.buttonChoiceListener();
-
 			})
 			.catch(error => console.log(error));
 	},
 	initVisorElement: function() {
+		const divVisor = document.createElement("div");
+		divVisor.classList.add('divVisorList');
+		configurator.menuOption.appendChild(divVisor);
+		const h3 = document.createElement("h3");
+		h3.textContent = `Visor`
+		divVisor.appendChild(h3);
+		configurator.messagesHelp.textContent =  "message d'aide visor";
 		const parts = `http://${configurator.localHosting}/essai/content/themes/veldt/template-parts/configurator-visor-step/visor.php`;
     fetch(parts)
 			.then(response => response.text())
@@ -240,6 +348,7 @@ const configurator = {
 				configurator.shortChoice = document.querySelectorAll('.short_visor_page > .allScrew');
 				configurator.longChoice = document.querySelectorAll('.long_visor_page > .allScrew');
 				configurator.roundColor = document.querySelectorAll('.roundColor');
+				configurator.menuOptionElement = document.querySelectorAll('.menu_option > div > div > p');
 				configurator.buttonChoiceListener();
 			})
 			.catch(error => console.log(error));
@@ -266,8 +375,9 @@ const configurator = {
  			configurator.changeSliderTitle(sens);
 		}
   },
-	changeSliderTitle: function(sens) {	
+	changeSliderTitle: function(sens) {		
 		configurator.numberArrayPosition = configurator.numberArrayPosition + sens;
+		configurator.popupHelp.style.display = 'none';
 		if (configurator.tabOne.checked) {
 			if (configurator.numberArrayPosition < 0) {
 				configurator.numberArrayPosition = configurator.titreArrayHelmet.length - 1;
@@ -275,7 +385,8 @@ const configurator = {
 			if (configurator.numberArrayPosition > configurator.titreArrayHelmet.length - 1) {
 				configurator.numberArrayPosition = 0;
 			}
-			configurator.elementName.innerHTML = configurator.titreArrayHelmet[configurator.numberArrayPosition] +  "<span class='number'>" + (configurator.numberArrayPosition + 1) + '/'+ configurator.titreArrayHelmet.length + "</span>";
+			configurator.elementName.innerHTML = configurator.titreArrayHelmet[configurator.numberArrayPosition] + "<span class='number'>" + (configurator.numberArrayPosition + 1) + '/'+ configurator.titreArrayHelmet.length + "</span>";
+			configurator.messagesHelp.textContent = configurator.helpMessageHelmet[configurator.numberArrayPosition];
 			const parts = `http://${configurator.localHosting}/essai/content/themes/veldt/template-parts/configurator-helmet-step/${configurator.phpFileHelmet[configurator.numberArrayPosition]}.php`;
 			fetch(parts)
 				.then(response => response.text())
@@ -297,7 +408,8 @@ const configurator = {
 				if (configurator.numberArrayPosition > configurator.titreArrayChin.length - 1) {
 					configurator.numberArrayPosition = 0;
 				}
-				configurator.chinguardElementName.innerHTML = configurator.titreArrayChin[configurator.numberArrayPosition] +  "<span class='number'>" + (configurator.numberArrayPosition + 1) + '/'+ configurator.titreArrayChin.length + "</span>";
+				configurator.chinguardElementName.innerHTML = configurator.titreArrayChin[configurator.numberArrayPosition] + "<span class='number'>" + (configurator.numberArrayPosition + 1) + '/' + configurator.titreArrayChin.length + "</span>";
+				configurator.messagesHelp.textContent = configurator.helpMessageChin[configurator.numberArrayPosition];
 				const parts = `http://${configurator.localHosting}/essai/content/themes/veldt/template-parts/configurator-chinguard-step/${configurator.phpFileChin[configurator.numberArrayPosition]}.php`;
 				fetch(parts)
 					.then(response => response.text())

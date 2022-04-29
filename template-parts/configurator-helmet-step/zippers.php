@@ -1,4 +1,4 @@
-<div class="varnish">
+<div class="varnishList">
 	<div class="allScrew">
 		<svg version="1.1" id="tab_nylon" viewBox="0 0 70 70">
 			<g>
