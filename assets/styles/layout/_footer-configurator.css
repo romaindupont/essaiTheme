@@ -321,6 +321,11 @@ svg#menu_option {
     top: -110px;
     left: 40px;
 	}
+	.exportWindow {
+		flex-direction: column;
+		align-items: center;
+		bottom: 40vh;
+	}
 
 }
 @media (min-width: 576px) { 
@@ -444,6 +449,14 @@ svg#menu_option {
 	.logoAppear {
 		display: block;
 	}
+	.exportWindow {
+		bottom: 80vh;
+		flex-direction: row;
+		align-items: start;
+	}
+ .openExportMenu {
+		bottom: 50vh;
+	}
 }
 @media (min-width : 1224px) {
 	footer.footer-configurator {
@@ -489,7 +502,9 @@ and (min-width : 1824px) {
 	overflow-y: hidden;
 	display: flex;
 }
-
+.colorList {
+	height: 200px;
+}
 .colorListType, .sizeChoice, .certifChoice {
 	overflow-x: scroll;
 	overflow-y: hidden;
@@ -508,6 +523,7 @@ and (min-width : 1824px) {
 	background-color: var(--scrollbar-bg-color);
 	border-radius: 10px;
 }
+
 .aerationDisplay {
 	text-transform: uppercase;
 	color: var(--color-principal);
@@ -577,6 +593,9 @@ and (min-width : 1824px) {
 	cursor: pointer;
 	align-items: center;
 }
+.textAction {
+	font-weight: 500;
+}
 .allScrew:hover > .textAction {
 	visibility: visible;
 	}
@@ -584,10 +603,13 @@ and (min-width : 1824px) {
 	content: "";
 	height: 4px;
 	position: absolute;
-	bottom: -10px;
+	bottom: -4px;
 	background: var(--color-principal);
-	left: 0;
+	left: 5%;
 	animation: widthLine 200ms forwards ease-in-out;
+}
+.colorP > .textAction {
+	position: relative;
 }
 .activeImage > .textAction {
 	visibility: visible !important;
@@ -596,10 +618,10 @@ and (min-width : 1824px) {
 	content: "";
 	height: 4px;
 	position: absolute;
-	bottom: -10px;
+	bottom: -4px;
 	background: var(--color-principal);
-	left: 0;
-	width: 100%;
+	left: 5%;
+	width: 90%;
 }
 .allScrew > .textAction {
 	text-align: center;
@@ -611,7 +633,7 @@ and (min-width : 1824px) {
 		width: 0%;
 	}
 	100% {
-		width: 100%;
+		width: 90%;
 	}
 	
 }
@@ -727,18 +749,18 @@ background: #000;
 }
 .roundColor:hover + .textAction::after {
 	content: "";
-	width: 100%;
+	width: 90%;
 	height: 4px;
 	position: absolute;
-	bottom: -6px;
+	bottom: -4px;
 	background: var(--color-principal);
-	left: 0;
+	left: 5%;
 	animation: widthLine 200ms forwards ease-in-out;
 	}
 .roundColor + .textAction {
 	text-align: center;
 	visibility: hidden;
-	width: 100%;
+	width: 90%;
 }
 
 .activeColor {
@@ -762,10 +784,10 @@ background: #000;
 	content: "";
 	height: 4px;
 	position: absolute;
-	bottom: -10px;
+	bottom: -4px;
 	background: var(--color-principal);
-	left: 0;
-	width: 100%;
+	left: 5%;
+	width: 90%;
 }
 
 .numberWindows {
@@ -870,12 +892,22 @@ input#numberSelection {
 	justify-items: center;
 	padding: 1rem 0;
 }
+.exportWindow {
+	display: none;
+	background: #fff;
+	width: 100vw;
+	height: 50vh;
+	position: absolute;
+	z-index: 94;
+	justify-items: center;
+	padding: 1rem 0;
+}
 .openMenuOption {
 	bottom: 50vh;
 }
 .menu_option > div > h3 {
 	text-transform: uppercase;
-	color: #233658;
+	color: var(--color-principal);
 	font-size: 1rem;
 	margin-bottom: 1rem;
 	font-weight: 600;
@@ -895,4 +927,65 @@ input#numberSelection {
 	top: 10px;
 	right: 10px;
 	cursor: pointer;
+}
+.exportWindow > #exportWindow_closeLogo {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 10px;
+	right: 25px;
+	cursor: pointer;
+}
+.exportWindow > div {
+	height: 100%;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	justify-content: center;
+}
+.exportWindow > div > h3 {
+	text-transform: uppercase;
+	color: var(--color-principal);
+	font-size: 1rem;
+	margin-bottom: 1rem;
+	font-weight: 600;
+}
+.exportWindow > div > div {
+	display: flex;
+	flex-direction: column;
+}
+.exportWindow > div > div > div {
+	flex-direction: row;
+	display: flex;
+	margin-bottom: 2rem;
+	align-items: center;
+}
+.exportWindow > div > div > div:first-child {
+	margin-top: 2rem;
+	border-bottom: 1px solid var(--color-principal);
+	padding-bottom: 2rem;
+}
+svg#link, svg#download {
+	width: 40px;
+	height: 40px;
+	margin-left: 5rem;
+	cursor: pointer;
+}
+.exportWindow > div > div > div > p {
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	color: var(--tabs-text-color);
+	width: 200px;
+}
+
+.menuImageToShare {
+	display: grid !important;
+	grid-template-columns: repeat(2, 1fr);
+	align-content: center;
+	justify-items: stretch;
+}
+.menuImageToShare > img {
+	width: 50%;
 }

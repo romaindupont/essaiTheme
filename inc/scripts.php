@@ -59,6 +59,13 @@ function veldt_theme_enqueue_scripts() {
 			[],
 			'20220413'
 		); 
+		wp_enqueue_script( 
+			' jsPdf ', 
+			'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js', 
+			[],
+			'020522',
+			true
+		);
 	}
 }
 
