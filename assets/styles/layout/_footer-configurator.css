@@ -195,7 +195,7 @@ svg#down {
 .down{
 	fill:var(--main-fillSvg-color);
 }
-svg#export {
+.export {
 	width: 40px;
 	height: 40px;
 	position: absolute;
@@ -279,8 +279,8 @@ svg#menu_option {
 	svg#down {
 		display: none;
 	}
-	svg#export {
-		top: 25px;
+	.export {
+		top: 20px;
 		right: 15px;
 	}
 	svg#menu_option {
@@ -371,9 +371,12 @@ svg#menu_option {
 	.openIt {
 		bottom: -30% !important;
 	}
-	svg#export {
-		top: 25px;
+	.export {
+		top: 75%;
 		right: 15px;
+	}
+	.positionExportLogo {
+    top: 40vh !important;
 	}
 	svg#menu_option {
 		display: block;
@@ -447,7 +450,7 @@ svg#menu_option {
 		display: block;
 	}
 	.exportWindow {
-		bottom: 80vh;
+		bottom: 70vh;
 		flex-direction: row;
 		align-items: start;
 	}
@@ -882,7 +885,7 @@ input#numberSelection {
 	width: 100vw;
 	height: 50vh;
 	position: absolute;
-	bottom: 80vh;
+	bottom: 70vh;
 	z-index: 94;
 	grid-template-columns: repeat(3, 1fr);
 	align-items: start;
@@ -895,7 +898,7 @@ input#numberSelection {
 	width: 100vw;
 	height: 50vh;
 	position: absolute;
-	z-index: 94;
+	z-index: 102;
 	justify-items: center;
 	padding: 1rem 0;
 }

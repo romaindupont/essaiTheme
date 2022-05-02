@@ -5,6 +5,7 @@ body {
 .configurator-header {
 	width: 100vw;
 	border-top: 10px solid var(--color-principal);
+	z-index: 1;
 }
 .header-configurator {
 	display: flex;
@@ -25,6 +26,7 @@ body {
 	width: 8%;
 	margin-right: 1.5rem;
 	cursor: pointer;
+	z-index: 2;
 }
 .header-configurator-left-title {
 	display: flex;

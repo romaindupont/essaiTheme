@@ -62,13 +62,13 @@ const configurator = {
 		configurator.popupHelp = document.querySelector('.popupHelp'); 
 		configurator.popupHelp_closeLogo = document.querySelector('.popupHelp_closeLogo'); 
 		configurator.menuOptionElement = document.querySelectorAll('.menu_option > div > div > p');
-		configurator.exportButton = document.querySelector('#export');
+		configurator.exportButton = document.querySelector('.export');
 		configurator.exportWindow = document.querySelector('footer > .exportWindow');
 		configurator.exportCloseButton = document.querySelector('#exportWindow_closeLogo');
 		configurator.exportDownload = document.querySelector('#download');
 
-		/* configurator.localHosting = 'localhost'; */
-		configurator.localHosting = '192.168.1.101:8080';
+		configurator.localHosting = 'localhost';
+		/* configurator.localHosting = '192.168.1.101:8080'; */
   },
 	jsonFileImport: function() {
 		const json = `http://${configurator.localHosting}/essai/content/themes/veldt/dist/json/helmetElement.json`;
@@ -92,7 +92,6 @@ const configurator = {
 		configurator.exportButton.addEventListener('click', () => configurator.exportWindow.style.display = 'flex');
 		configurator.exportCloseButton.addEventListener('click', () => configurator.exportWindow.style.display = 'none');
 		configurator.exportDownload.addEventListener('click', configurator.pdfFileMade);
-		console.log(configurator.exportButton)
   },
 	handleMenuOpen: function() {
     configurator.firstMenu.style.visibility = configurator.firstMenu.style.visibility === 'visible' ? 'visible' : 'visible';
@@ -140,6 +139,7 @@ const configurator = {
 		configurator.menuOption.classList.toggle('openMenuOption');
 		configurator.logoHelp.classList.toggle('logoAppear');
 		configurator.exportWindow.classList.toggle('openExportMenu');
+		configurator.exportButton.classList.toggle('positionExportLogo');
 	},
 	buttonChoiceListener: function() {
 		configurator.buttonChoice.forEach(button => button.addEventListener('click', (e) => {
