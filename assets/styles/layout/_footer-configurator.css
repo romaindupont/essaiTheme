@@ -159,7 +159,6 @@
 	order: 999;
 }
 footer.footer-configurator {
-	bottom: -80%;
 	position: absolute;
 	width: 100vw;
 }
@@ -267,7 +266,7 @@ svg#menu_option {
 		right: -10%;
 	}
 	footer.footer-configurator {
-    bottom: -40%;
+		top: 55vh;
 	}
 	svg#eye, #eye {
 		right: 45px;
@@ -281,7 +280,7 @@ svg#menu_option {
 		display: none;
 	}
 	svg#export {
-		top: -82%;
+		top: 25px;
 		right: 15px;
 	}
 	svg#menu_option {
@@ -340,13 +339,11 @@ svg#menu_option {
 		right: -10%;
 	}
 	footer.footer-configurator {
-    bottom: -50%;
 	}
 }
 
 @media (min-width : 768px) {
 	footer.footer-configurator {
-    bottom: -50%;
 	}
 	.sd-tabs > .sd-tab-label::after,
 	.sd-tabs > .sd-tab-label::before {
@@ -375,7 +372,7 @@ svg#menu_option {
 		bottom: -30% !important;
 	}
 	svg#export {
-		top: -10px;
+		top: 25px;
 		right: 15px;
 	}
 	svg#menu_option {
@@ -384,7 +381,7 @@ svg#menu_option {
 }
 @media (min-width : 1024px) {
 	footer.footer-configurator {
-    bottom: -60%;
+	 	top: 80vh;
 		transition: all 1s ease-in-out;
 	}
 	.sd-tabs > .sd-tab-label::after,
@@ -398,7 +395,7 @@ svg#menu_option {
 		right: -150%;
 	}
 	.openIt {
-		bottom: -40% !important;
+		top: 40vh !important;
 		transition: all 1s ease-in-out;
 	}
 	.infos{
@@ -460,7 +457,6 @@ svg#menu_option {
 }
 @media (min-width : 1224px) {
 	footer.footer-configurator {
-    bottom: -80%;
 	}
 	.sd-tabs > .sd-tab-label::after,
 	.sd-tabs > .sd-tab-label::before {
@@ -477,7 +473,8 @@ svg#menu_option {
 /* Large screens ----------- */
 @media only screen 
 and (min-width : 1824px) {
-/* Styles */
+	.footer-configurator {
+	}
 }
 
 /* Config helmet */
@@ -503,7 +500,7 @@ and (min-width : 1824px) {
 	display: flex;
 }
 .colorList {
-	height: 200px;
+	height: 125px;
 }
 .colorListType, .sizeChoice, .certifChoice {
 	overflow-x: scroll;

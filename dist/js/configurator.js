@@ -63,7 +63,7 @@ const configurator = {
 		configurator.popupHelp_closeLogo = document.querySelector('.popupHelp_closeLogo'); 
 		configurator.menuOptionElement = document.querySelectorAll('.menu_option > div > div > p');
 		configurator.exportButton = document.querySelector('#export');
-		configurator.exportWindow = document.querySelector('.exportWindow');
+		configurator.exportWindow = document.querySelector('footer > .exportWindow');
 		configurator.exportCloseButton = document.querySelector('#exportWindow_closeLogo');
 		configurator.exportDownload = document.querySelector('#download');
 
@@ -92,6 +92,7 @@ const configurator = {
 		configurator.exportButton.addEventListener('click', () => configurator.exportWindow.style.display = 'flex');
 		configurator.exportCloseButton.addEventListener('click', () => configurator.exportWindow.style.display = 'none');
 		configurator.exportDownload.addEventListener('click', configurator.pdfFileMade);
+		console.log(configurator.exportButton)
   },
 	handleMenuOpen: function() {
     configurator.firstMenu.style.visibility = configurator.firstMenu.style.visibility === 'visible' ? 'visible' : 'visible';
