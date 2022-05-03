@@ -67,8 +67,8 @@ const configurator = {
 		configurator.exportCloseButton = document.querySelector('#exportWindow_closeLogo');
 		configurator.exportDownload = document.querySelector('#download');
 
-		configurator.localHosting = 'localhost';
-		/* configurator.localHosting = '192.168.1.101:8080'; */
+	/* 	configurator.localHosting = 'localhost'; */
+		configurator.localHosting = '192.168.1.101:8080';
   },
 	jsonFileImport: function() {
 		const json = `http://${configurator.localHosting}/essai/content/themes/veldt/dist/json/helmetElement.json`;

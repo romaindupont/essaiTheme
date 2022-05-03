@@ -12,18 +12,6 @@ function veldt_theme_enqueue_scripts() {
 		'https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap', 
 		false
 	);
-/* 	wp_enqueue_style(
-		'veldt-style-reset',
-		get_theme_file_uri('dist/reset.css'),
-		[],
-		'20220413'
-	); 
-	wp_enqueue_style(
-		'veldt-style-variables',
-		get_theme_file_uri('dist/variables.css'),
-		[],
-		'20220413'
-	);  */
 	if(!is_page('configurator')){
 	wp_enqueue_script(
 		'veldt-script',
@@ -66,6 +54,14 @@ function veldt_theme_enqueue_scripts() {
 			'020522',
 			true
 		);
+	}
+	if(is_singular( 'product' )) {
+		wp_enqueue_style(
+			'veldt-singleProduct-style',
+			get_theme_file_uri('assets/styles/pages/_single-product.css'),
+			[],
+			'20220413'
+		); 
 	}
 }
 
