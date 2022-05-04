@@ -18,4 +18,4 @@ while ( have_posts() ) : the_post();
 
 endwhile; // end of the loop.
 
-/* get_footer(); */
+get_footer();

@@ -62,6 +62,13 @@ function veldt_theme_enqueue_scripts() {
 			[],
 			'20220413'
 		); 
+		wp_enqueue_script(
+			'veldt-singleProduct-script',
+			get_theme_file_uri('dist/js/single-product.js'),
+			[],
+			'20220413',
+			true
+		);
 	}
 }
 
