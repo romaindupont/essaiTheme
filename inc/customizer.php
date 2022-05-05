@@ -57,3 +57,4 @@ add_action('get_header', 'remove_admin_login_header');
 }
 add_action('after_setup_theme', 'remove_admin_bar'); */
 add_filter( 'show_admin_bar', '__return_false' );
+

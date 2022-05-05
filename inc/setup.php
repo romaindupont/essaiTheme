@@ -23,6 +23,7 @@ function my_theme_wrapper_end() {
 }
 function mytheme_add_woocommerce_support() {
 	add_theme_support( 'woocommerce' );
+	/* add_theme_support( 'neve' ); */
 /* 	add_theme_support( 'wc-product-gallery-zoom' );
 	add_theme_support( 'wc-product-gallery-lightbox' );
 	add_theme_support( 'wc-product-gallery-slider' ); */

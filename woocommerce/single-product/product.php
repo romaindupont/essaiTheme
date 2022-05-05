@@ -68,15 +68,27 @@ if ( ! $short_description ) {
 		</div>
 		<?php echo '<ul class="woocommerce-attribute-list">';
 		foreach( wc_get_attribute_taxonomies() as $values ) {
-				$term_names = get_terms( array('taxonomy' => 'pa_' . $values->attribute_name, 'fields' => 'names' ) );
-				echo '<li class="woocommerce-attribute-title"><strong>'. $values->attribute_label .'</strong><div class="woocommerce-attribute-choiceList">';
-				for($i= 0; $i < count($term_names); $i++){
-					echo '<div class="woocommerce-attribute-input"><input type="radio" id='. $term_names[$i] .' name='. $values->attribute_label .' value='. $term_names[$i] .'/><label for='. $term_names[$i] .'>'. $term_names[$i] .'</label></div>';
-					
-				}
-				echo '</div></li>';
+			$term_names = get_terms( array('taxonomy' => 'pa_' . $values->attribute_name, 'fields' => 'names' ) );
+			echo '<li class="woocommerce-attribute-title"><strong>'. $values->attribute_label .'</strong><div class="woocommerce-attribute-choiceList">';
+			for($i= 0; $i < count($term_names); $i++){
+				echo '<div class="woocommerce-attribute-input"><input type="radio" id='. $term_names[$i] .' name='. $values->attribute_label .' value='. $term_names[$i] .'/><label for='. $term_names[$i] .'>'. $term_names[$i] .'</label></div>';
+				
+			}
+			echo '</div></li>';
 		}
 		echo '</ul>';?>
 		</div>
+		
+		<form class="cart" method="post">
+
+				<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
+
+				<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->id ); ?>" />
+				<button type="submit">Add to Cart</button>
+
+				<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
+
+			</form>
 	</section>
+
 </main>

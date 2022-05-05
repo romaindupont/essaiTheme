@@ -95,10 +95,10 @@ const configurator = {
   },
 	handleMenuOpen: function() {
     configurator.firstMenu.style.visibility = configurator.firstMenu.style.visibility === 'visible' ? 'visible' : 'visible';
-		configurator.firstMenu.style.visibility === 'visible' ? configurator.firstMenu.style.left = '0' : configurator.firstMenu.style.left = '-100%';
+		configurator.firstMenu.style.visibility === 'visible' ? configurator.firstMenu.style.left = '0' : configurator.firstMenu.style.left = '-200%';
   },
 	handleMenuClose: function() {
-		configurator.firstMenu.style.visibility === 'visible' ? configurator.firstMenu.style.left = '-100%' : configurator.firstMenu.style.left = '0';
+		configurator.firstMenu.style.visibility === 'visible' ? configurator.firstMenu.style.left = '-200%' : configurator.firstMenu.style.left = '0';
 		configurator.firstMenu.style.visibility === 'visible' ? configurator.firstMenu.style.transition = 'left 600ms ease-in-out' : '';
 		configurator.SubMenuMark1.style.display = 'none';
 		configurator.SubMenuMark2.style.display = 'none';

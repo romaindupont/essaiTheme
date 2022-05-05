@@ -21,14 +21,6 @@
 			<circle class="menuOption" cx="11.5" cy="26.5" r="1"></circle>
 		</g>
 	</svg>
-<!-- 	<svg version="1.1" id="export" viewBox="0 0 35 35">
-		<style type="text/css">
-			.export{fill:#233658;}
-		</style>
-		<g>
-			<path class="export" d="M26.3,25.4l2.9-2.1v10.2H0V5.1h10.5L7.2,8H2.9v22.6h23.4V25.4L26.3,25.4z M8.1,21.6c-0.1,0.2-0.3,0.3-0.5,0.2   c-0.2,0-0.3-0.2-0.3-0.4c0.5-2.5,1.1-4.5,1.9-6.2c0.8-1.7,1.7-3.1,2.9-4.4s2.7-2.2,4.6-2.7c1.8-0.6,4.1-0.9,6.7-0.9V1.5L35,11.7   L23.4,21.8V16c-1.6,0-2.9,0-4,0.1c-1.1,0.1-2.4,0.3-3.8,0.7c-1.4,0.4-2.8,0.9-4,1.7C10.3,19.4,9.1,20.4,8.1,21.6z"></path>
-		</g>
-	</svg> -->
 	<svg version="1.1" id="info_logo" class="info_logo" viewBox="0 0 41 41">
 		<style type="text/css">
 			.info_logo_st0{fill:#233658;}
