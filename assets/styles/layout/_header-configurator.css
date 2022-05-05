@@ -212,19 +212,20 @@ and (max-device-width : 768px) {
 		left: 5px;
 	}
 	.header-configurator-left-title {
-		position: absolute;
-		top: 25px;
-		justify-content: center;
+		display: none;
 	}
 	.header-configurator-right {
 		align-items: none;
 		margin-right: 0;
 		position: absolute;
 		/* bottom: 50%; */
-		top: 35vh;
+		top: 44vh;
 		width: 100vw;
 		justify-content: none;
     align-items: none;
+	}
+	.header-configurator-right-comment {
+		display: none;
 	}
 	.first_menu-configurator {
 		width: 100vw;
