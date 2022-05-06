@@ -209,7 +209,7 @@ and (max-device-width : 768px) {
 		margin-right: 0;
 		position: absolute;
 		top: 25px;
-		left: 5px;
+		left: 20px;
 	}
 	.header-configurator-left-title {
 		display: none;
@@ -219,6 +219,7 @@ and (max-device-width : 768px) {
 		margin-right: 0;
 		position: absolute;
 		/* bottom: 50%; */
+		right: -30px;
 		top: 44vh;
 		width: 100vw;
 		justify-content: none;

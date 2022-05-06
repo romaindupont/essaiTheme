@@ -66,9 +66,16 @@ const configurator = {
 		configurator.exportWindow = document.querySelector('footer > .exportWindow');
 		configurator.exportCloseButton = document.querySelector('#exportWindow_closeLogo');
 		configurator.exportDownload = document.querySelector('#download');
-
-		configurator.localHosting = 'localhost';
-	/* 	configurator.localHosting = '192.168.1.101:8080'; */
+		configurator.addChinguard = document.querySelector('.chinguardAddButton');
+		configurator.addVisor = document.querySelector('.visorAddButton');
+		configurator.chinguardTemplate = document.querySelector('.chinguard');
+		configurator.visorTemplate = document.querySelector('.visor');
+		configurator.eraseChinguard = document.querySelector('.eraseChinguard');
+		configurator.eraseVisor = document.querySelector('.eraseVisor');
+		configurator.patternList = document.querySelectorAll('.patternList');
+		configurator.colorList = document.querySelectorAll('.colorList');
+		/* configurator.localHosting = 'localhost'; */
+		configurator.localHosting = '192.168.1.101:8080';
   },
 	jsonFileImport: function() {
 		const json = `http://${configurator.localHosting}/essai/content/themes/veldt/dist/json/helmetElement.json`;
@@ -92,6 +99,9 @@ const configurator = {
 		configurator.exportButton.addEventListener('click', () => configurator.exportWindow.style.display = 'flex');
 		configurator.exportCloseButton.addEventListener('click', () => configurator.exportWindow.style.display = 'none');
 		configurator.exportDownload.addEventListener('click', configurator.pdfFileMade);
+		configurator.addChinguard.addEventListener('click', configurator.buttonChangeFunction);
+		configurator.addVisor.addEventListener('click', configurator.buttonChangeFunction);
+		
   },
 	handleMenuOpen: function() {
     configurator.firstMenu.style.visibility = configurator.firstMenu.style.visibility === 'visible' ? 'visible' : 'visible';
@@ -180,6 +190,18 @@ const configurator = {
 			configurator.visorPage(e);
 		}));
 		configurator.menuOptionElement.forEach(button => button.addEventListener('click', configurator.menuOptionClicAction));
+		configurator.patternList.forEach(list => list.addEventListener('scroll',(e) => configurator.scrollEffectOnList(e, list)));
+		configurator.colorList.forEach(list => list.addEventListener('scroll',(e) => configurator.scrollEffectOnList(e, list)));
+	},
+	scrollEffectOnList: function(e, list) {
+		if(e.target.getBoundingClientRect().width < 878){
+			let calcul = e.target.clientWidth/2 - e.target.scrollLeft;
+			if(calcul < `-${e.target.clientWidth/2}`) {
+				list.style.transform = `translate3d(-${e.target.clientWidth/2}, 0px, 0px)`; 
+			}else {
+				list.style.transform = `translate3d(${calcul}px, 0px, 0px)`; 
+			}
+		}
 	},
 	menuOptionClicAction: function(e) {
 		let parts = '';
@@ -239,6 +261,7 @@ const configurator = {
 				configurator.roundColor = document.querySelectorAll('.roundColor');
 				configurator.buttonAdd = document.querySelector('.buttonAdd');
 				configurator.sizeButtonChoice = document.querySelectorAll('.SizebuttonChoice');
+				configurator.colorList = document.querySelectorAll('.colorList');
 				configurator.buttonChoiceListener();
 			})
 			.catch(error => console.log(error));	
@@ -301,6 +324,8 @@ const configurator = {
 			.then(data => {
 				document.querySelector('.template').innerHTML = data;
 				configurator.buttonChoice = document.querySelectorAll('.buttonChoice');
+				configurator.patternList = document.querySelectorAll('.patternList');
+				configurator.colorList = document.querySelectorAll('.colorList');
 				configurator.buttonChoiceListener();
 			})
 			.catch(error => console.log(error));
@@ -336,6 +361,8 @@ const configurator = {
 			.then(data => {
 				document.querySelector('.chinguard > .template').innerHTML = data;
 				configurator.buttonChoice = document.querySelectorAll('.buttonChoice');
+				configurator.patternList = document.querySelectorAll('.patternList');
+				configurator.colorList = document.querySelectorAll('.colorList');
 				configurator.buttonChoiceListener();
 			})
 			.catch(error => console.log(error));
@@ -360,6 +387,7 @@ const configurator = {
 				configurator.longChoice = document.querySelectorAll('.long_visor_page > .allScrew');
 				configurator.roundColor = document.querySelectorAll('.roundColor');
 				configurator.menuOptionElement = document.querySelectorAll('.menu_option > div > div > p');
+				configurator.patternList = document.querySelectorAll('.patternList');
 				configurator.buttonChoiceListener();
 			})
 			.catch(error => console.log(error));
@@ -408,6 +436,8 @@ const configurator = {
 					configurator.roundColor = document.querySelectorAll('.roundColor');
 					configurator.buttonAdd = document.querySelector('.buttonAdd');
 					configurator.sizeButtonChoice = document.querySelectorAll('.SizebuttonChoice');
+					configurator.patternList = document.querySelectorAll('.patternList');
+					configurator.colorList = document.querySelectorAll('.colorList');
 					configurator.buttonChoiceListener();
 				})
 				.catch(error => console.log(error));
@@ -429,6 +459,8 @@ const configurator = {
 						configurator.buttonChoice = document.querySelectorAll('.buttonChoice');
 						configurator.roundColor = document.querySelectorAll('.roundColor');
 						configurator.screwChoice = document.querySelectorAll('.allScrew');
+						configurator.patternList = document.querySelectorAll('.patternList');
+						configurator.colorList = document.querySelectorAll('.colorList');
 						configurator.buttonChoiceListener();
 					})
 					.catch(error => console.log(error));
@@ -485,6 +517,48 @@ const configurator = {
 		doc.addImage(imagesBackPosition, 100, 95, 50, 50);
 		doc.text("your link", 50, 25);
 		doc.save("VeldtHelmet.pdf");
+	},
+	buttonChangeFunction: function(e) {
+		switch (e.target.classList[1]) {
+			case 'chinguardAddButton':
+				configurator.chinguardTemplate.style.display = 'block';
+				configurator.addChinguard.textContent= 'Erase';
+				configurator.addChinguard.classList.add('eraseChinguard');
+				configurator.eraseChinguard = document.querySelector('.eraseChinguard');
+				configurator.eraseChinguard.addEventListener('click', configurator.buttonEraseToAdd);
+				configurator.addChinguard.removeEventListener('click',configurator.buttonChangeFunction)
+				break;
+			case 'visorAddButton':
+				configurator.visorTemplate.style.display = 'block';
+				configurator.addVisor.textContent= 'Erase';
+				configurator.addVisor.classList.add('eraseVisor');
+				configurator.eraseVisor = document.querySelector('.eraseVisor');
+				configurator.eraseVisor.addEventListener('click', configurator.buttonEraseToAdd);
+				configurator.addVisor.removeEventListener('click',configurator.buttonChangeFunction)
+				break;
+			default:
+
+		}
+	},
+	buttonEraseToAdd: function(e) {
+		switch (e.target.classList[2]) {
+			case 'eraseChinguard':
+				configurator.chinguardTemplate.style.display = 'none';
+				configurator.addChinguard.classList.remove('eraseChinguard');
+				configurator.addChinguard.textContent= '+ Add';
+				configurator.addChinguard = document.querySelector('.chinguardAddButton');
+				configurator.addChinguard.addEventListener('click', configurator.buttonChangeFunction);
+
+			break;
+			case 'eraseVisor':
+				configurator.visorTemplate.style.display = 'none';
+				configurator.addVisor.classList.remove('eraseVisor');
+				configurator.addVisor.textContent= '+ Add';
+				configurator.addVisor = document.querySelector('.visorAddButton');
+				configurator.addVisor.addEventListener('click', configurator.buttonChangeFunction);
+			break;
+			default:
+			}
 	},
 };
 

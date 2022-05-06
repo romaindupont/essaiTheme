@@ -1,3 +1,4 @@
+<h3 class="addProduct chinguardAddButton">&plus; Add</h3>
 <div class="infos chinguard">
 	<div class="elementChoice">
 			<img class="leftChoice direction" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/arrow_left.svg" alt="left direction">
