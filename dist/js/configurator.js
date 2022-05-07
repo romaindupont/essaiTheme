@@ -74,8 +74,8 @@ const configurator = {
 		configurator.eraseVisor = document.querySelector('.eraseVisor');
 		configurator.patternList = document.querySelectorAll('.patternList');
 		configurator.colorList = document.querySelectorAll('.colorList');
-		/* configurator.localHosting = 'localhost'; */
-		configurator.localHosting = '192.168.1.101:8080';
+		configurator.localHosting = 'localhost'
+		/* 		configurator.localHosting = '192.168.1.101:8080'; */
   },
 	jsonFileImport: function() {
 		const json = `http://${configurator.localHosting}/essai/content/themes/veldt/dist/json/helmetElement.json`;

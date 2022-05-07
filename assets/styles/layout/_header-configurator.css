@@ -4,7 +4,7 @@ body {
 }
 .configurator-header {
 	width: 100vw;
-	border-top: 10px solid var(--color-principal);
+	/* border-top: 10px solid var(--color-principal); */
 	z-index: 1;
 }
 .header-configurator {
@@ -23,8 +23,8 @@ body {
 	margin-left: 4rem;
 }
 .header-configurator-left-menu {
-	width: 40px;
-	height: 40px;
+	width: 30px;
+	height: 30px;
 	margin-right: 1.5rem;
 	cursor: pointer;
 	z-index: 2;
@@ -54,7 +54,7 @@ body {
 }
 .header-configurator-right-priceZone-price {
 	color: var(--price-config-color);
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	font-weight: 900;
 	padding: 1rem 1rem;
 }
@@ -64,7 +64,7 @@ button.header-configurator-right-priceZone-buy {
 	padding: 0.5rem 1.2rem;
 	text-transform: uppercase;
 	color: var(--button-config-color);
-	font-size: 1rem;
+	font-size: 0.8rem;
 	cursor: pointer;
 	letter-spacing: 0.2rem;
 }
@@ -206,24 +206,25 @@ and (max-device-width : 768px) {
 		justify-content: center;
 	}
 	.header-configurator-left-menu {
-		margin-right: 0;
+		margin: 2rem;
 		position: absolute;
-		top: 25px;
-		left: 20px;
+		top: 0px;
+		left: 0px;
 	}
 	.header-configurator-left-title {
 		display: none;
 	}
 	.header-configurator-right {
-		align-items: none;
+	/* 	align-items: none; */
 		margin-right: 0;
 		position: absolute;
 		/* bottom: 50%; */
-		right: -30px;
-		top: 44vh;
+		right: 0px;
+		top: 43vh;
 		width: 100vw;
-		justify-content: none;
-    align-items: none;
+/* 		justify-content: none;
+    align-items: none; */
+		margin: 0 2rem;
 	}
 	.header-configurator-right-comment {
 		display: none;

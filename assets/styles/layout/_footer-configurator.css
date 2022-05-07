@@ -283,8 +283,9 @@ svg#menu_option {
 		display: none;
 	}
 	.export {
-		top: 30px;
-		right: 20px;
+		top: 0px;
+		right: 0px;
+		margin: 2rem;
 	}
 	svg#menu_option {
 		display: none;
@@ -320,8 +321,9 @@ svg#menu_option {
     width: 30px;
     height: 30px;
     position: absolute;
-    top: -44px;
-    left: 30px;
+    top: -50px;
+    left: 0px;
+		margin: 0 2rem;
 	}
 	.exportWindow {
 		flex-direction: column;
@@ -597,7 +599,7 @@ and (min-width : 1824px) {
   cursor: pointer;
 }
 .elementPicker {
-	width: 400px;
+	width: 100%;
 	font-size: 1rem;
 	text-transform: uppercase;
 	font-weight: 600;
