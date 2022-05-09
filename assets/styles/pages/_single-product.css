@@ -31,6 +31,7 @@
 	width: 80%;
 	height: 80%;
 	object-fit: contain;
+	margin: 0px 3rem;
 }
 .btn-slider-container {
 	display: flex;

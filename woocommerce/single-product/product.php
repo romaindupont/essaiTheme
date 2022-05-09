@@ -6,6 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product;
 global $post;
+
 $columns           = apply_filters( 'woocommerce_product_thumbnails_columns', 4 );
 $post_thumbnail_id = $product->get_image_id();
 $images = $product->get_image();
@@ -58,15 +59,16 @@ if ( ! $short_description ) {
 			</div>
 		</div>
 		<div class="custom-singleProduct-page--right">
-		<?php the_title( '<h1 class="product_title entry-title">', '</h1>' );?>
-		<div class="woocommerce-product-details__short-description">
-			<?php echo $short_description; ?>
-		</div>
-		<div class="woocommerce-price-container">
-			<p class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price' ) ); ?>"><?php echo $product->get_price_html(); ?></p>
-			<p class="deliveryMessage">Free delivery <span>- 10 weeks</span></p>
-		</div>
-		<?php echo '<ul class="woocommerce-attribute-list">';
+			<?php the_title( '<h1 class="product_title entry-title">', '</h1>' );?>
+			<div class="woocommerce-product-details__short-description">
+				<?php echo $short_description; ?>
+			</div>
+			<div class="woocommerce-price-container">
+				<p class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price' ) ); ?>"><?php echo $product->get_price_html(); ?></p>
+				<p class="deliveryMessage">Free delivery <span>- 10 weeks</span></p>
+			</div>
+			<form class="cart" action="" method="get">
+			<?php echo '<ul class="woocommerce-attribute-list">';
 		foreach( wc_get_attribute_taxonomies() as $values ) {
 			$term_names = get_terms( array('taxonomy' => 'pa_' . $values->attribute_name, 'fields' => 'names' ) );
 			echo '<li class="woocommerce-attribute-title"><strong>'. $values->attribute_label .'</strong><div class="woocommerce-attribute-choiceList">';
@@ -79,14 +81,13 @@ if ( ! $short_description ) {
 		echo '</ul>';?>
 		</div>
 		
-		<form class="cart" method="post">
-
-				<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
+			
+			<button type="submit"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+				<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 
 				<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->id ); ?>" />
-				<button type="submit">Add to Cart</button>
+				<input type="hidden" name="product_id" value="<?php echo absint( $product->get_id() ); ?>" />
 
-				<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 
 			</form>
 	</section>

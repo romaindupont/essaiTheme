@@ -1,4 +1,4 @@
-<div class="colorListType">
+<div class="sizeChoice">
 	<span class="buttonChoice">None</span>
 	<span class="buttonChoice">White</span>
 	<span class="buttonChoice">Black</span>

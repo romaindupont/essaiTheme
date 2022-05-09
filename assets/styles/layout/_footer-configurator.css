@@ -99,7 +99,9 @@
   box-shadow: inset 0px 0px 0 1px var(--tabs-selected-bg-color);
   flex-direction: column;
   border-radius: 0 0 5px 5px;
-  overflow: auto;
+  /* overflow: auto; */
+	overflow-x: hidden;
+	overflow-y: auto;
 	height: 600px;
 /* 	border-top: 3px solid var(--tabs-border-color);
  */}
@@ -298,6 +300,7 @@ svg#menu_option {
 	}
 	.elementPicker {
 		text-align: center;
+		width: 100%;
 	}
 	.allScrew {
 		width: 60px;
@@ -335,6 +338,10 @@ svg#menu_option {
 	}
 	.patternList, .colorList {
 		transform: translate3d(50%, 0px, 0px);
+	}
+	.colorListType {
+		transform: translate3d(0%, 0px, 0px);
+		justify-content: flex-start;
 	}
 }
 @media (min-width: 576px) { 
@@ -376,7 +383,8 @@ svg#menu_option {
 	svg#down {
 		display: block;
 		top: 50px;
-		left: 15px;
+		left: 0px;
+		margin: 0.5rem 2rem;
 	}
 	.openIt {
 		bottom: -30% !important;
@@ -386,10 +394,11 @@ svg#menu_option {
 		right: 15px;
 	}
 	.positionExportLogo {
-    top: 40vh !important;
+    top: 35vh !important;
 	}
 	svg#menu_option {
 		display: block;
+		margin: 0.5rem 2rem;
 	}
 }
 @media (min-width : 1024px) {
@@ -428,6 +437,7 @@ svg#menu_option {
 	}
 	.elementPicker {
 		text-align: center;
+		width: 400px;
 	}
 	.allScrew {
 		width: 80px;
@@ -455,9 +465,10 @@ svg#menu_option {
     width: 30px;
     height: 30px;
     position: absolute;
-		top: 58px;
+		top: 50px;
     left: 200px;
     z-index: 51;
+		margin: 0.5rem 2rem;
 	}
 	.logoAppear {
 		display: block;
@@ -475,6 +486,9 @@ svg#menu_option {
 	}
 	svg#eye, #eye {
 		display: block;
+	}
+	.colorListType, .sizeChoice, .certifChoice {
+		justify-content: center;
 	}
 }
 @media (min-width : 1224px) {
@@ -530,8 +544,8 @@ and (min-width : 1824px) {
 	overflow-y: hidden;
 	/* margin-top: 1rem; */
 	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
+/* 	justify-content: center; */
+	/* flex-wrap: wrap; */
 }
 
 .chooseStyleNumber {
@@ -599,7 +613,7 @@ and (min-width : 1824px) {
   cursor: pointer;
 }
 .elementPicker {
-	width: 100%;
+	/* width: 100%; */
 	font-size: 1rem;
 	text-transform: uppercase;
 	font-weight: 600;
@@ -890,9 +904,9 @@ input#numberSelection {
 	flex-direction: column;
 }
 
-.peak_visor_page > .colorListType {
+/* .peak_visor_page > .colorListType {
 	flex-wrap: wrap;
-}
+} */
 .menu_option > div {
 	height: 100%;
 }
@@ -948,9 +962,10 @@ input#numberSelection {
 	width: 40px;
 	height: 40px;
 	position: absolute;
-	top: 10px;
-	right: 30px;
+	top: 0px;
+	right: 0px;
 	cursor: pointer;
+	margin: 1rem 2rem;
 }
 .exportWindow > #exportWindow_closeLogo {
 	width: 40px;

@@ -11,7 +11,12 @@ function veldt_theme_enqueue_scripts() {
 		'https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap', 
 		false
 	);
-
+/* 	if(!is_page('product')){ 
+		wp_enqueue_style(
+			'parent-style',
+			get_template_directory_uri() . '/style.css'
+		);
+	} */
 	if(!is_page('configurator')){
 	wp_enqueue_script(
 		'veldt-script',
@@ -55,10 +60,6 @@ function veldt_theme_enqueue_scripts() {
 			'020522',
 			true
 		);
-/* 		wp_enqueue_style(
-			'parent-style',
-			get_template_directory_uri() . '/style.css'
-		); */
 	}
 	if(is_singular( 'product' )) {
 		wp_enqueue_style(

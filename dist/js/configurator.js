@@ -74,7 +74,8 @@ const configurator = {
 		configurator.eraseVisor = document.querySelector('.eraseVisor');
 		configurator.patternList = document.querySelectorAll('.patternList');
 		configurator.colorList = document.querySelectorAll('.colorList');
-		configurator.localHosting = 'localhost'
+		configurator.colorListType = document.querySelectorAll('.colorListType');
+		configurator.localHosting = 'localhost:8080';
 		/* 		configurator.localHosting = '192.168.1.101:8080'; */
   },
 	jsonFileImport: function() {
@@ -192,14 +193,24 @@ const configurator = {
 		configurator.menuOptionElement.forEach(button => button.addEventListener('click', configurator.menuOptionClicAction));
 		configurator.patternList.forEach(list => list.addEventListener('scroll',(e) => configurator.scrollEffectOnList(e, list)));
 		configurator.colorList.forEach(list => list.addEventListener('scroll',(e) => configurator.scrollEffectOnList(e, list)));
+		configurator.colorListType.forEach(list => list.addEventListener('scroll',(e) => configurator.scrollEffectOnList(e, list)));
 	},
 	scrollEffectOnList: function(e, list) {
+		let ratio = 0;
+		if(list.classList[0] === 'colorListType') {
+			ratio = 3;
+		}
+		else {
+			ratio = 2.5;
+		}
 		if(e.target.getBoundingClientRect().width < 878){
-			let calcul = e.target.clientWidth/2 - e.target.scrollLeft;
-			if(calcul < `-${e.target.clientWidth/2}`) {
-				list.style.transform = `translate3d(-${e.target.clientWidth/2}, 0px, 0px)`; 
+			let calcul = e.target.clientWidth/ratio - e.target.scrollLeft;
+			if(calcul < `-${e.target.clientWidth/5}`) {
+				list.style.transform = `translate3d(-${calcul}, 0px, 0px)`; 
+				console.log('je change avec ratio')
 			}else {
 				list.style.transform = `translate3d(${calcul}px, 0px, 0px)`; 
+				console.log('je change avec le calcul normal')
 			}
 		}
 	},
@@ -326,6 +337,7 @@ const configurator = {
 				configurator.buttonChoice = document.querySelectorAll('.buttonChoice');
 				configurator.patternList = document.querySelectorAll('.patternList');
 				configurator.colorList = document.querySelectorAll('.colorList');
+				configurator.colorListType = document.querySelectorAll('.colorListType');
 				configurator.buttonChoiceListener();
 			})
 			.catch(error => console.log(error));
@@ -363,6 +375,7 @@ const configurator = {
 				configurator.buttonChoice = document.querySelectorAll('.buttonChoice');
 				configurator.patternList = document.querySelectorAll('.patternList');
 				configurator.colorList = document.querySelectorAll('.colorList');
+				configurator.colorListType = document.querySelectorAll('.colorListType');
 				configurator.buttonChoiceListener();
 			})
 			.catch(error => console.log(error));
@@ -388,6 +401,8 @@ const configurator = {
 				configurator.roundColor = document.querySelectorAll('.roundColor');
 				configurator.menuOptionElement = document.querySelectorAll('.menu_option > div > div > p');
 				configurator.patternList = document.querySelectorAll('.patternList');
+				configurator.colorList = document.querySelectorAll('.colorList');
+				configurator.colorListType = document.querySelectorAll('.colorListType');
 				configurator.buttonChoiceListener();
 			})
 			.catch(error => console.log(error));
@@ -438,6 +453,7 @@ const configurator = {
 					configurator.sizeButtonChoice = document.querySelectorAll('.SizebuttonChoice');
 					configurator.patternList = document.querySelectorAll('.patternList');
 					configurator.colorList = document.querySelectorAll('.colorList');
+					configurator.colorListType = document.querySelectorAll('.colorListType');
 					configurator.buttonChoiceListener();
 				})
 				.catch(error => console.log(error));
@@ -461,6 +477,7 @@ const configurator = {
 						configurator.screwChoice = document.querySelectorAll('.allScrew');
 						configurator.patternList = document.querySelectorAll('.patternList');
 						configurator.colorList = document.querySelectorAll('.colorList');
+						configurator.colorListType = document.querySelectorAll('.colorListType');
 						configurator.buttonChoiceListener();
 					})
 					.catch(error => console.log(error));
