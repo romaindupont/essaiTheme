@@ -6,6 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product;
 global $post;
+global $available_variations;
 
 $columns           = apply_filters( 'woocommerce_product_thumbnails_columns', 4 );
 $post_thumbnail_id = $product->get_image_id();
@@ -27,7 +28,6 @@ if ( ! $short_description ) {
 }
 
 ?>
-
 <main class="custom-singleProduct-page"> 
 	<section class="section">
 		<div class="slider" data-columns="<?php echo esc_attr( $columns ); ?>">
@@ -67,29 +67,39 @@ if ( ! $short_description ) {
 				<p class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price' ) ); ?>"><?php echo $product->get_price_html(); ?></p>
 				<p class="deliveryMessage">Free delivery <span>- 10 weeks</span></p>
 			</div>
-			<form class="cart" action="" method="get">
+			<form class="cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="get">
+			<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 			<?php echo '<ul class="woocommerce-attribute-list">';
 		foreach( wc_get_attribute_taxonomies() as $values ) {
 			$term_names = get_terms( array('taxonomy' => 'pa_' . $values->attribute_name, 'fields' => 'names' ) );
-			echo '<li class="woocommerce-attribute-title"><strong>'. $values->attribute_label .'</strong><div class="woocommerce-attribute-choiceList">';
+			echo '<li class="woocommerce-attribute-title '. $values->attribute_label .'"><strong>'. $values->attribute_label .'</strong><div class="woocommerce-attribute-choiceList">';
 			for($i= 0; $i < count($term_names); $i++){
-				echo '<div class="woocommerce-attribute-input"><input type="radio" id='. $term_names[$i] .' name='. $values->attribute_label .' value='. $term_names[$i] .'/><label for='. $term_names[$i] .'>'. $term_names[$i] .'</label></div>';
+				echo '<div class="woocommerce-attribute-input"><input type="radio" id='. $term_names[$i] .' name='. $values->attribute_label .' value='. $term_names[$i] .'><label for='. $term_names[$i] .'>'. $term_names[$i] .'</label></div>';
 				
 			}
 			echo '</div></li>';
 		}
 		echo '</ul>';?>
-		</div>
-		
-			
-			<button type="submit"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
-				<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
-
-				<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->id ); ?>" />
-				<input type="hidden" name="product_id" value="<?php echo absint( $product->get_id() ); ?>" />
-
-
+			<div class="buttonZone">
+				<button type="submit" class="add_to_cart"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+				<button class="personnalize"><a href="<?php echo get_permalink( get_page_by_path('configurator' )); ?>">Personnalize</a></button>
+				<button type="submit" class="special-test"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+			</div>
+			<?php 
+	 $data_store   = WC_Data_Store::load( 'product' );
+	 $variation_id = $data_store->find_matching_product_variation( new WC_Product($product->id), wp_unslash( $_GET ) );  
+	
+	$macertif = get_post_meta($variation_id, 'Certification', true);
+	var_dump( $variation_id);
+		?>
+			<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
+			<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->id );  ?>" />
+			<input type="hidden" name="product_id" value="<?php echo absint( $product->get_id() ); ?>" />
+			<input type="hidden" name="variation_id" class="variation_id" value="0" />
 			</form>
+		</div>
 	</section>
+	<?php do_action( 'woocommerce_before_variations_form' ); ?>
+
 
 </main>

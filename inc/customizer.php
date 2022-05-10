@@ -58,3 +58,14 @@ add_action('get_header', 'remove_admin_login_header');
 add_action('after_setup_theme', 'remove_admin_bar'); */
 add_filter( 'show_admin_bar', '__return_false' );
 
+function searchForVariants($certification, $size, $array) {
+
+	foreach ($array as $key => $sub_array) {
+
+			if ($sub_array['attributes']['attribute_pa_certification'] === $certification && $sub_array['attributes']['attribute_pa_size'] === $size) {
+				 return $sub_array['variation_id'];
+			} else {
+					continue;
+			}
+	}
+}

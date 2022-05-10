@@ -161,3 +161,11 @@ input[type="radio"]:checked + label::after {
 form.cart {
 	z-index: 999;
 }
+
+.buttonZone {
+	z-index: 1000;
+	display: flex;
+}
+.add_to_cart, .special-test {
+	z-index: 1001;
+}

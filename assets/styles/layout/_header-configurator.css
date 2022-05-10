@@ -55,7 +55,7 @@ body {
 .header-configurator-right-priceZone-price {
 	color: var(--price-config-color);
 	font-size: 1.3rem;
-	font-weight: 900;
+	font-weight: bold;
 	padding: 1rem 1rem;
 }
 button.header-configurator-right-priceZone-buy {
@@ -67,6 +67,8 @@ button.header-configurator-right-priceZone-buy {
 	font-size: 0.8rem;
 	cursor: pointer;
 	letter-spacing: 0.2rem;
+	border: none;
+	outline: inherit;
 }
 .first_menu-configurator-nav {
   width: 100%;

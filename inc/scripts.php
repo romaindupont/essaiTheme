@@ -11,6 +11,13 @@ function veldt_theme_enqueue_scripts() {
 		'https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap', 
 		false
 	);
+	wp_enqueue_script(
+		'veldt-special-script',
+		get_theme_file_uri('dist/main.js'),
+		[],
+		'20220413',
+		true
+	);
 /* 	if(!is_page('product')){ 
 		wp_enqueue_style(
 			'parent-style',
