@@ -6,8 +6,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product;
 global $post;
-global $available_variations;
-
+$variations = $product->get_available_variations();
+$product_sku = $product->get_sku();
 $columns           = apply_filters( 'woocommerce_product_thumbnails_columns', 4 );
 $post_thumbnail_id = $product->get_image_id();
 $images = $product->get_image();
@@ -70,36 +70,66 @@ if ( ! $short_description ) {
 			<form class="cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="get">
 			<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 			<?php echo '<ul class="woocommerce-attribute-list">';
-		foreach( wc_get_attribute_taxonomies() as $values ) {
+		/* foreach( wc_get_attribute_taxonomies() as $values ) {
 			$term_names = get_terms( array('taxonomy' => 'pa_' . $values->attribute_name, 'fields' => 'names' ) );
 			echo '<li class="woocommerce-attribute-title '. $values->attribute_label .'"><strong>'. $values->attribute_label .'</strong><div class="woocommerce-attribute-choiceList">';
 			for($i= 0; $i < count($term_names); $i++){
-				echo '<div class="woocommerce-attribute-input"><input type="radio" id='. $term_names[$i] .' name='. $values->attribute_label .' value='. $term_names[$i] .'><label for='. $term_names[$i] .'>'. $term_names[$i] .'</label></div>';
+				echo '<div class="woocommerce-attribute-input"><input type="radio" id='. $term_names[$i] .' name="attribute_pa_'. $values->attribute_name .'" value='. $term_names[$i] .'><label for='. $term_names[$i] .'>'. $term_names[$i] .'</label></div>';
 				
 			}
 			echo '</div></li>';
 		}
-		echo '</ul>';?>
+		echo '</ul>'; */?>
+		<?php $products = $product->get_attribute( 'pa_size' );
+$product_attributes = explode(',', $products);
+		/* var_dump($product_attributes); */
+?>
+<?php foreach ( $product_attributes as $product_attribute_key => $product_attribute ) : ?>
+	<li class="woocommerce-attribute-titlewoocommerce-attribute-title woocommerce-product-attributes-item woocommerce-product-attributes-item--<?php echo esc_attr( $product_attribute_key ); ?>">
+	<div class="woocommerce-attribute-input"><input type="radio" class="woocommerce-product-attributes-item__label"><?php echo wp_kses_post( $product_attribute ); ?></div>
+		<td class="woocommerce-product-attributes-item__value"><?php /* echo wp_kses_post( $product_attribute['value'] ); */ ?></td>
+	</li>
+	
+<?php endforeach; ?>
+<?php/* 	$data_store   = WC_Data_Store::load( 'product' );
+		$attributes = array(
+			"attribute_pa_certification" => 'dot',
+			"attribute_pa_size" => 'ml'
+		);
+		$variation_id = $data_store->find_matching_product_variation(
+			new \WC_Product( $product->id), $attributes
+		);
+		var_dump($variations);  */?>
 			<div class="buttonZone">
 				<button type="submit" class="add_to_cart"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
 				<button class="personnalize"><a href="<?php echo get_permalink( get_page_by_path('configurator' )); ?>">Personnalize</a></button>
-				<button type="submit" class="special-test"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
 			</div>
-			<?php 
-	 $data_store   = WC_Data_Store::load( 'product' );
-	 $variation_id = $data_store->find_matching_product_variation( new WC_Product($product->id), wp_unslash( $_GET ) );  
-	
-	$macertif = get_post_meta($variation_id, 'Certification', true);
-	var_dump( $variation_id);
-		?>
 			<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 			<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->id );  ?>" />
 			<input type="hidden" name="product_id" value="<?php echo absint( $product->get_id() ); ?>" />
 			<input type="hidden" name="variation_id" class="variation_id" value="0" />
-			</form>
+		</form>
 		</div>
 	</section>
-	<?php do_action( 'woocommerce_before_variations_form' ); ?>
-
-
+		<script>
+			(function ($) {
+    $(document).ready(function () {
+        const customVariations = document.getElementsByClassName('custom-wc-variations');
+        if (customVariations.length > 0) {
+            
+            Array.from(customVariations).forEach(function (variation) {
+                const radios = variation.querySelectorAll('input[type=radio]');
+                radios.forEach(function (radio) {
+                    radio.addEventListener('change', function () {
+                        const variationName = radio.getAttribute('data-variation-name');
+                        const selectBox = document.querySelector('select[name=' + variationName + ']');
+                        selectBox.value = radio.getAttribute('data-value');
+                        $(selectBox).trigger('change');
+                    });
+                });
+            });
+        }
+    });
+})(jQuery);
+		</script>
 </main>

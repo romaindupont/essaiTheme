@@ -6,7 +6,7 @@
   background: var(--background-page-config);
   padding-top: 0.075rem;
   position: relative;
-  height: 100%;
+  /* height: 100%; */
 	justify-content: center;
 }
 
@@ -490,6 +490,9 @@ svg#menu_option {
 	.colorListType, .sizeChoice, .certifChoice {
 		justify-content: center;
 	}
+	.menu_option {
+		bottom: 70vh;
+	}
 }
 @media (min-width : 1224px) {
 	footer.footer-configurator {
@@ -503,6 +506,9 @@ svg#menu_option {
 	}
 	.sd-tabs > .sd-tab-radio:checked + .sd-tab-label::after {
 		right: -250%;
+	}
+	.menu_option {
+		bottom: 70vh;
 	}
 }
 
@@ -923,7 +929,7 @@ input#numberSelection {
 	width: 100vw;
 	height: 50vh;
 	position: absolute;
-	bottom: 70vh;
+/* 	bottom: 70vh; */
 	z-index: 94;
 	grid-template-columns: repeat(3, 1fr);
 	align-items: start;
