@@ -75,8 +75,8 @@ const configurator = {
 		configurator.patternList = document.querySelectorAll('.patternList');
 		configurator.colorList = document.querySelectorAll('.colorList');
 		configurator.colorListType = document.querySelectorAll('.colorListType');
-		configurator.localHosting = 'localhost:8080';
-		/* 		configurator.localHosting = '192.168.1.101:8080'; */
+		/* configurator.localHosting = 'localhost:8080'; */
+				configurator.localHosting = 'localhost:80';
   },
 	jsonFileImport: function() {
 		const json = `http://${configurator.localHosting}/essai/content/themes/veldt/dist/json/helmetElement.json`;
