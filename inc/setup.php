@@ -34,17 +34,8 @@ remove_theme_support( 'wc-product-gallery-zoom' );
 remove_theme_support( 'wc-product-gallery-lightbox' );
 remove_theme_support( 'wc-product-gallery-slider' );
 
-// define the woocommerce_attribute callback 
-/* function filter_woocommerce_attribute( $wpautop, $attribute, $values ) { 
-	return $wpautop; 
-}; 
-			 
-// add the filter 
-add_filter( 'woocommerce_attribute', 'filter_woocommerce_attribute', 10, 3 ); */ 
-
-/* add_filter('woocommerce_attribute_show_in_nav_menus', 'wc_reg_for_menus', 1, 2);
-
-function wc_reg_for_menus( $register, $name = '' ) {
-     if ( $name == 'pa_size' ) $register = true;
-     return $register;
+/* add_filter('woocommerce_add_to_cart_redirect', 'woovina_skip_cart_redirect_checkout');
+ 
+function woovina_skip_cart_redirect_checkout($url) {
+    return wc_get_checkout_url();
 } */

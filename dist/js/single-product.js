@@ -9,13 +9,20 @@ const singleProduct = {
 	singleProduct.btnFirst = document.querySelector('.btn-first');
 	singleProduct.btnSecond = document.querySelector('.btn-second');
 	singleProduct.btnThird = document.querySelector('.btn-third');
+	singleProduct.singlePageSection = document.querySelector('.singlePageSection');
  },
  initFunctions: function() {
-	singleProduct.slides[0].style.display = 'block';
-	singleProduct.slides[1].style.display = 'block';
+	singleProduct.slides[0].style.display = 'flex';
+	singleProduct.slides[1].style.display = 'flex';
 	singleProduct.slides[2].style.display = 'none';
 	singleProduct.slides.forEach((slide, indx) => {
-		slide.style.transform = `translateY(${indx * 100}%)`;
+		if(singleProduct.singlePageSection.getBoundingClientRect().width < 878){
+			slide.style.transform = `translateX(${indx * 100}%)`;
+		}
+		else {
+			slide.style.transform = `translateY(${indx * 100}%)`;
+		}
+		
 	});
  },
  initListener: function() {
@@ -31,31 +38,46 @@ const singleProduct = {
 		case 'btn-first':
 			singleProduct.btnFirst.classList.add('btn-slider-active');
 			curSlide = 0;
-			singleProduct.slides[0].style.display = 'block';
-			singleProduct.slides[1].style.display = 'block';
+			singleProduct.slides[0].style.display = 'flex';
+			singleProduct.slides[1].style.display = 'flex';
 			singleProduct.slides[2].style.display = 'none';
 			singleProduct.slides.forEach((slide, indx) => {
-				slide.style.transform = `translateY(${100 * (indx - curSlide)}%)`;
+				if(singleProduct.singlePageSection.getBoundingClientRect().width < 878){
+					slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+				}
+				else {
+					slide.style.transform = `translateY(${100 * (indx - curSlide)}%)`;
+				}
 			});
 			break;
 		case 'btn-second':
 			singleProduct.btnSecond.classList.add('btn-slider-active');
 			curSlide = 1;
-			singleProduct.slides[0].style.display = 'block';
-			singleProduct.slides[1].style.display = 'block';
-			singleProduct.slides[2].style.display = 'block';
+			singleProduct.slides[0].style.display = 'flex';
+			singleProduct.slides[1].style.display = 'flex';
+			singleProduct.slides[2].style.display = 'flex';
 			singleProduct.slides.forEach((slide, indx) => {
-				slide.style.transform = `translateY(${100 * (indx - curSlide)}%)`;
+				if(singleProduct.singlePageSection.getBoundingClientRect().width < 878){
+					slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+				}
+				else {
+					slide.style.transform = `translateY(${100 * (indx - curSlide)}%)`;
+				}
 			});
 			break;
 		case 'btn-third':
 			singleProduct.btnThird.classList.add('btn-slider-active');
 			curSlide = 2;
-			singleProduct.slides[0].style.display = 'block';
-			singleProduct.slides[1].style.display = 'block';
-			singleProduct.slides[2].style.display = 'block';
+			singleProduct.slides[0].style.display = 'flex';
+			singleProduct.slides[1].style.display = 'flex';
+			singleProduct.slides[2].style.display = 'flex';
 			singleProduct.slides.forEach((slide, indx) => {
-				slide.style.transform = `translateY(${100 * (indx - curSlide)}%)`;
+				if(singleProduct.singlePageSection.getBoundingClientRect().width < 878){
+					slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+				}
+				else {
+					slide.style.transform = `translateY(${100 * (indx - curSlide)}%)`;
+				}
 			});
 			break;
 		default:

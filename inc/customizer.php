@@ -57,19 +57,3 @@ add_action('get_header', 'remove_admin_login_header');
 }
 add_action('after_setup_theme', 'remove_admin_bar'); */
 add_filter( 'show_admin_bar', '__return_false' );
-
-add_action( 'woocommerce_after_add_to_cart_button', 'bbloomer_display_dropdown_variation_add_cart' );
- 
-function bbloomer_display_dropdown_variation_add_cart() {
-   global $product;
-   if ( $product->is_type( 'variable' ) ) {
-      wc_enqueue_js( "
-         $( 'input.variation_id' ).on('change', function(){
-            if( '' != $(this).val() ) {
-               var var_id = $(this).val();
-               alert('You just selected variation #' + var_id);
-            }
-         });
-      " );
-   }
-}

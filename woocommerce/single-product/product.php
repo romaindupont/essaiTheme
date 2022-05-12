@@ -7,8 +7,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $product;
 global $post;
 
-$variations = $product->get_available_variations();
+
 $product_sku = $product->get_sku();
+$product = new WC_Product_Variable(	$product->id ); 
+$attributes = $product->get_variation_attributes();
+$available_variations = $product->get_available_variations();
 $columns           = apply_filters( 'woocommerce_product_thumbnails_columns', 4 );
 $post_thumbnail_id = $product->get_image_id();
 $images = $product->get_image();
@@ -29,8 +32,13 @@ if ( ! $short_description ) {
 }
 
 ?>
+<script>
+var passedArray = 	
+    <?php echo json_encode($available_variations); ?>;
+		localStorage.setItem("variationTable", JSON.stringify(passedArray));
+</script>
 <main class="custom-singleProduct-page"> 
-	<section class="section">
+	<section class="section singlePageSection">
 		<div class="slider" data-columns="<?php echo esc_attr( $columns ); ?>">
 				<?php
 				$attachment_ids = $product->get_gallery_image_ids();
@@ -69,26 +77,29 @@ if ( ! $short_description ) {
 				<p class="deliveryMessage">Free delivery <span>- 10 weeks</span></p>
 			</div>
 			<form class="cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="get">
+
 			<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 			<?php echo '<ul class="woocommerce-attribute-list">';
 		foreach( wc_get_attribute_taxonomies() as $values ) {
 			$term_names = get_terms( array('taxonomy' => 'pa_' . $values->attribute_name, 'fields' => 'names' ) );
 			echo '<li class="woocommerce-attribute-title '. $values->attribute_label .'"><strong>'. $values->attribute_label .'</strong><div class="woocommerce-attribute-choiceList">';
 			for($i= 0; $i < count($term_names); $i++){
-				echo '<div class="woocommerce-attribute-input"><input type="radio" id='. $term_names[$i] .' name="attribute_pa_'. $values->attribute_name .'" value='. $term_names[$i] .' class="variation_id"><label for='. $term_names[$i] .'>'. $term_names[$i] .'</label></div>';
+				echo '<div class="woocommerce-attribute-input"><input type="radio" id='. $term_names[$i] .' name="attribute_pa_'. $values->attribute_name .'" value='. $term_names[$i] .'><label for='. $term_names[$i] .'>'. $term_names[$i] .'</label></div>';
 				
 			}
 			echo '</div></li>';
 		}
 		echo '</ul>';?>
-
 	<div class="buttonZone">
 				<button type="submit" class="add_to_cart"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
 				<button class="personnalize"><a href="<?php echo get_permalink( get_page_by_path('configurator' )); ?>">Personnalize</a></button>
 			</div>
 			<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
+
 			<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->id );  ?>" />
 			<input type="hidden" name="product_id" value="<?php echo absint( $product->get_id() ); ?>" />
+			<input type="hidden" name="sku" class="sku" value="<?php echo $product_sku; ?>" />
+			<input type="hidden" name="quantity" class="quantity" value="1" />
 			<input type="hidden" name="variation_id" class="variation_id" value="0" />
 		</form>
 		</div>

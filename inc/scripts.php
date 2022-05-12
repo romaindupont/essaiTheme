@@ -12,8 +12,8 @@ function veldt_theme_enqueue_scripts() {
 		false
 	);
 	wp_enqueue_script(
-		'veldt-special-script',
-		get_theme_file_uri('dist/main.js'),
+		'veldt-addToCart-script',
+		get_theme_file_uri('dist/js/add_to_cart.js'),
 		[],
 		'20220413',
 		true

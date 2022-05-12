@@ -511,7 +511,14 @@ svg#menu_option {
 		bottom: 70vh;
 	}
 }
-
+@media (min-width : 1400px) {
+	.menu_option {
+		bottom: 50vh;
+	}
+	.exportWindow{
+		bottom: 50vh;
+	}
+}
 /* Large screens ----------- */
 @media only screen 
 and (min-width : 1824px) {
@@ -532,14 +539,16 @@ and (min-width : 1824px) {
 .aerationList, .pickerScrew, .patternList, .shellColor, .varnishList, .metalParts {
 	width: 100%;
 	display: flex;
-	position: relative;
+/* 	position: relative;
 	top: 50px;
-	height: 100%;
+	height: 100%; */
+	margin: 2rem 0;
 }
 .patternList, .colorList {
 	overflow-x: scroll;
 	overflow-y: hidden;
 	display: flex;
+	margin: 2rem 0;
 	/* transform: translate3d(50%, 0px, 0px); */
 }
 .colorList {
@@ -550,6 +559,7 @@ and (min-width : 1824px) {
 	overflow-y: hidden;
 	/* margin-top: 1rem; */
 	display: flex;
+	margin: 1rem 0;
 /* 	justify-content: center; */
 	/* flex-wrap: wrap; */
 }
@@ -601,6 +611,7 @@ and (min-width : 1824px) {
 .numberChoice {
 	display: flex;
 	justify-content: center;
+	margin: 2rem 0;
 }
 .activeButton {
   background:var(--color-second);
@@ -843,6 +854,7 @@ background: #000;
 	top: 100px;
 	flex-direction: column;
 	align-items: center;
+	/* margin: 2rem 0; */
 }
 
 .infosNumber {
@@ -857,6 +869,7 @@ background: #000;
 .chooseWindows {
 	display: flex;
 	flex-direction: column;
+	margin: 2rem 0;
 }
 .chooseWindows_input {
 	display: flex;
@@ -873,7 +886,12 @@ input#numberSelection {
 	justify-content: space-evenly;
 	margin-top: 1rem;
 }
-
+.peak_visor_page > .colorListType,.peak_visor_page > .colorList {
+	margin: 0;
+}
+.chinguard > div > .colorList, .chinguard > div > .colorListType {
+	margin: 0;
+}
 .selectButtonNumber > svg {
 	width: 40px;
 	height: 40px;
