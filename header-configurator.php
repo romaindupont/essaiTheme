@@ -23,7 +23,7 @@
 						</span>
 				</button>
 			</div>
-			<div class="header-configurator-right-comment">Livraison gratuite 10 semaines</div>
+			<div class="header-configurator-right-comment"><?php esc_html_e( "Free delivery 10 weeks", "deliveryInfo") ?></div>
 		</div>
 	</div>
 	<div class="first_menu-configurator">

@@ -50,7 +50,6 @@ const addToCart = {
 			}) 	
 		});
 	},	
-
 }
 
 document.addEventListener('DOMContentLoaded', addToCart.init);

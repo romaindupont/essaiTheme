@@ -1,9 +1,6 @@
 <div class="varnishList">
 	<div class="allScrew">
 		<svg class="interiorSvg" version="1.1" id="suede_blue" viewBox="0 0 60 60">
-			<style type="text/css">
-				.suede_blue{fill:#253658;}
-			</style>
 			<g>
 				<path class="suede_blue" d="M54.9,15.6l-3.3-2.9l3.3-2.9L58.3,7l-4.1-3.5l-4-3.4l-3.3,2.9l-3.3,2.9L40,2.9L36.7,0l-3.3,2.9l-3.3,3L26.7,3
 					l-3.3-2.9L20,3l-3.3,2.9L13.3,3L9.9,0.1L5.8,3.4l-4,3.4l3.3,2.9c1.9,1.6,3.3,2.9,3.3,3s-1.5,1.4-3.3,3l-3.3,2.9l3.3,2.9l3.3,2.9
@@ -16,9 +13,6 @@
 	</div>
 	<div class="allScrew">
 		<svg class="interiorSvg" version="1.1" id="suede_black" viewBox="0 0 60 60">
-			<style type="text/css">
-				.suede_black{fill:#000000;}
-			</style>
 			<g>
 				<path class="suede_black" d="M54.9,15.6l-3.3-2.9l3.3-2.9L58.3,7l-4.1-3.5l-4-3.4l-3.3,2.9l-3.3,2.9L40,2.9L36.7,0l-3.3,2.9l-3.3,3L26.7,3
 					l-3.3-2.9L20,3l-3.3,2.9L13.3,3L9.9,0.1L5.8,3.4l-4,3.4l3.3,2.9c1.9,1.6,3.3,2.9,3.3,3s-1.5,1.4-3.3,3l-3.3,2.9l3.3,2.9l3.3,2.9
@@ -31,9 +25,6 @@
 	</div>
 	<div class="allScrew">
 		<svg class="interiorSvg" version="1.1" id="leather_brown"	viewBox="0 0 60 60">
-			<style type="text/css">
-				.leather_brown{fill:#7c4024;}
-			</style>
 			<g>
 				<g>
 					<path class="leather_brown" d="M23.5,0.7c-0.4,1.4-1.4,3.9-2.3,5.2c-0.9,1.3-2.3,2.8-3.3,3.4c-3.1,2-6.9,2.1-11.3,0.1L6,9L5,9.8
@@ -54,9 +45,6 @@
 	</div>
 	<div class="allScrew">
 		<svg class="interiorSvg" version="1.1" id="leather_black"	viewBox="0 0 60 60">
-			<style type="text/css">
-				.leather_black{fill:#000000;}
-			</style>
 			<g>
 				<g>
 					<path class="leather_black" d="M23.5,0.7c-0.4,1.4-1.4,3.9-2.3,5.2c-0.9,1.3-2.3,2.8-3.3,3.4c-3.1,2-6.9,2.1-11.3,0.1L6,9L5,9.8

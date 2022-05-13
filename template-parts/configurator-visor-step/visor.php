@@ -241,7 +241,7 @@
 					.short_blue_st0{fill:#CCCCCC;stroke:#010101;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;}
 					.short_blue_st1{fill:#4D4D4D;stroke:#010101;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;}
 					.short_blue_st2{fill:#808080;stroke:#010101;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;}
-					.short_blue_st3{fill:url(#SVGID_1_);enable-background:new    ;}
+					.short_blue_st3{fill:url(#short_blueSVGID_1_);enable-background:new    ;}
 					.short_blue_st4{fill:none;stroke:#010101;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;}
 				</style>
 				<g>
@@ -277,7 +277,7 @@
 					C51.5,13.2,52.5,12.5,53.6,12.5z"/>
 				<path class="short_blue_st2" d="M40.3,1.9c-0.7,0.6-1.3,1.3-2,1.9c-0.5,0.5-1,1-1.5,1.4c0,0,0,0,0,0C36.8,3.3,38.4,1.7,40.3,1.9
 					C40.3,1.8,40.3,1.8,40.3,1.9z"/>
-				<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="12.8379" y1="29.2884" x2="60.4909" y2="56.8009">
+				<linearGradient id="short_blueSVGID_1_" gradientUnits="userSpaceOnUse" x1="12.8379" y1="29.2884" x2="60.4909" y2="56.8009">
 					<stop  offset="0" style="stop-color:#32113B"/>
 					<stop  offset="0.1047" style="stop-color:#34143D"/>
 					<stop  offset="0.1737" style="stop-color:#3C1D44"/>
@@ -319,7 +319,7 @@
 					.short_chrome_st0{fill:#CCCCCC;stroke:#010101;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;}
 					.short_chrome_st1{fill:#4D4D4D;stroke:#010101;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;}
 					.short_chrome_st2{fill:#808080;stroke:#010101;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;}
-					.short_chrome_st3{fill:url(#SVGID_1_);enable-background:new    ;}
+					.short_chrome_st3{fill:url(#short_chromeSVGID_1_);enable-background:new    ;}
 					.short_chrome_st4{fill:none;stroke:#010101;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;}
 				</style>
 				<g>
@@ -355,7 +355,7 @@
 					C51.5,13.2,52.5,12.5,53.6,12.5z"/>
 				<path class="short_chrome_st2" d="M40.3,1.9c-0.7,0.6-1.3,1.3-2,1.9c-0.5,0.5-1,1-1.5,1.4c0,0,0,0,0,0C36.8,3.3,38.4,1.7,40.3,1.9
 					C40.3,1.8,40.3,1.8,40.3,1.9z"/>
-				<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="12.8379" y1="29.2884" x2="60.4909" y2="56.8009">
+				<linearGradient id="short_chromeSVGID_1_" gradientUnits="userSpaceOnUse" x1="12.8379" y1="29.2884" x2="60.4909" y2="56.8009">
 					<stop  offset="0" style="stop-color:#000000"/>
 					<stop  offset="0.5" style="stop-color:#FFFFFF"/>
 					<stop  offset="1" style="stop-color:#000000"/>
@@ -563,7 +563,7 @@
 					.long_blue_st0{fill:#CCCCCC;stroke:#010101;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;}
 					.long_blue_st1{fill:#4D4D4D;stroke:#010101;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;}
 					.long_blue_st2{fill:#808080;stroke:#010101;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;}
-					.long_blue_st3{fill:url(#SVGID_1_);enable-background:new    ;}
+					.long_blue_st3{fill:url(#long_blueSVGID_1_);enable-background:new    ;}
 					.long_blue_st4{fill:none;stroke:#010101;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;}
 				</style>
 				<g>
@@ -601,7 +601,7 @@
 					C42,1.8,42,1.8,42,1.9z"/>
 				<path class="long_blue_st2" d="M75.3,31.5c0.1-1.2-0.9-2.2-2.1-2.2c-1.2,0-2.2,0.9-2.3,2.1c-0.1,1.2,0.9,2.2,2.1,2.2
 					C74.2,33.6,75.2,32.6,75.3,31.5z"/>
-				<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="10.9158" y1="35.609" x2="58.5688" y2="63.1215">
+				<linearGradient id="long_blueSVGID_1_" gradientUnits="userSpaceOnUse" x1="10.9158" y1="35.609" x2="58.5688" y2="63.1215">
 					<stop  offset="0" style="stop-color:#32113B"/>
 					<stop  offset="0.1047" style="stop-color:#34143D"/>
 					<stop  offset="0.1737" style="stop-color:#3C1D44"/>
@@ -645,7 +645,7 @@
 					.long_chrome_st0{fill:#CCCCCC;stroke:#010101;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;}
 					.long_chrome_st1{fill:#4D4D4D;stroke:#010101;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;}
 					.long_chrome_st2{fill:#808080;stroke:#010101;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;}
-					.long_chrome_st3{fill:url(#SVGID_1_);}
+					.long_chrome_st3{fill:url(#long_chromeSVGID_1_);}
 					.long_chrome_st4{fill:none;stroke:#010101;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;}
 				</style>
 				<g>
@@ -683,7 +683,7 @@
 					C42,1.8,42,1.8,42,1.9z"/>
 				<path class="long_chrome_st2" d="M75.3,31.5c0.1-1.2-0.9-2.2-2.1-2.2c-1.2,0-2.2,0.9-2.3,2.1c-0.1,1.2,0.9,2.2,2.1,2.2
 					C74.2,33.6,75.2,32.6,75.3,31.5z"/>
-				<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="10.9158" y1="35.609" x2="58.5688" y2="63.1215">
+				<linearGradient id="long_chromeSVGID_1_" gradientUnits="userSpaceOnUse" x1="10.9158" y1="35.609" x2="58.5688" y2="63.1215">
 					<stop  offset="0" style="stop-color:#010101"/>
 					<stop  offset="0.5" style="stop-color:#FFFFFF"/>
 					<stop  offset="1" style="stop-color:#010101"/>

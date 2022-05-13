@@ -653,11 +653,15 @@ and (min-width : 1824px) {
 .allScrew:hover > .textAction {
 	visibility: visible;
 	}
+	.varnishList > .allScrew:hover > .textAction::after {
+		content: "";
+		bottom: -4px;
+	}
 .allScrew:hover > .textAction::after {
 	content: "";
 	height: 4px;
 	position: absolute;
-	bottom: -4px;
+	bottom: 0px;
 	background: var(--color-principal);
 	left: 5%;
 	animation: widthLine 200ms forwards ease-in-out;
@@ -673,7 +677,7 @@ and (min-width : 1824px) {
 	content: "";
 	height: 4px;
 	position: absolute;
-	bottom: -4px;
+	bottom: 0px;
 	background: var(--color-principal);
 	left: 5%;
 	width: 90%;
@@ -839,7 +843,7 @@ background: #000;
 	content: "";
 	height: 4px;
 	position: absolute;
-	bottom: -4px;
+	bottom: 0px;
 	background: var(--color-principal);
 	left: 5%;
 	width: 90%;

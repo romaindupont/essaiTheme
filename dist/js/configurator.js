@@ -93,8 +93,8 @@ const configurator = {
 	OpenCloseMenu: function() {
     configurator.menu.addEventListener('click', configurator.handleMenuOpen);
 		configurator.close.addEventListener('click', configurator.handleMenuClose);
-		configurator.logoMenuOption.addEventListener('click',(e) => configurator.menuOption.style.display = 'grid');
-		configurator.logoCloseMenuOption.addEventListener('click',(e) => configurator.menuOption.style.display = 'none');
+		configurator.logoMenuOption.addEventListener('click', (e) => configurator.menuOption.style.display = 'grid');
+		configurator.logoCloseMenuOption.addEventListener('click', (e) => configurator.menuOption.style.display = 'none');
 		configurator.logoHelp.addEventListener('click', () => configurator.popupHelp.style.display = 'block');
 		configurator.popupHelp_closeLogo.addEventListener('click', () => configurator.popupHelp.style.display = 'none');
 		configurator.exportButton.addEventListener('click', () => configurator.exportWindow.style.display = 'flex');
@@ -102,7 +102,6 @@ const configurator = {
 		configurator.exportDownload.addEventListener('click', configurator.pdfFileMade);
 		configurator.addChinguard.addEventListener('click', configurator.buttonChangeFunction);
 		configurator.addVisor.addEventListener('click', configurator.buttonChangeFunction);
-		
   },
 	handleMenuOpen: function() {
     configurator.firstMenu.style.visibility = configurator.firstMenu.style.visibility === 'visible' ? 'visible' : 'visible';
@@ -191,26 +190,24 @@ const configurator = {
 			configurator.visorPage(e);
 		}));
 		configurator.menuOptionElement.forEach(button => button.addEventListener('click', configurator.menuOptionClicAction));
-		configurator.patternList.forEach(list => list.addEventListener('scroll',(e) => configurator.scrollEffectOnList(e, list)));
-		configurator.colorList.forEach(list => list.addEventListener('scroll',(e) => configurator.scrollEffectOnList(e, list)));
-		configurator.colorListType.forEach(list => list.addEventListener('scroll',(e) => configurator.scrollEffectOnList(e, list)));
+		configurator.patternList.forEach(list => list.addEventListener('scroll', (e) => configurator.scrollEffectOnList(e, list)));
+		configurator.colorList.forEach(list => list.addEventListener('scroll', (e) => configurator.scrollEffectOnList(e, list)));
+		configurator.colorListType.forEach(list => list.addEventListener('scroll', (e) => configurator.scrollEffectOnList(e, list)));
 	},
 	scrollEffectOnList: function(e, list) {
 		let ratio = 0;
 		if(list.classList[0] === 'colorListType') {
-			ratio = 3;
+			ratio = 3.5;
 		}
 		else {
 			ratio = 2.5;
 		}
-		if(e.target.getBoundingClientRect().width < 878){
+		if(e.target.getBoundingClientRect().width < 878) {
 			let calcul = e.target.clientWidth/ratio - e.target.scrollLeft;
 			if(calcul < `-${e.target.clientWidth/5}`) {
 				list.style.transform = `translate3d(-${calcul}, 0px, 0px)`; 
-				console.log('je change avec ratio')
 			}else {
 				list.style.transform = `translate3d(${calcul}px, 0px, 0px)`; 
-				console.log('je change avec le calcul normal')
 			}
 		}
 	},
@@ -223,7 +220,7 @@ const configurator = {
 			if (e.path[1].className === 'divHelmetp') {
 				configurator.tabOne.checked = true;
 				configurator.tabTwo.checked = false;
-				configurator.numberArrayPosition = configurator.phpFileHelmet.indexOf(e.target.classList.value)
+				configurator.numberArrayPosition = configurator.phpFileHelmet.indexOf(e.target.classList.value);
 				configurator.elementName.innerHTML = configurator.titreArrayHelmet[configurator.numberArrayPosition] + "<span class='number'>" + (configurator.numberArrayPosition + 1) + '/'+ configurator.titreArrayHelmet.length + "</span>";
 				configurator.messagesHelp.textContent = configurator.helpMessageHelmet[configurator.numberArrayPosition];
 				configuratorName = 'configurator-helmet-step';
@@ -232,7 +229,7 @@ const configurator = {
 			if (e.path[1].className === 'divChinp') {
 				configurator.tabOne.checked = false;
 				configurator.tabTwo.checked = true;
-				configurator.numberArrayPosition = configurator.phpFileChin.indexOf(e.target.classList.value)
+				configurator.numberArrayPosition = configurator.phpFileChin.indexOf(e.target.classList.value);
 				configurator.chinguardElementName.innerHTML = configurator.titreArrayChin[configurator.numberArrayPosition] + "<span class='number'>" + (configurator.numberArrayPosition + 1) + '/' + configurator.titreArrayChin.length + "</span>";
 				configurator.messagesHelp.textContent = configurator.helpMessageChin[configurator.numberArrayPosition];
 				configuratorName = 'configurator-chinguard-step';
@@ -246,7 +243,7 @@ const configurator = {
 			if (e.path[1].className === 'divHelmetp') {
 				configurator.tabOne.checked = true;
 				configurator.tabTwo.checked = false;
-				configurator.numberArrayPosition = configurator.phpFileHelmet.indexOf(e.target.classList.value)
+				configurator.numberArrayPosition = configurator.phpFileHelmet.indexOf(e.target.classList.value);
 				configurator.elementName.innerHTML = configurator.titreArrayHelmet[configurator.numberArrayPosition] + "<span class='number'>" + (configurator.numberArrayPosition + 1) + '/'+ configurator.titreArrayHelmet.length + "</span>";
 				configurator.messagesHelp.textContent = configurator.helpMessageHelmet[configurator.numberArrayPosition];
 				configuratorName = 'configurator-helmet-step';
@@ -255,7 +252,7 @@ const configurator = {
 			if (e.path[1].className === 'divChinp') {
 				configurator.tabOne.checked = false;
 				configurator.tabTwo.checked = true;
-				configurator.numberArrayPosition = configurator.phpFileChin.indexOf(e.target.classList.value)
+				configurator.numberArrayPosition = configurator.phpFileChin.indexOf(e.target.classList.value);
 				configurator.chinguardElementName.innerHTML = configurator.titreArrayChin[configurator.numberArrayPosition] + "<span class='number'>" + (configurator.numberArrayPosition + 1) + '/' + configurator.titreArrayChin.length + "</span>";
 				configurator.messagesHelp.textContent = configurator.helpMessageChin[configurator.numberArrayPosition];
 				configuratorName = 'configurator-chinguard-step';
@@ -279,33 +276,34 @@ const configurator = {
 	},
 	clicOnEye: function() {
 		configurator.eyes.forEach(eye => eye.addEventListener('click', 
-		() => {
-			if(eye.querySelector('#on')){
-				eye.innerHTML=`
-				<g>
-				<path class="eye_off" id="off" d="M15.6,1.6c7.7,0,14,6.3,14,14s-6.3,14-14,14s-14-6.3-14-14S7.9,1.6,15.6,1.6 M15.6,0.6c-8.3,0-15,6.7-15,15
-					s6.7,15,15,15s15-6.7,15-15S23.9,0.6,15.6,0.6L15.6,0.6z"/>
-			</g>
-			<g>
-				<circle class="eye_off" cx="15.6" cy="15.6" r="1.8"/>
-				<path class="eye_off" d="M15.6,10.8c-5,0-9.1,4.8-9.1,4.8s4.1,4.8,9.1,4.8c5,0,9.1-4.8,9.1-4.8S20.6,10.8,15.6,10.8z M15.6,19.1
-					c-1.9,0-3.5-1.6-3.5-3.5c0-1.9,1.6-3.5,3.5-3.5c1.9,0,3.5,1.6,3.5,3.5C19.1,17.5,17.5,19.1,15.6,19.1z"/>
-			</g>
-				 `}
-				 else {
+			() => {
+				if(eye.querySelector('#on')) {
 					eye.innerHTML=`
-					<path class="eye-on" id="on" d="M15.6,0.6c-8.3,0-15,6.7-15,15s6.7,15,15,15s15-6.7,15-15S23.9,0.6,15.6,0.6z M15.6,20.4c-5,0-9.1-4.8-9.1-4.8
-					s1.5-1.7,3.7-3.1l2.1,2.1c-0.1,0.3-0.2,0.6-0.2,1c0,1.9,1.6,3.5,3.5,3.5c0.3,0,0.7-0.1,1-0.2l1.2,1.2C17.1,20.3,16.3,20.4,15.6,20.4
-					z M13.9,16.2l1,1C14.5,17.1,14.1,16.7,13.9,16.2z M21,21.8L9.4,10.1l0.8-0.8L21.8,21L21,21.8z M16.2,13.9c0.5,0.2,0.8,0.6,1,1
-					L16.2,13.9z M21,18.7l-2.1-2.1c0.1-0.3,0.2-0.6,0.2-1c0-1.9-1.6-3.5-3.5-3.5c-0.3,0-0.7,0.1-1,0.2l-1.2-1.2c0.7-0.2,1.4-0.3,2.2-0.3
-					c5,0,9.1,4.8,9.1,4.8S23.3,17.3,21,18.7z"/>
-					 `
-				 }
-		}
+						<g>
+						<path class="eye_off" id="off" d="M15.6,1.6c7.7,0,14,6.3,14,14s-6.3,14-14,14s-14-6.3-14-14S7.9,1.6,15.6,1.6 M15.6,0.6c-8.3,0-15,6.7-15,15
+							s6.7,15,15,15s15-6.7,15-15S23.9,0.6,15.6,0.6L15.6,0.6z"/>
+						</g>
+						<g>
+							<circle class="eye_off" cx="15.6" cy="15.6" r="1.8"/>
+							<path class="eye_off" d="M15.6,10.8c-5,0-9.1,4.8-9.1,4.8s4.1,4.8,9.1,4.8c5,0,9.1-4.8,9.1-4.8S20.6,10.8,15.6,10.8z M15.6,19.1
+								c-1.9,0-3.5-1.6-3.5-3.5c0-1.9,1.6-3.5,3.5-3.5c1.9,0,3.5,1.6,3.5,3.5C19.1,17.5,17.5,19.1,15.6,19.1z"/>
+						</g>
+					`;
+				}
+				else {
+					eye.innerHTML=`
+						<path class="eye-on" id="on" d="M15.6,0.6c-8.3,0-15,6.7-15,15s6.7,15,15,15s15-6.7,15-15S23.9,0.6,15.6,0.6z M15.6,20.4c-5,0-9.1-4.8-9.1-4.8
+						s1.5-1.7,3.7-3.1l2.1,2.1c-0.1,0.3-0.2,0.6-0.2,1c0,1.9,1.6,3.5,3.5,3.5c0.3,0,0.7-0.1,1-0.2l1.2,1.2C17.1,20.3,16.3,20.4,15.6,20.4
+						z M13.9,16.2l1,1C14.5,17.1,14.1,16.7,13.9,16.2z M21,21.8L9.4,10.1l0.8-0.8L21.8,21L21,21.8z M16.2,13.9c0.5,0.2,0.8,0.6,1,1
+						L16.2,13.9z M21,18.7l-2.1-2.1c0.1-0.3,0.2-0.6,0.2-1c0-1.9-1.6-3.5-3.5-3.5c-0.3,0-0.7,0.1-1,0.2l-1.2-1.2c0.7-0.2,1.4-0.3,2.2-0.3
+						c5,0,9.1,4.8,9.1,4.8S23.3,17.3,21,18.7z"/>
+						`;
+				}
+			}
 		));
 	},
 	initHelmetTitleElement: function() {
-		for(let i = 0; i<Object.keys(configurator.dataJson.helmetElement).length;i++) {
+		for(let i = 0; i < Object.keys(configurator.dataJson.helmetElement).length;i++) {
 			let obj = Object.keys(configurator.dataJson.helmetElement)[i];
 			configurator.titreArrayHelmet.push(configurator.dataJson.helmetElement[`${obj}`].title);
 			configurator.phpFileHelmet.push(configurator.dataJson.helmetElement[`${obj}`].phpFile);
@@ -315,7 +313,7 @@ const configurator = {
 		divHelmet.classList.add('divHelmetList');
 		configurator.menuOption.appendChild(divHelmet);
 		const h3 = document.createElement("h3");
-		h3.textContent = `Helmet (${configurator.titreArrayHelmet.length} steps)`
+		h3.textContent = `Helmet (${configurator.titreArrayHelmet.length} steps)`;
 		divHelmet.appendChild(h3);
 		const divPHelmet = document.createElement("div");
 		divPHelmet.classList.add('divHelmetp');
@@ -353,7 +351,7 @@ const configurator = {
 		divChin.classList.add('divChinList');
 		configurator.menuOption.appendChild(divChin);
 		const h3 = document.createElement("h3");
-		h3.textContent = `Chinguard (${configurator.titreArrayChin.length} steps)`
+		h3.textContent = `Chinguard (${configurator.titreArrayChin.length} steps)`;
 		divChin.appendChild(h3);
 		const divPChin = document.createElement("div");
 		divPChin.classList.add('divChinp');
@@ -385,7 +383,7 @@ const configurator = {
 		divVisor.classList.add('divVisorList');
 		configurator.menuOption.appendChild(divVisor);
 		const h3 = document.createElement("h3");
-		h3.textContent = `Visor`
+		h3.textContent = `Visor`;
 		divVisor.appendChild(h3);
 		configurator.messagesHelp.textContent =  "message d'aide visor";
 		const parts = `http://${configurator.localHosting}/essai/content/themes/veldt/template-parts/configurator-visor-step/visor.php`;
@@ -543,7 +541,7 @@ const configurator = {
 				configurator.addChinguard.classList.add('eraseChinguard');
 				configurator.eraseChinguard = document.querySelector('.eraseChinguard');
 				configurator.eraseChinguard.addEventListener('click', configurator.buttonEraseToAdd);
-				configurator.addChinguard.removeEventListener('click',configurator.buttonChangeFunction)
+				configurator.addChinguard.removeEventListener('click',configurator.buttonChangeFunction);
 				break;
 			case 'visorAddButton':
 				configurator.visorTemplate.style.display = 'block';
@@ -551,7 +549,7 @@ const configurator = {
 				configurator.addVisor.classList.add('eraseVisor');
 				configurator.eraseVisor = document.querySelector('.eraseVisor');
 				configurator.eraseVisor.addEventListener('click', configurator.buttonEraseToAdd);
-				configurator.addVisor.removeEventListener('click',configurator.buttonChangeFunction)
+				configurator.addVisor.removeEventListener('click',configurator.buttonChangeFunction);
 				break;
 			default:
 

@@ -33,7 +33,7 @@
 .btn-slider-container {
 	display: flex;
 	position: absolute;
-	z-index: 50;
+	z-index: 39;
 }
 span.btn {
 	width: 8px;
@@ -92,6 +92,7 @@ p.deliveryMessage > span {
 	display: flex;
 	flex-direction: row;
 	margin-bottom: 2rem;
+	align-items: center;
 
 }
 .woocommerce-attribute-title > strong {
@@ -167,6 +168,7 @@ form.cart {
 	border-radius: 25px;
 	padding: 1em;
 	text-transform: uppercase;
+	border: 1px solid #233658;
 }
 
 .buttonZone > .personnalize {
@@ -175,7 +177,7 @@ form.cart {
 	width: 200px !important;
 	padding: 1em;
 	text-transform: uppercase;
-	background-position: 5px 5px !important;
+	border: 1px solid #233658;
 }
 
 .buttonZone > .personnalize > a {
@@ -204,11 +206,8 @@ form.cart {
 	}
 	.btn-slider-container {
     top: 100%;
-    /* transform: translate(0%, 0%); */
-    /* left: 20px; */
     width: 100%;
     flex-direction: row;
-    /* margin: 1rem; */
     justify-content: center;
 	}
 	span.btn {
@@ -220,6 +219,15 @@ form.cart {
 	}
 	.woocommerce-price-container {
 		flex-direction: column;
+	}
+	p.deliveryMessage {
+		margin-top: 1rem;
+	}
+	.buttonZone > .personnalize {
+		background-position: 5px 8px !important;
+	}
+	.buttonZone > .personnalize > a {
+		padding-left: 0.5rem;
 	}
 }
 @media (min-width: 576px) {}
@@ -254,6 +262,15 @@ form.cart {
 	}
 	.woocommerce-price-container {
 		flex-direction: row;
+	}
+	p.deliveryMessage {
+		margin-top:0;
+	}
+	.buttonZone > .personnalize {
+		background-position: 5px 5px !important;
+	}
+	.buttonZone > .personnalize > a {
+		padding-left: 0;
 	}
 }
 @media (min-width : 1224px) {}

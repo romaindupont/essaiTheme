@@ -69,6 +69,13 @@ button.header-configurator-right-priceZone-buy {
 	letter-spacing: 0.2rem;
 	border: none;
 	outline: inherit;
+	z-index: 10;
+	border: 1px solid var(--button-config-color);
+}
+button.header-configurator-right-priceZone-buy:hover {
+	background: var(--button-config-color);
+	color: var(--button-config-bg-color);
+	border: 1px solid var(--button-config-bg-color);
 }
 .first_menu-configurator-nav {
   width: 100%;

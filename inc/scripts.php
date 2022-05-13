@@ -49,6 +49,12 @@ function veldt_theme_enqueue_scripts() {
 			'20220413'
 		); 
 		wp_enqueue_style(
+			'veldt-svgConfigurator-style',
+			get_theme_file_uri('assets/styles/components/_svgConfigurator.css'),
+			[],
+			'20220413'
+		); 
+		wp_enqueue_style(
 			'veldt-configurator-style-header',
 			get_theme_file_uri('assets/styles/layout/_header-configurator.css'),
 			[],

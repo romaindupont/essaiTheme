@@ -1,14 +1,6 @@
 <div class="varnishList">
 	<div class="allScrew">
 		<svg version="1.1" id="black_leather"	viewBox="0 0 62 54">
-			<style type="text/css">
-				.black_leather_st0{fill:#4E4E50;}
-				.black_leather_st1{clip-path:url(#SVGID_2_);}
-				.black_leather_black_leather_st2{fill:#010101;}
-				.black_leather_st3{fill:#333333;}
-				.black_leather_st4{fill:none;stroke:#4D4D4D;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
-				.black_leather_st5{fill:none;stroke:#4D4D4D;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:3.9611,3.9611;}
-			</style>
 			<g>
 				<g>
 					<path class="black_leather_st0" d="M50.9,53.1c0.1-16.6-6.8-14.3-6.8-23.8c0-11.7,3.3-16.9,8.4-16.9c-12.6,0-31.2-3.8-43.6-11.2
@@ -1951,10 +1943,6 @@
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="black_rubber"	viewBox="0 0 62 54">
-			<style type="text/css">
-				.black_rubber_st0{fill:#575757;}
-				.black_rubber_st1{fill:#414141;}
-			</style>
 			<g>
 				<g>
 					<path class="black_rubber_st0" d="M50.3,53.1c-3.7-3.8-7.6-14.2-7.6-23.7c0-11.7,4.1-17,9.2-17c-12.6,0-31.2-3.8-43.6-11.2
@@ -1971,14 +1959,6 @@
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="brown_leather" viewBox="0 0 62 54">
-			<style type="text/css">
-				.brown_leather_st0{fill:#580D0D;}
-				.brown_leather_st1{clip-path:url(#SVGID_2_);}
-				.brown_leather_st2{fill:#A44324;}
-				.brown_leather_st3{fill:#781214;}
-				.brown_leather_st4{fill:#451211;}
-				.brown_leather_st5{fill:none;stroke:#6B0D0E;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:3.9611,3.9611;}
-			</style>
 			<g>
 				<g>
 					<path class="brown_leather_st0" d="M50.9,53.1c0.1-16.6-6.8-14.3-6.8-23.8c0-11.7,3.3-16.9,8.4-16.9c-12.6,0-31.2-3.8-43.6-11.2
@@ -3899,11 +3879,6 @@
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="white_rubber"	viewBox="0 0 62 54">
-			<style type="text/css">
-				.white_rubber_st0{fill:#FFFFFF;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-				.white_rubber_st1{fill:#575757;}
-				.white_rubber_st2{fill:#CCCCCC;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-			</style>
 			<g>
 				<path class="white_rubber_st0" d="M50.3,53.1c-3.7-3.8-7.6-14.2-7.6-23.7c0-11.7,4.1-17,9.2-17c-12.6,0-31.2-3.8-43.6-11.2
 					c-6.6-4-11.2,26.9-2.8,32.5C21.5,44.5,39.1,53.1,50.3,53.1z"/>

@@ -1,7 +1,7 @@
 <footer class="homepage-footer">
 	<div class="footer-block--newsletter"></div>
 	<div class="footer__real">
-		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="main-logo" x="0px" y="0px" viewBox="0 0 105 16" xml:space="preserve">
+		<svg version="1.1" id="main-logo" viewBox="0 0 105 16">
 		<g>
 			<g>
 				<polygon class="lvfooter" points="20.4,7.8 23.3,0.5 20.8,0.5 16.1,12.3 11.4,0.5 8.9,0.5 11.8,7.8 0,12.5 0.9,14.6 12.7,9.9     14.9,15.5 17.3,15.5 19.5,9.9 31.3,14.6 32.2,12.5   "></polygon>

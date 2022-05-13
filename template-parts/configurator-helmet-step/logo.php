@@ -98,46 +98,6 @@
 						<polygon points="40.9,27.2 38.8,27.2 35,36.8 31.2,27.2 29.1,27.2 31.5,33.2 21.9,37 22.6,38.8 32.2,34.9 34,39.5 36,39.5 
 							37.8,34.9 47.4,38.8 48.1,37 38.5,33.2 			"/>
 					</g>
-				<!-- 	<defs>
-						<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="21.9" y="27.2" width="26.2" height="12.2">
-								<feColorMatrix  type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" color-interpolation-filters="sRGB" result="source"/>
-						</filter>
-					</defs>
-					<mask maskUnits="userSpaceOnUse" x="21.9" y="27.2" width="26.2" height="12.2" id="SVGID_1_">
-						<g filter="url(#Adobe_OpacityMaskFilter)">
-								<image overflow="visible" width="127" height="68" xlink:href="386D64CB.jpg"  transform="matrix(0.24 0 0 0.24 19.6802 25.2397)">
-							</image>
-						</g>
-					</mask>
-					<g opacity="0.3" mask="url(#SVGID_1_)">
-						<polygon fill="#451218" points="40.9,27.2 38.8,27.2 35,36.8 31.2,27.2 29.1,27.2 31.5,33.2 21.9,37 22.6,38.8 32.2,34.9 
-							34,39.5 36,39.5 37.8,34.9 47.4,38.8 48.1,37 38.5,33.2 			"/>
-					</g>
-				</g>
-				<g>
-					<g>
-						<path d="M59.4,27.3c0-7.5-6.1-13.6-13.6-13.6c-4.4,0-8.3,2.3-10.8,5.5c-2.5-3.2-6.4-5.5-10.8-5.5c-7.5,0-13.6,6.1-13.6,13.6
-							c0,0-1.9,12.2,24.4,29.1C61.3,39.4,59.4,27.3,59.4,27.3z M35,53.3c-22.7-15-21.8-26-21.8-26c0-6.1,4.9-11,11-11
-							c3.2,0,6.5,1.7,8.7,4.5l2.1,2.6l2.1-2.6c2.2-2.8,5.5-4.5,8.7-4.5c6.1,0,11,4.9,11,11C56.8,27.3,57.7,38.3,35,53.3z"/>
-					</g>
-					<defs>
-						<filter id="Adobe_OpacityMaskFilter_1_" filterUnits="userSpaceOnUse" x="10.6" y="13.6" width="48.9" height="42.8">							
-								<feColorMatrix  type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" color-interpolation-filters="sRGB" result="source"/>
-						</filter>
-					</defs>
-					<mask maskUnits="userSpaceOnUse" x="10.6" y="13.6" width="48.9" height="42.8" id="SVGID_2_">
-						<g filter="url(#Adobe_OpacityMaskFilter_1_)">							
-								<image overflow="visible" width="221" height="196" xlink:href="386D64C9.jpg"  transform="matrix(0.24 0 0 0.24 8.4002 11.5597)">
-							</image>
-						</g>
-					</mask>
-					<g opacity="0.3" mask="url(#SVGID_2_)">
-						<path fill="#451218" d="M59.4,27.3c0-7.5-6.1-13.6-13.6-13.6c-4.4,0-8.3,2.3-10.8,5.5c-2.5-3.2-6.4-5.5-10.8-5.5
-							c-7.5,0-13.6,6.1-13.6,13.6c0,0-1.9,12.2,24.4,29.1C61.3,39.4,59.4,27.3,59.4,27.3z M35,53.3c-22.7-15-21.8-26-21.8-26
-							c0-6.1,4.9-11,11-11c3.2,0,6.5,1.7,8.7,4.5l2.1,2.6l2.1-2.6c2.2-2.8,5.5-4.5,8.7-4.5c6.1,0,11,4.9,11,11
-							C56.8,27.3,57.7,38.3,35,53.3z"/>
-					</g>
-				</g> -->
 			</g>
 			</svg>
 		<span class="textAction">Heart</span>
@@ -226,50 +186,6 @@
 						<polygon points="390,-190.6 388,-190.6 384.2,-180.9 380.3,-190.6 378.3,-190.6 380.7,-184.6 371.1,-180.8 371.8,-179 
 							381.4,-182.9 383.2,-178.3 385.1,-178.3 387,-182.9 396.6,-179 397.3,-180.8 387.7,-184.6 			"/>
 					</g>
-				<!-- 	<defs>
-						<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="371.1" y="-190.6" width="26.2" height="12.2">
-							
-								<feColorMatrix  type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" color-interpolation-filters="sRGB" result="source"/>
-						</filter>
-					</defs>
-					<mask maskUnits="userSpaceOnUse" x="371.1" y="-190.6" width="26.2" height="12.2" id="SVGID_1_">
-						<g filter="url(#Adobe_OpacityMaskFilter)">
-							
-								<image overflow="visible" width="127" height="68" xlink:href="3C09869D.jpg"  transform="matrix(0.24 0 0 0.24 368.8551 -192.5578)">
-							</image>
-						</g>
-					</mask>
-					<g opacity="0.3" mask="url(#SVGID_1_)">
-						<polygon fill="#451218" points="390,-190.6 388,-190.6 384.2,-180.9 380.3,-190.6 378.3,-190.6 380.7,-184.6 371.1,-180.8 
-							371.8,-179 381.4,-182.9 383.2,-178.3 385.1,-178.3 387,-182.9 396.6,-179 397.3,-180.8 387.7,-184.6 			"/>
-					</g>
-				</g>
-				<g>
-					<g>
-						<path d="M408.6-190.5c0-7.5-6.1-13.6-13.6-13.6c-4.4,0-8.3,2.3-10.8,5.5c-2.5-3.2-6.4-5.5-10.8-5.5c-7.5,0-13.6,6.1-13.6,13.6
-							c0,0-1.9,12.2,24.4,29.1C410.5-178.4,408.6-190.5,408.6-190.5z M384.2-164.5c-22.7-15-21.8-26-21.8-26c0-6.1,4.9-11,11-11
-							c3.2,0,6.5,1.7,8.7,4.5l2.1,2.6l2.1-2.6c2.2-2.8,5.5-4.5,8.7-4.5c6.1,0,11,4.9,11,11C406-190.5,406.8-179.5,384.2-164.5z"/>
-					</g>
-					<defs>
-						<filter id="Adobe_OpacityMaskFilter_1_" filterUnits="userSpaceOnUse" x="359.7" y="-204.2" width="48.9" height="42.8">
-							
-								<feColorMatrix  type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" color-interpolation-filters="sRGB" result="source"/>
-						</filter>
-					</defs>
-					<mask maskUnits="userSpaceOnUse" x="359.7" y="-204.2" width="48.9" height="42.8" id="SVGID_2_">
-						<g filter="url(#Adobe_OpacityMaskFilter_1_)">
-							
-								<image overflow="visible" width="221" height="196" xlink:href="3C09869F.jpg"  transform="matrix(0.24 0 0 0.24 357.5751 -206.2378)">
-							</image>
-						</g>
-					</mask>
-					<g opacity="0.3" mask="url(#SVGID_2_)">
-						<path fill="#451218" d="M408.6-190.5c0-7.5-6.1-13.6-13.6-13.6c-4.4,0-8.3,2.3-10.8,5.5c-2.5-3.2-6.4-5.5-10.8-5.5
-							c-7.5,0-13.6,6.1-13.6,13.6c0,0-1.9,12.2,24.4,29.1C410.5-178.4,408.6-190.5,408.6-190.5z M384.2-164.5c-22.7-15-21.8-26-21.8-26
-							c0-6.1,4.9-11,11-11c3.2,0,6.5,1.7,8.7,4.5l2.1,2.6l2.1-2.6c2.2-2.8,5.5-4.5,8.7-4.5c6.1,0,11,4.9,11,11
-							C406-190.5,406.8-179.5,384.2-164.5z"/>
-					</g>
-				</g> -->
 			</g>
 			</svg>
 		<span class="textAction">Multiply</span>
@@ -373,50 +289,6 @@
 						<polygon points="390,-190.6 388,-190.6 384.2,-180.9 380.3,-190.6 378.3,-190.6 380.7,-184.6 371.1,-180.8 371.8,-179 
 							381.4,-182.9 383.2,-178.3 385.1,-178.3 387,-182.9 396.6,-179 397.3,-180.8 387.7,-184.6 			"/>
 					</g>
-					<!--<defs>
-						 <filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="371.1" y="-190.6" width="26.2" height="12.2">
-							
-								<feColorMatrix  type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" color-interpolation-filters="sRGB" result="source"/>
-						</filter>
-					</defs>
-					<mask maskUnits="userSpaceOnUse" x="371.1" y="-190.6" width="26.2" height="12.2" id="SVGID_1_">
-						<g filter="url(#Adobe_OpacityMaskFilter)">
-							
-								<image overflow="visible" width="127" height="68" xlink:href="8CEC043.jpg"  transform="matrix(0.24 0 0 0.24 368.8551 -192.5578)">
-							</image>
-						</g>
-					</mask>
-					<g opacity="0.3" mask="url(#SVGID_1_)">
-						<polygon fill="#451218" points="390,-190.6 388,-190.6 384.2,-180.9 380.3,-190.6 378.3,-190.6 380.7,-184.6 371.1,-180.8 
-							371.8,-179 381.4,-182.9 383.2,-178.3 385.1,-178.3 387,-182.9 396.6,-179 397.3,-180.8 387.7,-184.6 			"/>
-					</g>
-				</g>
-				<g>
-					<g>
-						<path d="M408.6-190.5c0-7.5-6.1-13.6-13.6-13.6c-4.4,0-8.3,2.3-10.8,5.5c-2.5-3.2-6.4-5.5-10.8-5.5c-7.5,0-13.6,6.1-13.6,13.6
-							c0,0-1.9,12.2,24.4,29.1C410.5-178.4,408.6-190.5,408.6-190.5z M384.2-164.5c-22.7-15-21.8-26-21.8-26c0-6.1,4.9-11,11-11
-							c3.2,0,6.5,1.7,8.7,4.5l2.1,2.6l2.1-2.6c2.2-2.8,5.5-4.5,8.7-4.5c6.1,0,11,4.9,11,11C406-190.5,406.8-179.5,384.2-164.5z"/>
-					</g>
-					<defs>
-						<filter id="Adobe_OpacityMaskFilter_1_" filterUnits="userSpaceOnUse" x="359.7" y="-204.2" width="48.9" height="42.8">
-							
-								<feColorMatrix  type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" color-interpolation-filters="sRGB" result="source"/>
-						</filter>
-					</defs>
-					<mask maskUnits="userSpaceOnUse" x="359.7" y="-204.2" width="48.9" height="42.8" id="SVGID_2_">
-						<g filter="url(#Adobe_OpacityMaskFilter_1_)">
-							
-								<image overflow="visible" width="221" height="196" xlink:href="8CEC041.jpg"  transform="matrix(0.24 0 0 0.24 357.5751 -206.2378)">
-							</image>
-						</g>
-					</mask>
-					<g opacity="0.3" mask="url(#SVGID_2_)">
-						<path fill="#451218" d="M408.6-190.5c0-7.5-6.1-13.6-13.6-13.6c-4.4,0-8.3,2.3-10.8,5.5c-2.5-3.2-6.4-5.5-10.8-5.5
-							c-7.5,0-13.6,6.1-13.6,13.6c0,0-1.9,12.2,24.4,29.1C410.5-178.4,408.6-190.5,408.6-190.5z M384.2-164.5c-22.7-15-21.8-26-21.8-26
-							c0-6.1,4.9-11,11-11c3.2,0,6.5,1.7,8.7,4.5l2.1,2.6l2.1-2.6c2.2-2.8,5.5-4.5,8.7-4.5c6.1,0,11,4.9,11,11
-							C406-190.5,406.8-179.5,384.2-164.5z"/>
-					</g>
-				</g> -->
 			</g>
 			</svg>
 		<span class="textAction">Plus</span>

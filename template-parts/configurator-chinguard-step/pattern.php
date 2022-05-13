@@ -1,10 +1,6 @@
 <div class="patternList">
 	<div class="allScrew">
 		<svg version="1.1" id="chin_band"	viewBox="0 0 56 21">
-			<style type="text/css">
-				.chin_band_st0{fill:#FFFFFF;stroke:#231F20;stroke-width:0.4956;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-				.chin_band_st1{fill:#231F20;stroke:#231F20;stroke-width:0.4956;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-			</style>
 			<g>
 				<polygon class="chin_band_st0" points="5.3,0.8 5.1,0.8 4.9,0.8 4.5,0.9 4.1,0.9 2.5,0.9 1.1,0.9 1.1,0.9 1.1,0.9 1,0.9 1,0.9 0.9,1 0.9,1.1 
 					0.8,1.3 0.8,1.5 0.8,1.8 0.8,2.1 0.8,2.1 0.8,2.9 0.9,3.5 0.9,3.7 1.1,4.5 1.3,5.4 1.4,5.9 1.5,6.4 1.6,7 1.8,7.5 1.9,8 2.1,8.5 
@@ -42,10 +38,6 @@
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="chin_checker"	viewBox="0 0 50 21">
-			<style type="text/css">
-				.chin_checker_st0{fill:#231F20;stroke:#231F20;stroke-width:0.4956;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-				.chin_checker_st1{fill:#FFFFFF;stroke:#231F20;stroke-width:0.4956;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-			</style>
 			<g>
 				<polygon class="chin_checker_st0" points="22.5,10 13.5,10 13.2,4.3 13.2,3.7 13.4,3.2 13.4,3 13.5,2.9 14.7,2.9 16.7,2.9 17.1,2.9 17.6,2.9 
 					18,2.9 18.5,2.9 18.9,2.9 19.9,2.9 20.8,2.9 22.3,2.9 22.3,3 22.3,3.2 22.2,3.7 22.2,4 22.2,4.3 	"/>
@@ -79,10 +71,6 @@
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="chin_contour" viewBox="0 0 50 21">
-			<style type="text/css">
-				.chin_contour_st0{fill:#FFFFFF;stroke:#231F20;stroke-width:0.4956;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-				.chin_contour_st1{fill:#231F20;stroke:#231F20;stroke-width:0.4956;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-			</style>
 			<g>
 				<path class="chin_contour_st0" d="M4.7,18.9C3.6,14.1,3.3,9,3.9,4c0-0.6,0.7-1.2,1.3-1.1l0.6,0l0.7,0l1.1,0l0.8,0l0.9,0l1,0l2.1,0l2.3,0l2,0
 					l0.4,0l0.4,0l0.5,0l0.5,0l0.5,0l0.9,0l0.9,0l1.9,0l0.2,0l0.2,0l0.2,0l0.2,0l0.5-0.1l0.5-0.1L25,2.6l0.4-0.2l0.7-0.4l0.6-0.6
@@ -106,10 +94,6 @@
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="chin_dots"	viewBox="0 0 50 21">
-			<style type="text/css">
-				.chin_dots_st0{fill:#FFFFFF;stroke:#231F20;stroke-width:0.4956;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-				.chin_dots_st1{fill:#231F20;stroke:#231F20;stroke-width:0.4956;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-			</style>
 			<g>
 				<path class="chin_dots_st0" d="M4.7,18.9C3.6,14.1,3.3,9,3.9,4c0-0.6,0.7-1.2,1.3-1.1l0.6,0l0.7,0l1.1,0l0.8,0l0.9,0l1,0l2.1,0l2.3,0l2,0
 					l0.5,0l0.4,0l0.5,0l0.5,0l0.5,0l0.9,0l0.9,0l1.9,0l0.2,0l0.2,0l0.2,0l0.2,0l0.5-0.1l0.5-0.1L25,2.6l0.4-0.2l0.7-0.4l0.6-0.6
@@ -138,10 +122,6 @@
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="chin_dual"	viewBox="0 0 56 21">
-			<style type="text/css">
-				.chin_dual_st0{fill:#231F20;stroke:#231F20;stroke-width:0.4956;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-				.chin_dual_st1{fill:#FFFFFF;stroke:#231F20;stroke-width:0.4956;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-			</style>
 			<g>
 				<polygon class="chin_dual_st0" points="23.9,3 24,2.9 23.9,2.9 23.5,2.9 22.7,2.9 22.6,2.9 21.9,2.9 21.9,2.9 21.3,2.9 20.3,2.9 20,2.9 
 					19.1,2.9 18.2,2.9 18.2,2.9 16.6,2.9 16.4,2.9 16.1,2.9 16,2.9 14.9,2.9 12.9,2.9 11.1,2.9 9.8,3 9.5,3 9.3,3 9,3 8.8,3 8.6,3 
@@ -184,10 +164,6 @@
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="chin_extend"	viewBox="0 0 50 21">
-			<style type="text/css">
-				.chin_extend_st0{fill:#FFFFFF;stroke:#231F20;stroke-width:0.4956;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-				.chin_extend_st1{fill:#231F20;stroke:#231F20;stroke-width:0.4956;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-			</style>
 			<g>
 				<path class="chin_extend_st0" d="M4.7,18.9C3.6,14.1,3.3,9,3.9,4c0-0.6,0.7-1.2,1.3-1.1l0.6,0l0.7,0l1.1,0l0.8,0l0.9,0l1,0l2.1,0l2.3,0l2,0
 					l0.4,0l0.4,0l0.5,0l0.5,0l0.5,0l0.9,0l0.9,0l1.9,0l0.2,0l0.2,0l0.2,0l0.2,0l0.5-0.1l0.5-0.1L25,2.6l0.4-0.2l0.7-0.4l0.6-0.6
@@ -221,10 +197,6 @@
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="chin_half"	viewBox="0 0 56 21">
-			<style type="text/css">
-				.chin_half_st0{stroke:#231F20;stroke-width:0.4956;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-				.chin_half_st1{fill:#FFFFFF;stroke:#231F20;stroke-width:0.4956;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-			</style>
 			<g>
 				<polygon class="chin_half_st0" points="23.9,3 24,2.9 23.9,2.9 23.5,2.9 22.7,2.9 22.6,2.9 21.9,2.9 21.9,2.9 21.3,2.9 20.3,2.9 20,2.9 
 					19.1,2.9 18.2,2.9 18.2,2.9 16.6,2.9 16.4,2.9 16.1,2.9 16,2.9 14.9,2.9 12.9,2.9 11.1,2.9 9.8,3 9.5,3 9.3,3 9,3 8.8,3 8.6,3 
@@ -267,11 +239,6 @@
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="chin_outline" viewBox="0 0 50 21">
-			<style type="text/css">
-				.chin_outline_st0{fill:#FFFFFF;stroke:#231F20;stroke-width:0.4956;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-				.chin_outline_st1{fill:#231F20;stroke:#231F20;stroke-width:0.4956;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-				.chin_outline_st2{stroke:#231F20;stroke-width:0.4956;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-			</style>
 			<g>
 				<path class="chin_outline_st0" d="M4.7,18.9C3.6,14.1,3.3,9,3.9,4c0-0.6,0.7-1.2,1.3-1.1l0.6,0l0.7,0l1.1,0l0.8,0l0.9,0l1,0l2.1,0l2.3,0l2,0
 					l0.4,0l0.4,0l0.5,0l0.5,0l0.5,0l0.9,0l0.9,0l1.9,0l0.2,0l0.2,0l0.2,0l0.2,0l0.5-0.1l0.5-0.1L25,2.6l0.4-0.2l0.7-0.4l0.6-0.6
@@ -294,10 +261,6 @@
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="chin_parabol"	viewBox="0 0 50 21">
-			<style type="text/css">
-				.chin_parabol_st0{fill:#FFFFFF;stroke:#231F20;stroke-width:0.4956;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-				.chin_parabol_st1{fill:#231F20;stroke:#231F20;stroke-width:0.4956;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-			</style>
 			<g>
 				<path class="chin_parabol_st0" d="M4.7,18.9C3.6,14.1,3.3,9,3.9,4c0-0.6,0.7-1.2,1.3-1.1l0.6,0l0.7,0l1.1,0l0.8,0l0.9,0l1,0l2.1,0l2.3,0l2,0
 					l0.4,0l0.4,0l0.5,0l0.5,0l0.5,0l0.9,0l0.9,0l1.9,0l0.2,0l0.2,0l0.2,0l0.2,0l0.5-0.1l0.5-0.1L25,2.6l0.4-0.2l0.7-0.4l0.6-0.6
@@ -329,10 +292,6 @@
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="chin_plain"	viewBox="0 0 50 21">
-			<style type="text/css">
-				.chin_plain_st0{fill:#FFFFFF;stroke:#231F20;stroke-width:0.4956;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-				.chin_plain_st1{fill:#231F20;stroke:#231F20;stroke-width:0.4956;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-			</style>
 			<g>
 				<path class="chin_plain_st0" d="M4.7,18.9C3.6,14.1,3.3,9,3.9,4c0-0.6,0.7-1.2,1.3-1.1l0.6,0l0.7,0l1.1,0l0.8,0l0.9,0l1,0l2.1,0l2.3,0l2,0
 					l0.4,0l0.4,0l0.5,0l0.5,0l0.5,0l0.9,0l0.9,0l1.9,0l0.2,0l0.2,0l0.2,0l0.2,0l0.5-0.1l0.5-0.1L25,2.6l0.4-0.2l0.7-0.4l0.6-0.6
@@ -353,10 +312,6 @@
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="chin_stars"	viewBox="0 0 50 21">
-			<style type="text/css">
-				.chin_stars_st0{fill:#FFFFFF;stroke:#231F20;stroke-width:0.4956;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-				.chin_stars_st1{fill:#231F20;stroke:#231F20;stroke-width:0.4956;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-			</style>
 			<g>
 				<path class="chin_stars_st0" d="M4.7,18.9C3.6,14.1,3.3,9,3.9,4c0-0.6,0.7-1.2,1.3-1.1l0.6,0l0.7,0l1.1,0l0.8,0l0.9,0l1,0l2.1,0l2.3,0l2,0
 					l0.4,0l0.4,0l0.5,0l0.5,0l0.5,0l0.9,0l0.9,0l1.9,0l0.2,0l0.2,0l0.2,0l0.2,0l0.5-0.1l0.5-0.1L25,2.6l0.4-0.2l0.7-0.4l0.6-0.6
