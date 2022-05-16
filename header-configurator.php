@@ -7,23 +7,23 @@
 			</div>
 			<div class="header-configurator-left-title">
 			<img class="configurator-header__heading-menu" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/veldt-logo.svg" alt="logo-veldt">
-				<h2 class="header-configurator-left-title-2">Configurator</h2>
+				<h2 class="header-configurator-left-title-2"><?php echo _e( "Configurator") ?></h2>
 			</div>
 		</div>
 		<div class="header-configurator-right">
 			<div class="header-configurator-right-priceZone">
-				<div class="header-configurator-right-priceZone-price">950<span>€</span></div>
+				<div class="header-configurator-right-priceZone-price">950<span><?php echo get_woocommerce_currency_symbol()?></span></div>
 				<button
 					type="submit"
 					name="add"
 					class="header-configurator-right-priceZone-buy"
 				>
 						<span>
-							Acheter
+							<?php echo _e( "Buy it") ?>
 						</span>
 				</button>
 			</div>
-			<div class="header-configurator-right-comment"><?php esc_html_e( "Free delivery 10 weeks", "deliveryInfo") ?></div>
+			<div class="header-configurator-right-comment"><?php echo _e( "Free delivery 10 weeks") ?></div>
 		</div>
 	</div>
 	<div class="first_menu-configurator">

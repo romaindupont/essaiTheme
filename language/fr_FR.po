@@ -1,0 +1,217 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-16 09:19+0200\n"
+"PO-Revision-Date: 2022-05-16 16:05+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: header-configurator:26
+msgid "Free delivery 10 weeks"
+msgstr "Livraison gratuite sous 10 semaines"
+
+#: header-configurator.php:10
+msgid "Configurator"
+msgstr "Configurateur"
+
+#: header-configurator.php:22
+msgid "Buy it"
+msgstr "Acheter"
+
+#: footer-configurator.php:33
+msgid "Helmet"
+msgstr "Casque"
+
+#: footer-configurator.php:43
+msgid "Chinguard"
+msgstr "Mentonnière"
+
+#: footer-configurator.php:59
+msgid "Visor"
+msgstr "Visière"
+
+#: footer-configurator.php:106
+msgid "Share Your product creation"
+msgstr "Partage ta création"
+
+#: footer-configurator.php:109
+msgid "Copy and share the link"
+msgstr "Copie et partage le lien"
+
+#: footer-configurator.php:115
+msgid "Download 4 views"
+msgstr "Télécharge les 4 vues"
+
+#: configurator-chinguard.php:2
+msgid "Add"
+msgstr "Ajouter"
+
+#: configurator-chinguard.php:2
+msgid "Erase"
+msgstr "Effacer"
+
+#: configurator-chinguard.php:5
+msgid "Elements"
+msgstr "Elements"
+
+#: configurator-helmet-step/aeration.php:3
+msgid "Without"
+msgstr "Sans"
+
+#: configurator-helmet-step/aeration.php:4
+msgid "With"
+msgstr "Avec"
+
+#: number back-right-left.php:4
+msgid "Choose your style and your number"
+msgstr "Choix du numéro et du style"
+
+#: number back-right-left.php:36
+msgid "Classic"
+msgstr "Classic"
+
+#: number back-right-left.php:42
+msgid "Dirt"
+msgstr "Dirt"
+
+#: number back-right-left.php:50
+msgid "Pixel"
+msgstr "Pixel"
+
+#: number back-right-left.php:58
+msgid "Racing"
+msgstr "Racing"
+
+#: engraving.php:5
+msgid "Your Text"
+msgstr "Votre texte"
+
+#: logo.php:3
+msgid "None"
+msgstr "Aucun"
+
+#: logo.php:4
+msgid "White"
+msgstr "Blanc"
+
+#: logo.php:5
+msgid "Black"
+msgstr "Noir"
+
+#: couleur type et nom
+msgid "Plain"
+msgstr "Uni"
+
+msgid "Metallic"
+msgstr "Métallique"
+
+msgid "Glitter"
+msgstr "Pailletté"
+
+msgid "Sheathing"
+msgstr "Gainage"
+
+msgid "Carbon"
+msgstr "Carbone"
+
+msgid "Cool Grey"
+msgstr "Gris cool"
+
+msgid "Estate Blue"
+msgstr "Bleu"
+
+msgid "Pirate Grey"
+msgstr "Gris Pirate"
+
+msgid "Dusk Blue"
+msgstr "Bleu crépuscule"
+
+msgid "Double Cream"
+msgstr "Double crème"
+
+msgid "Rally Blue"
+msgstr "Bleu Rally"
+
+msgid "Yellow Iris"
+msgstr "Jaune Iris"
+
+msgid "Iceberg Green"
+msgstr "Vert Glacier"
+
+msgid "Blazing Yellow"
+msgstr "Jaune Flamboyant"
+
+msgid "Green Double"
+msgstr "Double Vert"
+
+msgid "Blazing Orange"
+msgstr "Orange Flamboyant"
+
+msgid "Lime Green"
+msgstr "Vert Citron"
+
+msgid "Vermillion"
+msgstr "Vermillion"
+
+msgid "Green Gables"
+msgstr "Pignons Verts"
+
+msgid "Orchid Pink"
+msgstr "Orchidée Rose"
+
+msgid "Camel"
+msgstr "Camel"
+
+msgid "Plum Purple"
+msgstr "Prune Violet"
+
+msgid "Brown Stone"
+msgstr "Pierre Brune"
+
+msgid "Cayenne Red"
+msgstr "Cayenne Rouge"
+
+msgid "Iridescent Blue"
+msgstr "Bleu Irisé"
+
+msgid "Chineses Red"
+msgstr "Rouge Chinois"
+
+msgid "Iridescent Pink"
+msgstr "Rose Irisé"
+
+msgid "Fluo Pink"
+msgstr "Rose Fluo"
+
+msgid "Fluo Yellow"
+msgstr "Jaune Fluo"
+
+msgid "Copper Foil"
+msgstr "Cuivre"
+
+msgid "Gold Foil"
+msgstr "Or"
+
+msgid "Silver Foil"
+msgstr "Argent"
+
+#: interior.php
+msgid "Blue"
+msgstr "Bleu"
+
+msgid "Brown"
+msgstr "Marron"
+
+msgid "Leather"
+msgstr "Cuir"

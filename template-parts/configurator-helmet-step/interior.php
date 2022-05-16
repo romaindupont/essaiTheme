@@ -1,3 +1,4 @@
+<?php require_once $_SERVER['DOCUMENT_ROOT'].'/essai/wp/wp-load.php'; ?>
 <div class="varnishList">
 	<div class="allScrew">
 		<svg class="interiorSvg" version="1.1" id="suede_blue" viewBox="0 0 60 60">
@@ -9,7 +10,7 @@
 					l3.3-2.9l3.3-2.9l-3.3-2.9L51.4,36l3.3-2.9l3.3-2.9l-3.3-2.9l-3.3-2.9l3.3-2.9l3.3-2.9L54.9,15.6L54.9,15.6z"/>
 			</g>
 		</svg>
-		<span class="textAction">Suede Blue</span>
+		<span class="textAction">Suede <?php echo _e( "Blue") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg class="interiorSvg" version="1.1" id="suede_black" viewBox="0 0 60 60">
@@ -21,7 +22,7 @@
 					l3.3-2.9l3.3-2.9l-3.3-2.9L51.4,36l3.3-2.9l3.3-2.9l-3.3-2.9l-3.3-2.9l3.3-2.9l3.3-2.9L54.9,15.6L54.9,15.6z"/>
 			</g>
 		</svg>
-		<span class="textAction">Suede Black</span>
+		<span class="textAction">Suede <?php echo _e( "Black") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg class="interiorSvg" version="1.1" id="leather_brown"	viewBox="0 0 60 60">
@@ -41,7 +42,7 @@
 				</g>
 			</g>
 		</svg>
-		<span class="textAction">Leather Brown</span>
+		<span class="textAction"><?php echo _e( "Leather") ?> <?php echo _e( "Brown") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg class="interiorSvg" version="1.1" id="leather_black"	viewBox="0 0 60 60">
@@ -61,6 +62,6 @@
 				</g>
 			</g>
 		</svg>
-		<span class="textAction">Leather Black</span>
+		<span class="textAction"><?php echo _e( "Leather") ?> <?php echo _e( "Black") ?></span>
 	</div>
 </div>

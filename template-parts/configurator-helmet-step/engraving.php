@@ -1,7 +1,8 @@
+<?php require_once $_SERVER['DOCUMENT_ROOT'].'/essai/wp/wp-load.php'; ?>
 <div class="numberChoice">
-	<button class="buttonAdd">&plus; Add</button>
+	<button class="buttonAdd">&plus; <?php echo _e( "Add") ?></button>
 	<div class="numberWindows">
-		<p class="infosNumber">Your Text</p>
+		<p class="infosNumber"><?php echo _e( "Your Text") ?></p>
 		<div class="chooseWindows">
 			<div class="chooseWindows_input">
 				<input type="text" name="textSelection" id="textSelection">

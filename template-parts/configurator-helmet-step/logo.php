@@ -1,7 +1,8 @@
+<?php require_once $_SERVER['DOCUMENT_ROOT'].'/essai/wp/wp-load.php'; ?>
 <div class="sizeChoice">
-	<span class="buttonChoice">None</span>
-	<span class="buttonChoice">White</span>
-	<span class="buttonChoice">Black</span>
+	<span class="buttonChoice"><?php echo _e( "None") ?></span>
+	<span class="buttonChoice"><?php echo _e( "White") ?></span>
+	<span class="buttonChoice"><?php echo _e( "Black") ?></span>
 </div>
 <div class="patternList">
 	<div class="allScrew">

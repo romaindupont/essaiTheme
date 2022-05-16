@@ -1,7 +1,8 @@
+<?php require_once $_SERVER['DOCUMENT_ROOT'].'/essai/wp/wp-load.php'; ?>
 <div class="numberChoice">
-	<button class="buttonAdd">&plus; Add</button>
+	<button class="buttonAdd">&plus; <?php echo _e( "Add") ?></button>
 	<div class="numberWindows">
-		<p class="infosNumber">Choose your style and your number</p>
+		<p class="infosNumber"><?php echo _e( "Choose your style and your number") ?></p>
 		<div class="chooseWindows">
 			<div class="chooseWindows_input">
 				<input type="number" name="numberSelection" id="numberSelection">
@@ -32,13 +33,13 @@
 									c0,0.5-0.2,0.7-0.7,0.7H21.3z"/>
 							</g>
 						</svg>
-						<span class="textAction">Classic</span>
+						<span class="textAction"><?php echo _e( "Classic") ?></span>
 					</div>
 					<div class="allScrew">
 						<svg version="1.1" id="dirt" viewBox="0 0 40 40">
 							<path class="dirt_st0" d="M26,29l11.4-1.5L39.3,40H0.7l1.1-11.7L14.7,29V14.3l-6.7,4.3L0.7,8.8L15.3,0l13.9,0.7L26,29z"/>
 						</svg>
-						<span class="textAction">Dirt</span>
+						<span class="textAction"><?php echo _e( "Dirt") ?></span>
 					</div>
 					<div class="allScrew">
 						<svg version="1.1" id="pixel"	viewBox="0 0 40 40">
@@ -46,7 +47,7 @@
 								<path class="pixel_st0" d="M2.9,40v-5.7h11.4V11.4H8.6V5.7h5.7V0h11.4v34.3h11.4V40H2.9z"/>
 							</g>
 						</svg>
-						<span class="textAction">Pixel</span>
+						<span class="textAction"><?php echo _e( "Pixel") ?></span>
 					</div>
 					<div class="allScrew">
 						<svg version="1.1" id="racing" viewBox="0 0 40 40">
@@ -54,7 +55,7 @@
 							c0.2-0.8,0.5-1.8,0.5-3.5c0-2.6-3.6-2.6-8.8-2.2c0.1-0.3,0.1-0.7,0.2-1c5.1-0.8,8.5-1.2,14.5-4.9c2.7,0,5.4,0,8.1,0
 							c-2.2,10.5-4.5,21.1-6.7,31.6c-0.3,1.7-0.6,3.1-0.6,3.5c0,3.7,2.2,3.5,7.9,4C35.4,39.4,35.3,39.7,35.3,40z"/>
 						</svg>
-						<span class="textAction">Racing</span>
+						<span class="textAction"><?php echo _e( "Racing") ?></span>
 					</div>
 				</div>
 			</div>
