@@ -6,7 +6,7 @@
 	<span class="buttonChoice"><?php echo _e( "Sheathing") ?></span>
 </div>
 <div class="colorList">
-<div class="colorP"><div class="roundColor carbon"></div><span class="textAction"><?php echo _e( "Carbon") ?></span></div>
+	<div class="colorP"><div class="roundColor carbon"></div><span class="textAction"><?php echo _e( "Carbon") ?></span></div>
 	<div class="colorP"><div class="roundColor white"></div><span class="textAction"><?php echo _e( "White") ?></span></div>
 	<div class="colorP"><div class="roundColor black"></div><span class="textAction"><?php echo _e( "Black") ?></span></div>
 	<div class="colorP"><div class="roundColor coolGrey"></div><span class="textAction"><?php echo _e( "Cool Grey") ?></span></div>

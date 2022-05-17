@@ -57,3 +57,14 @@ add_action('get_header', 'remove_admin_login_header');
 }
 add_action('after_setup_theme', 'remove_admin_bar'); */
 add_filter( 'show_admin_bar', '__return_false' );
+
+add_filter('woocommerce_product_add_to_cart_text', 'replace_cart_text');
+add_filter('woocommerce_product_single_add_to_cart_text', 'replace_cart_text');
+function replace_cart_text() {
+    if (get_locale() == 'fr_FR') {
+        return 'Ajouter au panier';
+    }
+    if (get_locale() == 'en_US') {
+        return 'Buy now';
+    }
+}

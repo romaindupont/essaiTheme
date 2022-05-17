@@ -1,3 +1,4 @@
+<?php require_once $_SERVER['DOCUMENT_ROOT'].'/essai/wp/wp-load.php'; ?>
 <div class="varnishList">
 	<div class="allScrew">
 		<svg version="1.1" id="black_leather"	viewBox="0 0 62 54">
@@ -1939,7 +1940,7 @@
 				</g>
 			</g>
 			</svg>
-		<span class="textAction">Black Leather</span>
+		<span class="textAction"><?php echo _e( "Black") ?> <?php echo _e( "Leather") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="black_rubber"	viewBox="0 0 62 54">
@@ -1955,7 +1956,7 @@
 				</g>
 			</g>
 		</svg>
-		<span class="textAction">Black Rubber</span>
+		<span class="textAction"><?php echo _e( "Black") ?> <?php echo _e( "Rubber") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="brown_leather" viewBox="0 0 62 54">
@@ -3875,7 +3876,7 @@
 				</g>
 			</g>
 		</svg>
-		<span class="textAction">Brown Leather</span>
+		<span class="textAction"><?php echo _e( "Brown") ?> <?php echo _e( "Leather") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="white_rubber"	viewBox="0 0 62 54">
@@ -3889,6 +3890,6 @@
 			<path class="white_rubber_st2" d="M50.3,28.2l4.4-1.4v24.9c3.7-3.8,6.4-14.6,6.4-24c0-11.7-4.1-15.3-9.2-15.3s-9.2,5.3-9.2,17
 				c0,9.4,3.9,19.8,7.6,23.7v-1.8L50.3,28.2z"/>
 		</svg>
-		<span class="textAction">White Rubber</span>
+		<span class="textAction"><?php echo _e( "White") ?> <?php echo _e( "Rubber") ?></span>
 	</div>
 </div>

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-16 09:19+0200\n"
-"PO-Revision-Date: 2022-05-16 16:05+0200\n"
+"PO-Revision-Date: 2022-05-17 14:10+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -215,3 +215,106 @@ msgstr "Marron"
 
 msgid "Leather"
 msgstr "Cuir"
+
+#: pattern.php:4
+msgid "Band"
+msgstr "Bande"
+
+msgid "Checker"
+msgstr "Damier"
+
+msgid "Chester"
+msgstr "Chester"
+
+msgid "Around"
+msgstr "Contour"
+
+msgid "Dots"
+msgstr "Pois"
+
+msgid "Dual"
+msgstr "Double ligne"
+
+msgid "Extend"
+msgstr "Extend"
+
+msgid "Gradient"
+msgstr "Dégradé"
+
+msgid "Half"
+msgstr "Demi"
+
+msgid "Horizontal"
+msgstr "Horizontal"
+
+msgid "Outline"
+msgstr "Ligne contour"
+
+msgid "Parabol"
+msgstr "Parabol"
+
+msgid "Stars"
+msgstr "Etoile"
+
+msgid "Vertical"
+msgstr "Vertical"
+
+#: screw.php:4
+msgid "Bottom"
+msgstr "Bas"
+
+msgid "Top"
+msgstr "Haut"
+
+msgid "All"
+msgstr "Tous"
+
+#: trim.php:1959-3893
+msgid "Rubber"
+msgstr "Caoutchouc"
+
+#: varnish.php:3-46
+msgid "Glossy"
+msgstr "Brillant"
+
+msgid "Mat"
+msgstr "Mat"
+
+#: zippers.php:74
+msgid "Nylon"
+msgstr "Nylon"
+
+#: visor.php:73-121-180-377-434
+msgid "short"
+msgstr "court"
+
+msgid "long"
+msgstr "long"
+
+msgid "peak"
+msgstr "peak"
+
+msgid "Full"
+msgstr "Complet"
+
+msgid "Light"
+msgstr "Léger"
+
+msgid "Transparant"
+msgstr "Transparant"
+
+msgid "Chrome"
+msgstr "Chrome"
+
+msgid "Semi"
+msgstr "Demi"
+
+#: product.php:77
+msgid "Free delivery"
+msgstr "Livraison gratuite"
+
+msgid "weeks"
+msgstr "semaines"
+
+msgid "Personnalize"
+msgstr "Personnaliser"

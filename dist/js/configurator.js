@@ -79,7 +79,14 @@ const configurator = {
 			/* 	configurator.localHosting = 'localhost:80'; */
   },
 	jsonFileImport: function() {
-		const json = `http://${configurator.localHosting}/essai/content/themes/veldt/dist/json/helmetElement.json`;
+		let lang = 'helmetElement';
+		if (navigator.language === 'fr-FR'){
+			lang = 'helmetElement-fr_FR';
+		}
+		else {
+			lang = 'helmetElement';
+		}
+		const json = `http://${configurator.localHosting}/essai/content/themes/veldt/dist/json/${lang}.json`;
     fetch(json)
 			.then(response => response.json())
 			.then(data => {
@@ -534,10 +541,17 @@ const configurator = {
 		doc.save("VeldtHelmet.pdf");
 	},
 	buttonChangeFunction: function(e) {
+		let textErase ='Erase';
+		if (navigator.language === 'fr-FR'){
+			textErase = 'Supprimer';
+		}
+		else {
+			textErase = 'Erase';
+		}
 		switch (e.target.classList[1]) {
 			case 'chinguardAddButton':
 				configurator.chinguardTemplate.style.display = 'block';
-				configurator.addChinguard.textContent= 'Erase';
+				configurator.addChinguard.textContent= textErase;
 				configurator.addChinguard.classList.add('eraseChinguard');
 				configurator.eraseChinguard = document.querySelector('.eraseChinguard');
 				configurator.eraseChinguard.addEventListener('click', configurator.buttonEraseToAdd);
@@ -545,7 +559,7 @@ const configurator = {
 				break;
 			case 'visorAddButton':
 				configurator.visorTemplate.style.display = 'block';
-				configurator.addVisor.textContent= 'Erase';
+				configurator.addVisor.textContent= textErase;
 				configurator.addVisor.classList.add('eraseVisor');
 				configurator.eraseVisor = document.querySelector('.eraseVisor');
 				configurator.eraseVisor.addEventListener('click', configurator.buttonEraseToAdd);
@@ -556,19 +570,25 @@ const configurator = {
 		}
 	},
 	buttonEraseToAdd: function(e) {
+		let textAdd ='+ Add';
+		if (navigator.language === 'fr-FR'){
+			textAdd = '+ Ajouter';
+		}
+		else {
+			textAdd = '+ Add';
+		}
 		switch (e.target.classList[2]) {
 			case 'eraseChinguard':
 				configurator.chinguardTemplate.style.display = 'none';
 				configurator.addChinguard.classList.remove('eraseChinguard');
-				configurator.addChinguard.textContent= '+ Add';
+				configurator.addChinguard.textContent= textAdd;
 				configurator.addChinguard = document.querySelector('.chinguardAddButton');
 				configurator.addChinguard.addEventListener('click', configurator.buttonChangeFunction);
-
 			break;
 			case 'eraseVisor':
 				configurator.visorTemplate.style.display = 'none';
 				configurator.addVisor.classList.remove('eraseVisor');
-				configurator.addVisor.textContent= '+ Add';
+				configurator.addVisor.textContent= textAdd;
 				configurator.addVisor = document.querySelector('.visorAddButton');
 				configurator.addVisor.addEventListener('click', configurator.buttonChangeFunction);
 			break;

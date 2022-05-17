@@ -1,3 +1,4 @@
+<?php require_once $_SERVER['DOCUMENT_ROOT'].'/essai/wp/wp-load.php'; ?>
 <div class="patternList">
 	<div class="allScrew">
 		<svg version="1.1" id="chin_band"	viewBox="0 0 56 21">
@@ -34,7 +35,7 @@
 					7.7,20.1 7.8,20.1 7.9,20.1 7.9,20.1 8,20.2 8,20.2 8,20.2 48,20.2 48,20.2 	"/>
 			</g>
 		</svg>
-		<span class="textAction">Band</span>
+		<span class="textAction"><?php echo _e( "Band") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="chin_checker"	viewBox="0 0 50 21">
@@ -67,7 +68,7 @@
 					C30.3,20.3,32.5,19.1,33.3,17.8z"/>
 			</g>
 		</svg>
-		<span class="textAction">Checker</span>
+		<span class="textAction"><?php echo _e( "Checker") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="chin_contour" viewBox="0 0 50 21">
@@ -90,7 +91,7 @@
 					C35.8,11.9,36.8,10.9,36.7,10.1z"/>
 			</g>
 		</svg>
-		<span class="textAction">Around</span>
+		<span class="textAction"><?php echo _e( "Around") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="chin_dots"	viewBox="0 0 50 21">
@@ -118,7 +119,7 @@
 				<circle class="chin_dots_st0" cx="41.3" cy="6" r="1.8"/>
 			</g>
 		</svg>
-		<span class="textAction">Dots</span>
+		<span class="textAction"><?php echo _e( "Dots") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="chin_dual"	viewBox="0 0 56 21">
@@ -160,7 +161,7 @@
 					40.4,3.6 40.3,3.4 40.3,3.3 40.1,3.1 40,3 	"/>
 			</g>
 		</svg>
-		<span class="textAction">Dual</span>
+		<span class="textAction"><?php echo _e( "Dual") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="chin_extend"	viewBox="0 0 50 21">
@@ -193,7 +194,7 @@
 					C30.3,20.3,32.5,19.1,33.3,17.8z"/>
 			</g>
 		</svg>
-		<span class="textAction">Extend</span>
+		<span class="textAction"><?php echo _e( "Extend") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="chin_half"	viewBox="0 0 56 21">
@@ -235,7 +236,7 @@
 					5.3,15.8 7.2,18.6 7.4,18.9 7.6,19 7.9,19 9.5,19 11.7,19 14.4,19 16,19 17.9,19 18.1,19 22.5,19 24.6,19 25,19 25.3,19 28,19 	"/>
 			</g>
 		</svg>
-		<span class="textAction">Half</span>
+		<span class="textAction"><?php echo _e( "Half") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="chin_outline" viewBox="0 0 50 21">
@@ -257,7 +258,7 @@
 				<circle class="chin_outline_st0" cx="35" cy="10.1" r="1.8"/>
 			</g>
 		</svg>
-		<span class="textAction">Outline</span>
+		<span class="textAction"><?php echo _e( "Outline") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="chin_parabol"	viewBox="0 0 50 21">
@@ -288,7 +289,7 @@
 					C30.3,20.3,32.5,19.1,33.3,17.8z"/>
 			</g>
 		</svg>
-		<span class="textAction">Parabol</span>
+		<span class="textAction"><?php echo _e( "Parabol") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="chin_plain"	viewBox="0 0 50 21">
@@ -308,7 +309,7 @@
 				<circle class="chin_plain_st0" cx="41.3" cy="6" r="1.8"/>
 			</g>
 		</svg>
-		<span class="textAction">Plain</span>
+		<span class="textAction"><?php echo _e( "Plain") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="chin_stars"	viewBox="0 0 50 21">
@@ -339,7 +340,7 @@
 				<circle class="chin_stars_st0" cx="41.3" cy="6" r="1.8"/>
 			</g>
 		</svg>
-		<span class="textAction">Stars</span>
+		<span class="textAction"><?php echo _e( "Stars") ?></span>
 	</div>
 </div>
 

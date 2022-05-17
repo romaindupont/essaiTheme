@@ -1,3 +1,4 @@
+<?php require_once $_SERVER['DOCUMENT_ROOT'].'/essai/wp/wp-load.php'; ?>
 <div class="pickerScrew">
 	<div class="allScrew">
 		<svg version="1.1" id="screwNone" viewBox="0 0 73 71">
@@ -7,7 +8,7 @@
 				<circle class="screwNone_st1" cx="28.7" cy="49.3" r="4"></circle>
 			</g>
 		</svg>
-		<span class="textAction">None</span>
+		<span class="textAction"><?php echo _e( "None") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="screwBottom" viewBox="0 0 73 71">
@@ -18,7 +19,7 @@
 				<circle class="screwBottom_st1" cx="28.7" cy="49.3" r="4"></circle>
 			</g>
 		</svg>
-		<span class="textAction">Bottom</span>
+		<span class="textAction"><?php echo _e( "Bottom") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="screwTop" viewBox="0 0 73 71"">
@@ -30,7 +31,7 @@
 				<circle class="screwTop_st1" cx="28.7" cy="49.3" r="4"></circle>
 			</g>
 		</svg>
-		<span class="textAction">Top</span>
+		<span class="textAction"><?php echo _e( "Top") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="screwAll" viewBox="0 0 73 71">
@@ -43,6 +44,6 @@
 				<ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 -5.1948 7.3694)" class="screwAll_st1" cx="6.3" cy="10" rx="4.3" ry="1.9"></ellipse>
 			</g>
 		</svg>
-		<span class="textAction">All</span>
+		<span class="textAction"><?php echo _e( "All") ?></span>
 	</div>
 </div>

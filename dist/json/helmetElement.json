@@ -33,17 +33,17 @@
 		"right-number": {
 			"title": "right number",
 			"phpFile":"right-number",
-			"helpMessage" : "Apply a number on right of the helmet, chosse the number and the style"
+			"helpMessage" : "Apply a number on right of the helmet, choose the number and the style"
 		},
 		"left-number": {
 			"title": "left number",
 			"phpFile":"left-number",
-			"helpMessage" : "Apply a number on left of the helmet, chosse the number and the style"
+			"helpMessage" : "Apply a number on left of the helmet, choose the number and the style"
 		},
 		"back-number": {
 			"title": "back number",
 			"phpFile":"back-number",
-			"helpMessage" : "Apply a number on back of the helmet, chosse the number and the style"
+			"helpMessage" : "Apply a number on back of the helmet, choose the number and the style"
 		},
 		"logo": {
 			"title": "logo",

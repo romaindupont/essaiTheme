@@ -1,3 +1,4 @@
+<?php require_once $_SERVER['DOCUMENT_ROOT'].'/essai/wp/wp-load.php'; ?>
 <div class="varnishList">
 	<div class="allScrew">
 		<svg version="1.1" id="glossy_varnish" viewBox="0 0 43 60">
@@ -34,7 +35,7 @@
 				</g>
 			</g>
 		</svg>
-		<span class="textAction">Glossy</span>
+		<span class="textAction"><?php echo _e( "Glossy") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="mat_varnish" viewBox="0 0 43 60">
@@ -43,6 +44,6 @@
 				c1.3-2.7,1.9-5.4,1.7-8.5c-0.3-4.5-1.5-8.1-4.7-13.1c-0.3-0.5-1.3-2-2.2-3.4c-1.9-2.8-2.8-4.3-3.6-5.8C24.9,13.5,23,8,22.2,1.7
 				c-0.1-0.8-0.1-0.9-0.3-1c-0.1-0.1-0.2-0.2-0.4-0.2C21.1,0.4,21,0.5,20.9,0.6L20.9,0.6z"/>
 		</svg>
-		<span class="textAction">Mat</span>
+		<span class="textAction"><?php echo _e( "Mat") ?></span>
 	</div>
 </div>

@@ -1,3 +1,4 @@
+<?php require_once $_SERVER['DOCUMENT_ROOT'].'/essai/wp/wp-load.php'; ?>
 <div class="patternList">
 	<div class="allScrew">
 		<svg version="1.1" id="shell_band" viewBox="0 0 60 60">
@@ -72,7 +73,7 @@
 					10.3,54.7 10.3,54.9 10.2,55.2 10.2,55.4 10.1,55.6 10.1,55.9 10,56.1 	"/>
 			</g>
 		</svg>	
-		<span class="textAction">Band</span>
+		<span class="textAction"><?php echo _e( "Band") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="shell_checker"	viewBox="0 0 60 60">
@@ -125,7 +126,7 @@
 					l0.8,0l2.5,0l0.2,1.4C50.6,58.2,50.1,58.6,49.6,58.6z"/>
 			</g>
 		</svg>
-		<span class="textAction">Checker</span>
+		<span class="textAction"><?php echo _e( "Checker") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="shell_chester" viewBox="0 0 60 60">
@@ -189,7 +190,7 @@
 					l8.5-0.1l0.8,0l2.5,0l0.2,1.4C50.6,58.1,50.1,58.5,49.6,58.6z"/>
 			</g>
 		</svg>
-		<span class="textAction">Chester</span>
+		<span class="textAction"><?php echo _e( "Chester") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="shell_contour"	viewBox="0 0 60 60">
@@ -232,7 +233,7 @@
 					C15.3,50.3,16.3,49.3,16.2,48.4z"/>
 			</g>
 		</svg>
-		<span class="textAction">Around</span>
+		<span class="textAction"><?php echo _e( "Around") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="shell_dots" viewBox="0 0 60 60">
@@ -288,7 +289,7 @@
 					C15.3,50.3,16.3,49.3,16.2,48.4z"/>
 			</g>
 		</svg>
-		<span class="textAction">Dots</span>
+		<span class="textAction"><?php echo _e( "Dots") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="shell_dual" viewBox="0 0 60 60">
@@ -367,7 +368,7 @@
 			</g>
 			</svg>
 
-		<span class="textAction">Dual</span>
+		<span class="textAction"><?php echo _e( "Dual") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="shell_extend" viewBox="0 0 60 60">
@@ -402,7 +403,7 @@
 					l0.8,0l2.5,0l0.2,1.4C50.6,58.2,50.1,58.6,49.6,58.6z"/>
 			</g>
 		</svg>
-		<span class="textAction">Extend</span>
+		<span class="textAction"><?php echo _e( "Extend") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="shell_gradient" viewBox="0 0 60 60">
@@ -432,7 +433,7 @@
 				<circle class="shell_gradient_st2" cx="20.7" cy="44.3" r="1.8"/>
 			</g>
 		</svg>
-		<span class="textAction">Gradient</span>
+		<span class="textAction"><?php echo _e( "Gradient") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="shell_half" viewBox="0 0 60 60">
@@ -509,7 +510,7 @@
 					10.3,54.7 10.3,54.9 10.2,55.2 10.2,55.4 10.1,55.6 10.1,55.9 10,56.1 	"/>
 			</g>
 		</svg>
-		<span class="textAction">Half</span>
+		<span class="textAction"><?php echo _e( "Half") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="shell_horizontal" viewBox="0 0 60 60">
@@ -539,7 +540,7 @@
 					l0.8,0l2.5,0l0.2,1.4C50.6,58.2,50.1,58.6,49.6,58.6z"/>
 			</g>
 		</svg>
-		<span class="textAction">Horizontal</span>
+		<span class="textAction"><?php echo _e( "Horizontal") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="shell_outline"	viewBox="0 0 60 60">
@@ -583,7 +584,7 @@
 				<circle class="shell_outline_st0" cx="20.7" cy="44.3" r="1.8"/>
 			</g>
 		</svg>
-		<span class="textAction">Outline</span>
+		<span class="textAction"><?php echo _e( "Outline") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="shell_parabol"	viewBox="0 0 60 60">
@@ -622,7 +623,7 @@
 					l0.8,0l2.5,0l0.2,1.4C50.6,58.2,50.1,58.6,49.6,58.6z"/>
 			</g>
 			</svg>
-		<span class="textAction">Parabol</span>
+		<span class="textAction"><?php echo _e( "Parabol") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="shell_plain"	viewBox="0 0 60 60">
@@ -648,7 +649,7 @@
 				<circle class="shell_plain_st0" cx="20.7" cy="44.3" r="1.8"/>
 			</g>
 		</svg>
-		<span class="textAction">Plain</span>
+		<span class="textAction"><?php echo _e( "Plain") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="shell_stars" viewBox="0 0 60 60">
@@ -705,7 +706,7 @@
 				<circle class="shell_stars_st0" cx="14.4" cy="48.4" r="1.8"/>
 			</g>
 		</svg>
-		<span class="textAction">Stars</span>
+		<span class="textAction"><?php echo _e( "Stars") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="shell_vertical" viewBox="0 0 60 60">
@@ -734,7 +735,7 @@
 					l0.8,0l2.5,0l0.2,1.4C50.6,58.2,50.1,58.6,49.6,58.6z"/>
 			</g>
 		</svg>
-		<span class="textAction">Vertical</span>
+		<span class="textAction"><?php echo _e( "Vertical") ?></span>
 	</div>
 </div>
 

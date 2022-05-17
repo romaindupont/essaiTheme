@@ -13,17 +13,13 @@ class My_Walker extends Walker_Nav_Menu {
         );
 		$image1= '';
 		$closeMenu = get_stylesheet_directory_uri() . "/assets/images/close-menu.svg";
-		//$image1 = get_stylesheet_directory_uri() . "/assets/images/imageMotorHelmet.png";
-		//image2 = get_stylesheet_directory_uri() . "/assets/images/veldt-logo.svg";
-		//$imageCentral = '';
     $class_names = implode( ' ', $classes );
 				if($display_depth == 1) {
 					$output .= "\n" . $indent . '<ul class="' . $class_names . '">' . "\n" . '<h2 class="SubmenuTitle"></h2>' . "\n" .'<img class="helmetImage" alt="Helmet Image" src="'. $image1 .'">'. "\n" . '<img class="closeMenu" alt="Close menu" src="'. $closeMenu .'">' . "\n";
-							//'. $display_depth % 2  ? 'menu-odd' : 'menu-even'.'
 						} else {
 							$output .= "\n" . $indent . '<ul class="' . $class_names . '">' . "\n" ;
 						}
-				}
+	}
 	//lorsqu’un élément est initialisé (<li>+content)
   //function start_el( &$output, $item, $depth, $args, $id = 0 ) {
 		//var_dump($item);

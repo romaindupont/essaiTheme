@@ -1,0 +1,127 @@
+{
+	"helmetElement" :{
+		"aeration": {
+			"title": "aération",
+			"phpFile": "aeration",
+			"helpMessage" : "Choisir d'ajouter ou d'enlever les aérations"
+			},
+		"screw and rivets": {
+			"title": "vis et rivets",
+			"phpFile":"screw",
+			"helpMessage" : "Choisir la position des vis et rivets"
+		},
+		"pattern": {
+			"title": "modèle",
+			"phpFile":"pattern",
+			"helpMessage" : "Choisir le modèle à appliquer"
+		},
+		"main-color": {
+			"title": "couleur principale",
+			"phpFile":"main-color",
+			"helpMessage" : "Choisir la couleur principale"
+		},
+		"pattern-color": {
+			"title": "couleur du modèle",
+			"phpFile": "pattern-color",
+			"helpMessage" : "Choix de la couleur du modèle et de la finition"
+		},
+		"varnish": {
+			"title": "vernis",
+			"phpFile":"varnish",
+			"helpMessage" : "Choisir la finition vernis"
+		},
+		"right-number": {
+			"title": "numéro droite",
+			"phpFile":"right-number",
+			"helpMessage" : "Appliquer un numéro du côté droit du casque, choisir également le style"
+		},
+		"left-number": {
+			"title": "numéro gauche",
+			"phpFile":"left-number",
+			"helpMessage" : "Appliquer un numéro du côté gauche du casque, choisir également le style"
+		},
+		"back-number": {
+			"title": "numéro arrière",
+			"phpFile":"back-number",
+			"helpMessage" : "Appliquer un numéro à l'arrière du casque, choisir également le style"
+		},
+		"logo": {
+			"title": "logo",
+			"phpFile":"logo",
+			"helpMessage" : "Choisir entre différente proposition de logo Veldt et sélectionner la couleur"
+		},
+		"interior": {
+			"title": "interieur",
+			"phpFile":"interior",
+			"helpMessage" : "Choisir le revêtement de l'intérieur du casque"
+		},
+		"rush": {
+			"title": "jonc",
+			"phpFile":"trim",
+			"helpMessage" : "Choisir la couleur du jonc"
+		},
+		"metal-parts": {
+			"title": "pièces métalliques",
+			"phpFile":"metal-parts",
+			"helpMessage" : "Choisir la couleur des pièces métalliques"
+		},
+		"zippers": {
+			"title": "Fermeture",
+			"phpFile":"zippers",
+			"helpMessage" : "Choisir le type de fermeture entre deux technologies"
+		},
+		"engraving": {
+			"title": "Gravures",
+			"phpFile":"engraving",
+			"helpMessage" : "Choisir le texte à appliquer sur la gravure à l'arrière du casque"
+		},
+		"size": {
+			"title": "taille et certification",
+			"phpFile":"size",
+			"helpMessage" : "Choisir la taille et certification"
+		}	
+	},
+	"chinguardElement" : {
+		"aeration": {
+			"title": "aération",
+			"phpFile": "aeration",
+			"helpMessage" : "Choisir d'ajouter ou d'enlever les aérations"
+			},
+			"pattern": {
+				"title": "modèle",
+				"phpFile":"pattern",
+				"helpMessage" : "Choisir le modèle à appliquer"
+			},
+			"main-color": {
+				"title": "couleur principale",
+				"phpFile":"main-color",
+				"helpMessage" : "Choisir la couleur principale"
+			},
+			"pattern-color": {
+				"title": "couleur du modèle",
+				"phpFile": "pattern-color",
+				"helpMessage" : "Choix de la couleur du modèle et de la finition"
+			},
+			"varnish": {
+				"title": "vernis",
+				"phpFile":"varnish",
+				"helpMessage" : "Choisir la finition vernis"
+			},
+			"interior": {
+				"title": "interieur",
+				"phpFile":"interior",
+				"helpMessage" : "Choisir le revêtement de l'intérieur de la mentonnière"
+			},
+			"rush": {
+				"title": "jonc",
+				"phpFile":"trim",
+				"helpMessage" : "Choisir la couleur du jonc"
+			},
+			"metal-parts": {
+				"title": "pièces métalliques",
+				"phpFile":"metal-parts",
+				"helpMessage" : "Choisir la couleur des pièces métalliques"
+			}
+	}
+
+}

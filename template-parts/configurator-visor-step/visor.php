@@ -1,10 +1,11 @@
+<?php require_once $_SERVER['DOCUMENT_ROOT'].'/essai/wp/wp-load.php'; ?>
 <div class="inputVisorChoice">
 	<input class="inputVisor" type="radio" name="visor" id="short_visor" value="short_visor">
-	<label class="buttonChoice" for="short_visor">short</label>
+	<label class="buttonChoice" for="short_visor"><?php echo _e( "short") ?></label>
 	<input class="inputVisor" type="radio" name="visor" id="long_visor" value="long_visor">
-	<label class="buttonChoice" for="long_visor">long</label>
+	<label class="buttonChoice" for="long_visor"><?php echo _e( "long") ?></label>
 	<input class="inputVisor" type="radio" name="visor" id="peak_visor" value="peak_visor">
-	<label class="buttonChoice" for="peak_visor">peak</label>
+	<label class="buttonChoice" for="peak_visor"><?php echo _e( "peak") ?></label>
 </div>
 <div class="frame">
 	<div class="allScrew">
@@ -69,7 +70,7 @@
 					C43.8,35.1,44.9,34.1,44.9,32.8z"/>
 			</g>
 		</svg>
-		<span class="textAction">Full</span>
+		<span class="textAction"><?php echo _e( "Full") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="frame_light"	viewBox="0 0 52 42">
@@ -117,7 +118,7 @@
 					C44.1,35.1,45.2,34.1,45.2,32.9z"/>
 			</g>
 		</svg>
-		<span class="textAction">Light</span>
+		<span class="textAction"><?php echo _e( "Light") ?></span>
 	</div>
 </div>
 <div class="short_visor_page">
@@ -176,7 +177,7 @@
 					c0,0,0,0,0,0C16.2,20.1,5.1,39.6,0.3,61.1c16,0,32,0,48.1,0c2.9,0,5.4-1.7,6.6-4.3c0.1-0.3,0.3-0.6,0.4-1c0.1-0.2,0.2-0.4,0.3-0.6
 					c0.3-0.7,0.6-1.4,0.9-2.1c0.2-0.6,0.5-1.1,0.7-1.7c0.1-0.2,0.1-0.3,0.2-0.5C57.9,49.8,58.3,48.7,58.8,47.6z"/>
 			</svg>
-			<span class="textAction">Transparant</span>
+			<span class="textAction"><?php echo _e( "Transparant") ?></span>
 		</div>
 		<div class="allScrew">
 			<svg version="1.1" id="short_black"	viewBox="0 0 80 62">
@@ -233,7 +234,7 @@
 					c0,0,0,0,0,0C16.2,20.1,5.1,39.6,0.3,61.1c16,0,32,0,48.1,0c2.9,0,5.4-1.7,6.6-4.3c0.1-0.3,0.3-0.6,0.4-1c0.1-0.2,0.2-0.4,0.3-0.6
 					c0.3-0.7,0.6-1.4,0.9-2.1c0.2-0.6,0.5-1.1,0.7-1.7c0.1-0.2,0.1-0.3,0.2-0.5C57.9,49.8,58.3,48.7,58.8,47.6z"/>
 			</svg>
-			<span class="textAction">Black</span>
+			<span class="textAction"><?php echo _e( "Black") ?></span>
 		</div>
 		<div class="allScrew">
 			<svg version="1.1" id="short_blue" viewBox="0 0 80 62">
@@ -311,7 +312,7 @@
 					c0,0,0,0,0,0C16.2,20.1,5.1,39.6,0.3,61.1c16,0,32,0,48.1,0c2.9,0,5.4-1.7,6.6-4.3c0.1-0.3,0.3-0.6,0.4-1c0.1-0.2,0.2-0.4,0.3-0.6
 					c0.3-0.7,0.6-1.4,0.9-2.1c0.2-0.6,0.5-1.1,0.7-1.7c0.1-0.2,0.1-0.3,0.2-0.5C57.9,49.8,58.3,48.7,58.8,47.6z"/>
 			</svg>
-			<span class="textAction">Blue</span>
+			<span class="textAction"><?php echo _e( "Blue") ?></span>
 		</div>
 		<div class="allScrew">
 			<svg version="1.1" id="short_chrome"	viewBox="0 0 80 62">
@@ -373,7 +374,7 @@
 					c0,0,0,0,0,0C16.2,20.1,5.1,39.6,0.3,61.1c16,0,32,0,48.1,0c2.9,0,5.4-1.7,6.6-4.3c0.1-0.3,0.3-0.6,0.4-1c0.1-0.2,0.2-0.4,0.3-0.6
 					c0.3-0.7,0.6-1.4,0.9-2.1c0.2-0.6,0.5-1.1,0.7-1.7c0.1-0.2,0.1-0.3,0.2-0.5C57.9,49.8,58.3,48.7,58.8,47.6z"/>
 				</svg>
-			<span class="textAction">Chrome</span>
+			<span class="textAction"><?php echo _e( "Chrome") ?></span>
 		</div>
 		<div class="allScrew">
 			<svg version="1.1" id="short_semi" viewBox="0 0 80 62">
@@ -430,7 +431,7 @@
 					c0,0,0,0,0,0C16.2,20.1,5.1,39.6,0.3,61.1c16,0,32,0,48.1,0c2.9,0,5.4-1.7,6.6-4.3c0.1-0.3,0.3-0.6,0.4-1c0.1-0.2,0.2-0.4,0.3-0.6
 					c0.3-0.7,0.6-1.4,0.9-2.1c0.2-0.6,0.5-1.1,0.7-1.7c0.1-0.2,0.1-0.3,0.2-0.5C57.9,49.8,58.3,48.7,58.8,47.6z"/>
 				</svg>
-			<span class="textAction">Semi</span>
+			<span class="textAction"><?php echo _e( "Semi") ?></span>
 		</div>
 </div>
 <div class="long_visor_page">
@@ -493,7 +494,7 @@
 					c0.8-1.9,1.6-3.7,2.4-5.6c0.1-0.2,0.2-0.4,0.3-0.6c0.3-0.7,0.6-1.4,0.9-2.1c0.2-0.6,0.5-1.1,0.7-1.7c0.1-0.2,0.1-0.3,0.2-0.5
 					c0.5-1.1,0.9-2.1,1.4-3.2c1-2.3,2.6-4.2,4.7-5.6c1-0.7,2.1-1.3,3.3-1.7C69.9,39.8,70.7,39.7,72.1,39.6z"/>
 			</svg>
-		<span class="textAction">Transparant</span>
+		<span class="textAction"><?php echo _e( "Transparant") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="long_black" viewBox="0 0 82 78.1">
@@ -555,7 +556,7 @@
 					c0.5-1.1,0.9-2.1,1.4-3.2c1-2.3,2.6-4.2,4.7-5.6c1-0.7,2.1-1.3,3.3-1.7C69.9,39.8,70.7,39.7,72.1,39.6z"/>
 			</svg>
 
-		<span class="textAction">Black</span>
+		<span class="textAction"><?php echo _e( "Black") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="long_blue"	viewBox="0 0 82 78.1">
@@ -637,7 +638,7 @@
 					c0.8-1.9,1.6-3.7,2.4-5.6c0.1-0.2,0.2-0.4,0.3-0.6c0.3-0.7,0.6-1.4,0.9-2.1c0.2-0.6,0.5-1.1,0.7-1.7c0.1-0.2,0.1-0.3,0.2-0.5
 					c0.5-1.1,0.9-2.1,1.4-3.2c1-2.3,2.6-4.2,4.7-5.6c1-0.7,2.1-1.3,3.3-1.7C69.9,39.8,70.7,39.7,72.1,39.6z"/>
 			</svg>
-		<span class="textAction">Blue</span>
+		<span class="textAction"><?php echo _e( "Blue") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="long_chrome"	viewBox="0 0 82 78.1">
@@ -703,7 +704,7 @@
 					c0.8-1.9,1.6-3.7,2.4-5.6c0.1-0.2,0.2-0.4,0.3-0.6c0.3-0.7,0.6-1.4,0.9-2.1c0.2-0.6,0.5-1.1,0.7-1.7c0.1-0.2,0.1-0.3,0.2-0.5
 					c0.5-1.1,0.9-2.1,1.4-3.2c1-2.3,2.6-4.2,4.7-5.6c1-0.7,2.1-1.3,3.3-1.7C69.9,39.8,70.7,39.7,72.1,39.6z"/>
 			</svg>
-		<span class="textAction">Chrome</span>
+		<span class="textAction"><?php echo _e( "Chrome") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="long_semi" viewBox="0 0 82 78.1">
@@ -764,46 +765,46 @@
 				c0.8-1.9,1.6-3.7,2.4-5.6c0.1-0.2,0.2-0.4,0.3-0.6c0.3-0.7,0.6-1.4,0.9-2.1c0.2-0.6,0.5-1.1,0.7-1.7c0.1-0.2,0.1-0.3,0.2-0.5
 				c0.5-1.1,0.9-2.1,1.4-3.2c1-2.3,2.6-4.2,4.7-5.6c1-0.7,2.1-1.3,3.3-1.7C69.9,39.8,70.7,39.7,72.1,39.6z"/>
 			</svg>
-		<span class="textAction">Semi</span>
+		<span class="textAction"><?php echo _e( "Semi") ?></span>
 	</div>
 </div>
 <div class="peak_visor_page">
 	<div class="colorListType">
-		<span class="buttonChoice">Plain</span>
-		<span class="buttonChoice">Metallic</span>
-		<span class="buttonChoice">Glitter</span>
-		<span class="buttonChoice">Sheathing</span>
+		<span class="buttonChoice"><?php echo _e( "Plain") ?></span>
+		<span class="buttonChoice"><?php echo _e( "Metallic") ?></span>
+		<span class="buttonChoice"><?php echo _e( "Glitter") ?></span>
+		<span class="buttonChoice"><?php echo _e( "Sheathing") ?></span>
 	</div>
 	<div class="colorList">
-		<div class="colorP"><div class="roundColor carbon"></div><span class="textAction">Carbon</span></div>
-		<div class="colorP"><div class="roundColor white"></div><span class="textAction">White</span></div>
-		<div class="colorP"><div class="roundColor black"></div><span class="textAction">Black</span></div>
-		<div class="colorP"><div class="roundColor coolGrey"></div><span class="textAction">Cool Grey</span></div>
-		<div class="colorP"><div class="roundColor EstateBlue"></div><span class="textAction">Estate Blue</span></div>
-		<div class="colorP"><div class="roundColor pirateGrey"></div><span class="textAction">Pirate Grey</span></div>
-		<div class="colorP"><div class="roundColor duskBlue"></div><span class="textAction">Dusk Blue</span></div>
-		<div class="colorP"><div class="roundColor doubleCream"></div><span class="textAction">Double Cream</span></div>
-		<div class="colorP"><div class="roundColor rallyBlue"></div><span class="textAction">Rally Blue</span></div>
-		<div class="colorP"><div class="roundColor yellowIris"></div><span class="textAction">Yellow Iris</span></div>
-		<div class="colorP"><div class="roundColor icebergGreen"></div><span class="textAction">Iceberg Green</span></div>
-		<div class="colorP"><div class="roundColor blazingYellow"></div><span class="textAction">Blazing Yellow</span></div>
-		<div class="colorP"><div class="roundColor greenDouble"></div><span class="textAction">Green Double</span></div>
-		<div class="colorP"><div class="roundColor blazingOrange"></div><span class="textAction">Blazing Orange</span></div>
-		<div class="colorP"><div class="roundColor limeGreen"></div><span class="textAction">Lime Green</span></div>
-		<div class="colorP"><div class="roundColor vermillion"></div><span class="textAction">Vermillion</span></div>
-		<div class="colorP"><div class="roundColor greenGables"></div><span class="textAction">Green Gables</span></div>
-		<div class="colorP"><div class="roundColor orchidPink"></div><span class="textAction">Orchid Pink</span></div>
-		<div class="colorP"><div class="roundColor camel"></div><span class="textAction">Camel</span></div>
-		<div class="colorP"><div class="roundColor plumPurple"></div><span class="textAction">Plum Purple</span></div>
-		<div class="colorP"><div class="roundColor brownStone"></div><span class="textAction">Brown Stone</span></div>
-		<div class="colorP"><div class="roundColor cayenneRed"></div><span class="textAction">Cayenne Red</span></div>
-		<div class="colorP"><div class="roundColor iridescentBlue"></div><span class="textAction">Iridescent Blue</span></div>
-		<div class="colorP"><div class="roundColor chinesesRed"></div><span class="textAction">Chineses Red</span></div>
-		<div class="colorP"><div class="roundColor iridescentPink"></div><span class="textAction">Iridescent Pink</span></div>
-		<div class="colorP"><div class="roundColor fluoYellow"></div><span class="textAction">Fluo Yellow</span></div>
-		<div class="colorP"><div class="roundColor fluoPink"></div><span class="textAction">Fluo Pink</span></div>
-		<div class="colorP"><div class="roundColor copperFoil"></div><span class="textAction">Copper Foil</span></div>
-		<div class="colorP"><div class="roundColor goldFoil"></div><span class="textAction">Gold Foil</span></div>
-		<div class="colorP"><div class="roundColor silverFoil"></div><span class="textAction">Silver Foil</span></div>
+		<div class="colorP"><div class="roundColor carbon"></div><span class="textAction"><?php echo _e( "Carbon") ?></span></div>
+		<div class="colorP"><div class="roundColor white"></div><span class="textAction"><?php echo _e( "White") ?></span></div>
+		<div class="colorP"><div class="roundColor black"></div><span class="textAction"><?php echo _e( "Black") ?></span></div>
+		<div class="colorP"><div class="roundColor coolGrey"></div><span class="textAction"><?php echo _e( "Cool Grey") ?></span></div>
+		<div class="colorP"><div class="roundColor EstateBlue"></div><span class="textAction"><?php echo _e( "Estate Blue") ?></span></div>
+		<div class="colorP"><div class="roundColor pirateGrey"></div><span class="textAction"><?php echo _e( "Pirate Grey") ?></span></div>
+		<div class="colorP"><div class="roundColor duskBlue"></div><span class="textAction"><?php echo _e( "Dusk Blue") ?></span></div>
+		<div class="colorP"><div class="roundColor doubleCream"></div><span class="textAction"><?php echo _e( "Double Cream") ?></span></div>
+		<div class="colorP"><div class="roundColor rallyBlue"></div><span class="textAction"><?php echo _e( "Rally Blue") ?></span></div>
+		<div class="colorP"><div class="roundColor yellowIris"></div><span class="textAction"><?php echo _e( "Yellow Iris") ?></span></div>
+		<div class="colorP"><div class="roundColor icebergGreen"></div><span class="textAction"><?php echo _e( "Iceberg Green") ?></span></div>
+		<div class="colorP"><div class="roundColor blazingYellow"></div><span class="textAction"><?php echo _e( "Blazing Yellow") ?></span></div>
+		<div class="colorP"><div class="roundColor greenDouble"></div><span class="textAction"><?php echo _e( "Green Double") ?></span></div>
+		<div class="colorP"><div class="roundColor blazingOrange"></div><span class="textAction"><?php echo _e( "Blazing Orange") ?></span></div>
+		<div class="colorP"><div class="roundColor limeGreen"></div><span class="textAction"><?php echo _e( "Lime Green") ?></span></div>
+		<div class="colorP"><div class="roundColor vermillion"></div><span class="textAction"><?php echo _e( "Vermillion") ?></span></div>
+		<div class="colorP"><div class="roundColor greenGables"></div><span class="textAction"><?php echo _e( "Green Gables") ?></span></div>
+		<div class="colorP"><div class="roundColor orchidPink"></div><span class="textAction"><?php echo _e( "Orchid Pink") ?></span></div>
+		<div class="colorP"><div class="roundColor camel"></div><span class="textAction"><?php echo _e( "Camel") ?></span></div>
+		<div class="colorP"><div class="roundColor plumPurple"></div><span class="textAction"><?php echo _e( "Plum Purple") ?></span></div>
+		<div class="colorP"><div class="roundColor brownStone"></div><span class="textAction"><?php echo _e( "Brown Stone") ?></span></div>
+		<div class="colorP"><div class="roundColor cayenneRed"></div><span class="textAction"><?php echo _e( "Cayenne Red") ?></span></div>
+		<div class="colorP"><div class="roundColor iridescentBlue"></div><span class="textAction"><?php echo _e( "Iridescent Blue") ?></span></div>
+		<div class="colorP"><div class="roundColor chinesesRed"></div><span class="textAction"><?php echo _e( "Chineses Red") ?></span></div>
+		<div class="colorP"><div class="roundColor iridescentPink"></div><span class="textAction"><?php echo _e( "Iridescent Pink") ?></span></div>
+		<div class="colorP"><div class="roundColor fluoYellow"></div><span class="textAction"><?php echo _e( "Fluo Yellow") ?></span></div>
+		<div class="colorP"><div class="roundColor fluoPink"></div><span class="textAction"><?php echo _e( "Fluo Pink") ?></span></div>
+		<div class="colorP"><div class="roundColor copperFoil"></div><span class="textAction"><?php echo _e( "Copper Foil") ?></span></div>
+		<div class="colorP"><div class="roundColor goldFoil"></div><span class="textAction"><?php echo _e( "Gold Foil") ?></span></div>
+		<div class="colorP"><div class="roundColor silverFoil"></div><span class="textAction"><?php echo _e( "Silver Foil") ?></span></div>
 	</div>
 </div>

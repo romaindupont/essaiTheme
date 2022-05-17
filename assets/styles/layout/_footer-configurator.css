@@ -343,6 +343,18 @@ svg#menu_option {
 		transform: translate3d(0%, 0px, 0px);
 		justify-content: flex-start;
 	}
+	#menu-main-menu > .menu-item > a {
+		font-size: 1rem;
+	}
+	.first_menu-configurator-nav > #menu-main-menu > .mark1 > .menu-depth-1 > li ul > li a, .first_menu-configurator-nav > #menu-main-menu > .mark2 > .menu-depth-1 > li ul > li a {
+		font-size: 0.6rem;
+	}
+	.first_menu-configurator-nav > #menu-main-menu > .mark1 > .menu-depth-1 > li a, .first_menu-configurator-nav > #menu-main-menu > .mark2 > .menu-depth-1 > li a {
+    font-size: 0.7rem;
+	}
+	ul > li > ul {
+		width: 200px;
+	}
 }
 @media (min-width: 576px) { 
 	.sd-tabs > .sd-tab-label::after,
@@ -522,7 +534,41 @@ svg#menu_option {
 /* Large screens ----------- */
 @media only screen 
 and (min-width : 1824px) {
-	.footer-configurator {
+	footer.footer-configurator {
+		top: 90vh;
+	}
+	.openIt {
+		top: 75vh !important;
+	}
+	.menu_option {
+		bottom: 15vh;
+	}
+	.export {
+    top: 85%;	
+	}
+	.positionExportLogo {
+    top: 70vh !important;
+	}
+	.exportWindow {
+    bottom: 20vh;
+	}
+	.openExportMenu {
+    bottom: 40vh !important;
+	}
+.colorList {
+    transform: translate3d(50%, 0px, 0px);
+	}
+	#menu-main-menu > .menu-item > a {
+		font-size: 3rem;
+	}
+	.first_menu-configurator-nav > #menu-main-menu > .mark1 > .menu-depth-1 > li ul > li a, .first_menu-configurator-nav > #menu-main-menu > .mark2 > .menu-depth-1 > li ul > li a {
+		font-size: 1.4rem;
+	}
+	.first_menu-configurator-nav > #menu-main-menu > .mark1 > .menu-depth-1 > li a, .first_menu-configurator-nav > #menu-main-menu > .mark2 > .menu-depth-1 > li a {
+    font-size: 1.5rem;
+	}
+	ul > li > ul {
+		width: 500px;
 	}
 }
 
@@ -843,7 +889,7 @@ background: #000;
 	content: "";
 	height: 4px;
 	position: absolute;
-	bottom: 0px;
+	bottom: -4px;
 	background: var(--color-principal);
 	left: 5%;
 	width: 90%;

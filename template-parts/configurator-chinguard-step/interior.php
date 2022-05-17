@@ -42,7 +42,7 @@
 				</g>
 			</g>
 		</svg>
-		<span class="textAction">Leather Brown</span>
+		<span class="textAction"><?php echo _e( "Leather") ?> <?php echo _e( "Brown") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg class="interiorSvg" version="1.1" id="leather_black"	viewBox="0 0 60 60">
@@ -62,6 +62,6 @@
 				</g>
 			</g>
 		</svg>
-		<span class="textAction">Leather Black</span>
+		<span class="textAction"><?php echo _e( "Leather") ?> <?php echo _e( "Black") ?></span>
 	</div>
 </div>

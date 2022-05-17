@@ -1,3 +1,4 @@
+<?php require_once $_SERVER['DOCUMENT_ROOT'].'/essai/wp/wp-load.php'; ?>
 <div class="varnishList">
 	<div class="allScrew">
 		<svg version="1.1" id="tab_nylon" viewBox="0 0 70 70">
@@ -70,7 +71,7 @@
 				</g>
 			</g>
 		</svg>
-		<span class="textAction">Nylon</span>
+		<span class="textAction"><?php echo _e( "Nylon") ?></span>
 	</div>
 	<div class="allScrew">
 		<svg version="1.1" id="tab_leather"	viewBox="0 0 70 70">
@@ -2111,6 +2112,6 @@
 				</g>
 			</g>
 		</svg>
-		<span class="textAction">Leather</span>
+		<span class="textAction"><?php echo _e( "Leather") ?></span>
 	</div>
 </div>
