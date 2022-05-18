@@ -82,11 +82,18 @@ const configurator = {
   },
 	langImportFile: function() {
 		let langName = 'en';
-		if (navigator.language === 'fr-FR'){
-			langName = 'fr';
-		}
-		else {
-			langName = 'en';
+		switch (navigator.language.substring(0, 2)) {
+			case 'fr':
+				langName = 'fr';
+				break;
+			case 'es':
+				langName = 'es';
+				break;
+			case 'en':
+				langName = 'en';
+				break;
+			default:
+				langName = 'en';
 		}
 		const json = `http://${configurator.localHosting}/essai/content/themes/veldt/dist/js/lang.${langName}.js`;
     import(json)
@@ -400,16 +407,8 @@ const configurator = {
 			.catch(error => console.log(error));
 	},
 	initVisorElement: function() {
-		let titleMenuStep ="Visor";
-		let helpMessage = "help message for visor";
-		if (navigator.language === 'fr-FR'){
-			titleMenuStep = "Visière";
-			helpMessage = "message d'aide visor";
-		}
-		else {
-			titleMenuStep = "Visor";
-			helpMessage = "help message for visor";
-		}
+		let titleMenuStep = configurator.dataLang.titleMenuStepVisor;
+		let helpMessage = configurator.dataLang.visorHelpMessage;
 		const divVisor = document.createElement("div");
 		divVisor.classList.add('divVisorList');
 		configurator.menuOption.appendChild(divVisor);
@@ -542,7 +541,6 @@ const configurator = {
 				displayLong.style.display = 'none';
 				displayPeak.style.display = 'none';
 		}
-
 	},
 	pdfFileMade: function() {
 		const { jsPDF } = window.jspdf;
@@ -565,17 +563,10 @@ const configurator = {
 		doc.save("VeldtHelmet.pdf");
 	},
 	buttonChangeFunction: function(e) {
-		let textErase ='Erase';
-		if (navigator.language === 'fr-FR'){
-			textErase = 'Supprimer';
-		}
-		else {
-			textErase = 'Erase';
-		}
 		switch (e.target.classList[1]) {
 			case 'chinguardAddButton':
 				configurator.chinguardTemplate.style.display = 'block';
-				configurator.addChinguard.textContent= textErase;
+				configurator.addChinguard.textContent = configurator.dataLang.textErase;
 				configurator.addChinguard.classList.add('eraseChinguard');
 				configurator.eraseChinguard = document.querySelector('.eraseChinguard');
 				configurator.eraseChinguard.addEventListener('click', configurator.buttonEraseToAdd);
@@ -583,7 +574,7 @@ const configurator = {
 				break;
 			case 'visorAddButton':
 				configurator.visorTemplate.style.display = 'block';
-				configurator.addVisor.textContent= textErase;
+				configurator.addVisor.textContent= configurator.dataLang.textErase;
 				configurator.addVisor.classList.add('eraseVisor');
 				configurator.eraseVisor = document.querySelector('.eraseVisor');
 				configurator.eraseVisor.addEventListener('click', configurator.buttonEraseToAdd);
@@ -593,25 +584,18 @@ const configurator = {
 		}
 	},
 	buttonEraseToAdd: function(e) {
-		let textAdd ='+ Add';
-		if (navigator.language === 'fr-FR'){
-			textAdd = '+ Ajouter';
-		}
-		else {
-			textAdd = '+ Add';
-		}
 		switch (e.target.classList[2]) {
 			case 'eraseChinguard':
 				configurator.chinguardTemplate.style.display = 'none';
 				configurator.addChinguard.classList.remove('eraseChinguard');
-				configurator.addChinguard.textContent= textAdd;
+				configurator.addChinguard.textContent= configurator.dataLang.textAdd;
 				configurator.addChinguard = document.querySelector('.chinguardAddButton');
 				configurator.addChinguard.addEventListener('click', configurator.buttonChangeFunction);
 			break;
 			case 'eraseVisor':
 				configurator.visorTemplate.style.display = 'none';
 				configurator.addVisor.classList.remove('eraseVisor');
-				configurator.addVisor.textContent= textAdd;
+				configurator.addVisor.textContent= configurator.dataLang.textAdd;
 				configurator.addVisor = document.querySelector('.visorAddButton');
 				configurator.addVisor.addEventListener('click', configurator.buttonChangeFunction);
 			break;

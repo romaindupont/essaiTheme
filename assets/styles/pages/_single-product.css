@@ -8,12 +8,7 @@
 }
 
 .slider {
-
 	position: relative;
-}
-
-.custom-singleProduct-page--right {
-
 }
 
 .slide {
@@ -30,11 +25,13 @@
 	opacity: 0;
 	object-fit: contain;
 }
+
 .btn-slider-container {
 	display: flex;
 	position: absolute;
 	z-index: 39;
 }
+
 span.btn {
 	width: 8px;
 	height: 8px;
@@ -42,6 +39,7 @@ span.btn {
 	border-radius: 50%;
 	cursor: pointer;
 }
+
 .btn-slider-active {
 	background-color: var(--color-principal);
 	width: 7px !important;
@@ -82,19 +80,22 @@ p.deliveryMessage {
 	text-transform: uppercase;
 	color: var(--comments-price-config-color);
 }
+
 p.deliveryMessage > span {
 	font-style: italic;
 }
+
 .woocommerce-attribute-list {
 	margin-top: 2rem;
 }
+
 .woocommerce-attribute-title {
 	display: flex;
 	flex-direction: row;
 	margin-bottom: 2rem;
 	align-items: center;
-
 }
+
 .woocommerce-attribute-title > strong {
 	font-size: 1rem;
 	text-transform: uppercase;
@@ -109,18 +110,22 @@ p.deliveryMessage > span {
 	width: 100%;
 	justify-content: space-evenly;
 }
+
 input[type=radio] {
 	visibility: hidden;
 }
+
 .woocommerce-attribute-input {
 	z-index: 39;
 	width: 33%;
 }
+
 .woocommerce-attribute-input > label {
 	cursor: pointer;
 	width: 100%;
 	position: relative;
 }
+
 .woocommerce-attribute-input > label:hover::after {
 	content: '';
 	height: 2px;
@@ -129,8 +134,8 @@ input[type=radio] {
 	background: var(--color-principal);
 	left: 5%;
 	animation: widthLine 200ms forwards ease-in-out;
-
 }
+
 input[type="radio"]:checked + label::after {
 	content: '';
 	height: 2px;
@@ -139,7 +144,6 @@ input[type="radio"]:checked + label::after {
 	background: var(--color-principal);
 	left: 5%;
 	width: 90%;
-
 }
 
 @keyframes widthLine {
@@ -149,7 +153,6 @@ input[type="radio"]:checked + label::after {
 	100% {
 		width: 90%;
 	}
-	
 }
 
 form.cart {
@@ -161,35 +164,32 @@ form.cart {
 	display: flex;
 	justify-content: space-evenly;
 }
+
 .add_to_cart {
 	z-index: 39;
 	width: 200px;
-	background: #233658;
-	color: #fff;
+	background: var(--color-principal);
+	color: var(--color-second);
 	border-radius: 25px;
 	padding: 1em;
 	text-transform: uppercase;
-	border: 1px solid #233658;
+	border: 1px solid var(--color-principal);
 	cursor: pointer;
 }
 
 .buttonZone > .personnalize {
-	background-color: #fff !important;
-	color: #233658 !important;
-/* 	width: 200px !important; */
+	background-color: var(--color-second) !important;
+	color: var(--color-principal) !important;
 	padding: 1em;
 	text-transform: uppercase;
-	border: 1px solid #233658;
+	border: 1px solid var(--color-principal);
 	cursor: pointer;
 	z-index: 39;
 }
 
 .buttonZone > .personnalize > a {
-	color: #233658 !important;
-
+	color: var(--color-principal) !important;
 }
-
-
 
 @media (min-width : 320px) {
 	.singlePageSection {
@@ -244,6 +244,7 @@ form.cart {
 		background-size: 15%;
 	}
 }
+
 @media (min-width: 576px) {}
 @media (min-width : 768px) {}
 @media (min-width : 1024px) {

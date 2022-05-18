@@ -22,7 +22,6 @@ const singleProduct = {
 		else {
 			slide.style.transform = `translateY(${indx * 100}%)`;
 		}
-		
 	});
  },
  initListener: function() {
@@ -83,7 +82,6 @@ const singleProduct = {
 		default:
 			console.log(`Sorry, we are out of ${e.target.classList[1]}.`);
 	 }
-	
  },
 };
 

@@ -5,15 +5,17 @@
   align-items: flex-end;
   margin-top: 3rem;
 }
+
 .footer__real > #main-logo {
 	height: auto;
 	max-width: 150px;
   width: 100%;
 }
-.lvfooter{
-	fill:#ffffff;
 
+.lvfooter{
+	fill: var(--footer-bg-color);
 }
+
 .homepage-footer {
 	 overflow: hidden;
 	 display: flex;

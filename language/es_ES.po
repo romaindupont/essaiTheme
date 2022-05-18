@@ -1,0 +1,316 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2022-05-18 15:00+0200\n"
+"PO-Revision-Date: 2022-05-18 15:20+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-Basepath: .\n"
+
+#: header-configurator:26
+msgid "Free delivery 10 weeks"
+msgstr "Entrega gratis 10 semanas"
+
+#: header-configurator.php:10
+msgid "Configurator"
+msgstr "Configurador"
+
+#: header-configurator.php:22
+msgid "Buy it"
+msgstr "Cómpralo"
+
+#: footer-configurator.php:33
+msgid "Helmet"
+msgstr "Casco"
+
+#: footer-configurator.php:43
+msgid "Chinguard"
+msgstr "Mentonera"
+
+#: footer-configurator.php:59
+msgid "Visor"
+msgstr "Visera"
+
+#: footer-configurator.php:106
+msgid "Share your product creation"
+msgstr "Comparte la creación de tu producto"
+
+#: footer-configurator.php:109
+msgid "Copy and share the link"
+msgstr "Copia y comparte el enlace"
+
+#: footer-configurator.php:115
+msgid "Download 4 views"
+msgstr "Descargar 4 vistas"
+
+#: configurator-chinguard.php:2
+msgid "Add"
+msgstr "Agregar"
+
+#: configurator-chinguard.php:2
+msgid "Erase"
+msgstr "Borrar"
+
+#: configurator-chinguard.php:5
+msgid "Elements"
+msgstr "Elementos"
+
+#: configurator-helmet-step/aeration.php:3
+msgid "Without"
+msgstr "Sin"
+
+#: configurator-helmet-step/aeration.php:4
+msgid "With"
+msgstr "Con"
+
+#: number back-right-left.php:4
+msgid "Choose your style and your number"
+msgstr "Elige tu estilo y tu número"
+
+#: number back-right-left.php:36
+msgid "Classic"
+msgstr "Clásica"
+
+#: number back-right-left.php:42
+msgid "Dirt"
+msgstr "Suciedad"
+
+#: number back-right-left.php:50
+msgid "Pixel"
+msgstr "Píxel"
+
+#: number back-right-left.php:58
+msgid "Racing"
+msgstr "Carreras"
+
+#: engraving.php:5
+msgid "Your Text"
+msgstr "Tu texto"
+
+#: logo.php:3
+msgid "None"
+msgstr "Nada"
+
+#: logo.php:4
+msgid "White"
+msgstr "Blanca"
+
+#: logo.php:5
+msgid "Black"
+msgstr "Negra"
+
+#: couleur type et nom
+msgid "Plain"
+msgstr ""
+
+msgid "Metallic"
+msgstr "Metálica"
+
+msgid "Glitter"
+msgstr "Brillantina"
+
+msgid "Sheathing"
+msgstr "Revestimiento"
+
+msgid "Carbon"
+msgstr "Carbón"
+
+msgid "Cool Grey"
+msgstr "Gris Frío"
+
+msgid "Estate Blue"
+msgstr "Estado Azul"
+
+msgid "Pirate Grey"
+msgstr "Gris Pirata"
+
+msgid "Dusk Blue"
+msgstr "Azul Anochecer"
+
+msgid "Double Cream"
+msgstr "Doble Crema"
+
+msgid "Rally Blue"
+msgstr "Rally Azul"
+
+msgid "Yellow Iris"
+msgstr "Iris Amarillo"
+
+msgid "Iceberg Green"
+msgstr "Verde Iceberg"
+
+msgid "Blazing Yellow"
+msgstr "Amarillo Resplandeciente"
+
+msgid "Green Double"
+msgstr "Doble Verde"
+
+msgid "Blazing Orange"
+msgstr "Naranja Ardiente"
+
+msgid "Lime Green"
+msgstr "Verde Lima"
+
+msgid "Vermillion"
+msgstr "Bermellón"
+
+msgid "Green Gables"
+msgstr "Aguilones Verdes"
+
+msgid "Orchid Pink"
+msgstr "Rosa Orquídea"
+
+msgid "Camel"
+msgstr "Camello"
+
+msgid "Plum Purple"
+msgstr "Ciruela Púrpura"
+
+msgid "Brown Stone"
+msgstr "Piedra Marrón"
+
+msgid "Cayenne Red"
+msgstr "Rojo Cayena"
+
+msgid "Iridescent Blue"
+msgstr "Azul Iridiscente"
+
+msgid "Chineses Red"
+msgstr "Rojo Chino"
+
+msgid "Iridescent Pink"
+msgstr "Rosa Iridiscente"
+
+msgid "Fluo Pink"
+msgstr "Rosa Flúor"
+
+msgid "Fluo Yellow"
+msgstr "Amarillo Flúor"
+
+msgid "Copper Foil"
+msgstr "Cobre"
+
+msgid "Gold Foil"
+msgstr "Oro"
+
+msgid "Silver Foil"
+msgstr "Plata"
+
+#: interior.php
+msgid "Blue"
+msgstr "Azul"
+
+msgid "Brown"
+msgstr "Marrón"
+
+msgid "Leather"
+msgstr "Cuero"
+
+#: pattern.php:4
+msgid "Band"
+msgstr "Banda"
+
+msgid "Checker"
+msgstr "Checker"
+
+msgid "Chester"
+msgstr "Chester"
+
+msgid "Around"
+msgstr "Alrededor"
+
+msgid "Dots"
+msgstr "Puntos"
+
+msgid "Dual"
+msgstr "Doble"
+
+msgid "Extend"
+msgstr "Extender"
+
+msgid "Gradient"
+msgstr "Degradada"
+
+msgid "Half"
+msgstr "Media"
+
+msgid "Horizontal"
+msgstr "Horizontal"
+
+msgid "Outline"
+msgstr "Describir"
+
+msgid "Parabol"
+msgstr "Parabol"
+
+msgid "Stars"
+msgstr "Estrellas"
+
+msgid "Vertical"
+msgstr "Vertical"
+
+#: screw.php:4
+msgid "Bottom"
+msgstr "Abajo"
+
+msgid "Top"
+msgstr "Cima"
+
+msgid "All"
+msgstr "Todos"
+
+#: trim.php:1959-3893
+msgid "Rubber"
+msgstr "Caucho"
+
+#: varnish.php:3-46
+msgid "Glossy"
+msgstr "Lustrosa"
+
+msgid "Mat"
+msgstr "Estera"
+
+#: zippers.php:74
+msgid "Nylon"
+msgstr "Nylon"
+
+#: visor.php:73-121-180-377-434
+msgid "short"
+msgstr "corta"
+
+msgid "long"
+msgstr "larga"
+
+msgid "peak"
+msgstr "cima"
+
+msgid "Full"
+msgstr "Llena"
+
+msgid "Light"
+msgstr "Ligera"
+
+msgid "Transparant"
+msgstr "Transparente"
+
+msgid "Chrome"
+msgstr "Cromo"
+
+msgid "Semi"
+msgstr "Semi"
+
+#: product.php:77
+msgid "Free delivery"
+msgstr "Entrega gratis"
+
+msgid "weeks"
+msgstr "semanas"
+
+msgid "Personnalize"
+msgstr "Personalizar"

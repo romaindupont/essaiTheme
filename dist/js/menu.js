@@ -1,7 +1,8 @@
 const menu = {
 	init: function() {
 		menu.initElements();
-		menu.OpenCloseSubMenu();
+		menu.langImportFile();
+		
  	},
  	initElements: function(e) {
 		menu.mainMenuMobile = document.querySelector('.main-header__menu-mobile-logo');
@@ -18,13 +19,39 @@ const menu = {
 		menu.image1 = "content/themes/veldt/assets/images/imageMotorHelmet.png";
 		menu.image2 = "content/themes/veldt/assets/images/veldt-logo.svg";
 		menu.submenuTitle = document.querySelectorAll('.SubmenuTitle');
-		menu.menuMark1 = 'Mark 1 - Helmet Motorbike';
-		menu.menuMark2 = 'Mark 2 - Helmet';
+		menu.menuMark1;
+		menu.menuMark2;
 		menu.closeMenu = document.querySelectorAll('.closeMenu');
 		menu.closeLogo = document.querySelector('.closeLogo');
 		menu.subMenuMark1Mobile = document.querySelector('.first_menu-configurator-nav > #menu-main-menu-1 > .mark1 > .menu-depth-1');
 		menu.subMenuMark2Mobile = document.querySelector('.first_menu-configurator-nav > #menu-main-menu-1 > .mark2 > .menu-depth-1');
 		menu.loc = window.location;
+		menu.dataLang;
+	},
+	langImportFile: function() {
+		let langName = 'en';
+		switch (navigator.language.substring(0, 2)) {
+			case 'fr':
+				langName = 'fr';
+				break;
+			case 'es':
+				langName = 'es';
+				break;
+			case 'en':
+				langName = 'en';
+				break;
+			default:
+				langName = 'en';
+		}
+		const json = `${menu.loc.origin}/essai/content/themes/veldt/dist/js/lang.${langName}.js`;
+    import(json)
+			.then(module => {
+				menu.dataLang = module.langage;
+				menu.menuMark1 = menu.dataLang.titleMenuMark1;
+				menu.menuMark2 = menu.dataLang.titleMenuMark2;
+				menu.OpenCloseSubMenu();
+			})
+			.catch(error => console.log(error));
 	},
 	OpenCloseSubMenu: function() {
 		menu.subMenu.forEach(element => element.addEventListener("click", menu.OpenMenuAction));

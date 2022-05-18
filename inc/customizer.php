@@ -67,4 +67,7 @@ function replace_cart_text() {
     if (get_locale() == 'en_US') {
         return 'Buy now';
     }
+		else {
+			return 'Add to cart';
+		}
 }

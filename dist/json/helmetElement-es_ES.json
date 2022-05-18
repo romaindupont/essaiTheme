@@ -1,0 +1,127 @@
+{
+	"helmetElement" :{
+		"aeration": {
+			"title": "aireación",
+			"phpFile": "aeration",
+			"helpMessage" : "Elige si quieres aireación o no"
+			},
+		"screw and rivets": {
+			"title": "tornillo y remaches",
+			"phpFile":"screw",
+			"helpMessage" : "Elija la posición de los tornillos y remaches"
+		},
+		"pattern": {
+			"title": "patrón",
+			"phpFile":"pattern",
+			"helpMessage" : "Elija el estilo de patrón que desee"
+		},
+		"main-color": {
+			"title": "color principal",
+			"phpFile":"main-color",
+			"helpMessage" : "Elige el color principal"
+		},
+		"pattern-color": {
+			"title": "color del patrón",
+			"phpFile": "pattern-color",
+			"helpMessage" : "Elige el color del estampado y el acabado"
+		},
+		"varnish": {
+			"title": "barniz",
+			"phpFile":"varnish",
+			"helpMessage" : "Elige el barniz de acabado"
+		},
+		"right-number": {
+			"title": "número correcto",
+			"phpFile":"right-number",
+			"helpMessage" : "Aplique un número a la derecha del casco, elija el número y el estilo"
+		},
+		"left-number": {
+			"title": "número izquierdo",
+			"phpFile":"left-number",
+			"helpMessage" : "Aplique un número a la izquierda del casco, elija el número y el estilo"
+		},
+		"back-number": {
+			"title": "número atrasado",
+			"phpFile":"back-number",
+			"helpMessage" : "Aplique un número en la parte posterior del casco, elija el número y el estilo"
+		},
+		"logo": {
+			"title": "logo",
+			"phpFile":"logo",
+			"helpMessage" : "Elige entre varios Logo tu mejor y selecciona el color"
+		},
+		"interior": {
+			"title": "interior",
+			"phpFile":"interior",
+			"helpMessage" : "Elige el material interior para tu casco"
+		},
+		"rush": {
+			"title": "brazalete",
+			"phpFile":"trim",
+			"helpMessage" : "Elige color y material de adorno"
+		},
+		"metal-parts": {
+			"title": "partes de metal",
+			"phpFile":"metal-parts",
+			"helpMessage" : "Elige el color de las partes metálicas"
+		},
+		"zippers": {
+			"title": "cremalleras",
+			"phpFile":"zippers",
+			"helpMessage" : "Elige las cremalleras entre dos tecnologías"
+		},
+		"engraving": {
+			"title": "grabado",
+			"phpFile":"engraving",
+			"helpMessage" : "Elija el mensaje detrás"
+		},
+		"size": {
+			"title": "tamaño y certificación",
+			"phpFile":"size",
+			"helpMessage" : "Elige la talla de casco y la certificación"
+		}	
+	},
+	"chinguardElement" : {
+		"aeration": {
+			"title": "aireación",
+			"phpFile": "aeration",
+			"helpMessage" : "Elige si quieres aireación o no"
+			},
+			"pattern": {
+				"title": "patrón",
+				"phpFile":"pattern",
+				"helpMessage" : "Elija el estilo de patrón que desee"
+			},
+			"main-color": {
+				"title": "color principal",
+				"phpFile":"main-color",
+				"helpMessage" : "Elige el color principal"
+			},
+			"pattern-color": {
+				"title": "color del patrón",
+				"phpFile": "pattern-color",
+				"helpMessage" : "Elige el color del estampado y el acabado"
+			},
+			"varnish": {
+				"title": "barniz",
+				"phpFile":"varnish",
+				"helpMessage" : "Elige el barniz de acabado"
+			},
+			"interior": {
+				"title": "interior",
+				"phpFile":"interior",
+				"helpMessage" : "Elige el material interior para tu casco"
+			},
+			"rush": {
+				"title": "brazalete",
+				"phpFile":"trim",
+				"helpMessage" : "Elige color y material de adorno"
+			},
+			"metal-parts": {
+				"title": "partes de metal",
+				"phpFile":"metal-parts",
+				"helpMessage" : "Elige el color de las partes metálicas"
+			}
+	}
+
+}
