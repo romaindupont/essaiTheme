@@ -1,14 +1,15 @@
 
 const configurator = {
    init: function() {
-    configurator.initElements();
-		configurator.OpenCloseMenu();
-		configurator.subMenuOpenClose();
-		configurator.tabsOpenClose();
-		configurator.clicOnEye();
-		configurator.jsonFileImport(); 
-		configurator.slider();
-		configurator.tabChoice();
+			configurator.initElements();
+			configurator.langImportFile();
+			configurator.OpenCloseMenu();
+			configurator.subMenuOpenClose();
+			configurator.tabsOpenClose();
+			configurator.clicOnEye();
+			/* configurator.jsonFileImport();  */
+			configurator.slider();
+			configurator.tabChoice();
   },
   initElements: function() {
     configurator.menu = document.querySelector('.header-configurator-left-menu');
@@ -47,6 +48,7 @@ const configurator = {
 		configurator.buttonAdd = document.querySelector('.buttonAdd');
 		configurator.inputVisor = document.querySelectorAll('input[name="visor"]');
 		configurator.dataJson;
+		configurator.dataLang;
 		configurator.titreArrayChin = [];
 		configurator.phpFileChin = [];
 		configurator.helpMessageChin = [];
@@ -78,15 +80,24 @@ const configurator = {
 		configurator.localHosting = 'localhost:8080';
 			/* 	configurator.localHosting = 'localhost:80'; */
   },
-	jsonFileImport: function() {
-		let lang = 'helmetElement';
+	langImportFile: function() {
+		let langName = 'en';
 		if (navigator.language === 'fr-FR'){
-			lang = 'helmetElement-fr_FR';
+			langName = 'fr';
 		}
 		else {
-			lang = 'helmetElement';
+			langName = 'en';
 		}
-		const json = `http://${configurator.localHosting}/essai/content/themes/veldt/dist/json/${lang}.json`;
+		const json = `http://${configurator.localHosting}/essai/content/themes/veldt/dist/js/lang.${langName}.js`;
+    import(json)
+			.then(module => {
+				configurator.dataLang = module.langage;
+				configurator.jsonFileImport();
+			})
+			.catch(error => console.log(error));
+	},
+	jsonFileImport: function() {
+		const json = `http://${configurator.localHosting}/essai/content/themes/veldt/dist/json/${configurator.dataLang.jsonFileToImport}.json`;
     fetch(json)
 			.then(response => response.json())
 			.then(data => {
@@ -320,7 +331,8 @@ const configurator = {
 		divHelmet.classList.add('divHelmetList');
 		configurator.menuOption.appendChild(divHelmet);
 		const h3 = document.createElement("h3");
-		h3.textContent = `Helmet (${configurator.titreArrayHelmet.length} steps)`;
+		let titleMenuStep =`${configurator.dataLang.titleMenuStepHelmet} (${configurator.titreArrayHelmet.length} ${configurator.dataLang.step})`;
+		h3.textContent = titleMenuStep;
 		divHelmet.appendChild(h3);
 		const divPHelmet = document.createElement("div");
 		divPHelmet.classList.add('divHelmetp');
@@ -358,7 +370,9 @@ const configurator = {
 		divChin.classList.add('divChinList');
 		configurator.menuOption.appendChild(divChin);
 		const h3 = document.createElement("h3");
-		h3.textContent = `Chinguard (${configurator.titreArrayChin.length} steps)`;
+
+		let titleMenuStep =		`${configurator.dataLang.titleMenuStepChinguard} (${configurator.titreArrayChin.length} ${configurator.dataLang.step})`;
+		h3.textContent = titleMenuStep;
 		divChin.appendChild(h3);
 		const divPChin = document.createElement("div");
 		divPChin.classList.add('divChinp');
@@ -386,13 +400,23 @@ const configurator = {
 			.catch(error => console.log(error));
 	},
 	initVisorElement: function() {
+		let titleMenuStep ="Visor";
+		let helpMessage = "help message for visor";
+		if (navigator.language === 'fr-FR'){
+			titleMenuStep = "Visière";
+			helpMessage = "message d'aide visor";
+		}
+		else {
+			titleMenuStep = "Visor";
+			helpMessage = "help message for visor";
+		}
 		const divVisor = document.createElement("div");
 		divVisor.classList.add('divVisorList');
 		configurator.menuOption.appendChild(divVisor);
 		const h3 = document.createElement("h3");
-		h3.textContent = `Visor`;
+		h3.textContent = titleMenuStep;
 		divVisor.appendChild(h3);
-		configurator.messagesHelp.textContent =  "message d'aide visor";
+		configurator.messagesHelp.textContent =  helpMessage;
 		const parts = `http://${configurator.localHosting}/essai/content/themes/veldt/template-parts/configurator-visor-step/visor.php`;
     fetch(parts)
 			.then(response => response.text())
@@ -566,7 +590,6 @@ const configurator = {
 				configurator.addVisor.removeEventListener('click',configurator.buttonChangeFunction);
 				break;
 			default:
-
 		}
 	},
 	buttonEraseToAdd: function(e) {

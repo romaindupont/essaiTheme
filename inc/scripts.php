@@ -11,13 +11,13 @@ function veldt_theme_enqueue_scripts() {
 		'https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap', 
 		false
 	);
-	wp_enqueue_script(
+/* 	wp_enqueue_script(
 		'veldt-addToCart-script',
 		get_theme_file_uri('dist/js/add_to_cart.js'),
 		[],
 		'20220413',
 		true
-	);
+	); */
 /* 	if(!is_page('product')){ 
 		wp_enqueue_style(
 			'parent-style',
@@ -84,6 +84,13 @@ function veldt_theme_enqueue_scripts() {
 		wp_enqueue_script(
 			'veldt-singleProduct-script',
 			get_theme_file_uri('dist/js/single-product.js'),
+			[],
+			'20220413',
+			true
+		);
+		wp_enqueue_script(
+			'veldt-addToCart-script',
+			get_theme_file_uri('dist/js/add_to_cart.js'),
 			[],
 			'20220413',
 			true
