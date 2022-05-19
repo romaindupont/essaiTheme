@@ -12,22 +12,22 @@ body {
 	display: flex;
   justify-content: space-between;
 	width: 100vw;
-  height: 15vh;
+  /* height: 15vh; */
 }
 
 .header-configurator-left {
 	width: 50vw;
-	height: 15vh;
+/* 	height: 15vh; */
 	display: flex;
 	flex-direction: row;
-	align-items: center;
+/* 	align-items: center; */
 	margin: 2rem;
 }
 
 .header-configurator-left-menu {
-	width: 30px;
-	height: 30px;
-	margin-right: 1.5rem;
+	width: 40px;
+	height: 40px;
+	margin-right: 1rem;
 	cursor: pointer;
 	z-index: 2;
 }
@@ -38,22 +38,25 @@ body {
 }
 
 .header-configurator-left-title-2 {
-	color: var(--comments-price-config-color);
+	color: #233658;
 	font-size: 1rem;
 	text-transform: uppercase;
-	font-weight: 700;
+	font-weight: 600;
+	padding-top: .3rem;
 }
 
 .header-configurator-right {
 	width: 50vw;
-	height: 15vh;
+	/* height: 15vh; */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-end;
 	margin: 2rem;
 }
-
+.header-configurator-right-comment {
+	margin-top: 0.6rem;
+}
 .header-configurator-right-priceZone {
 	display: flex;
 	align-items: center;
@@ -63,7 +66,7 @@ body {
 	color: var(--price-config-color);
 	font-size: 1.3rem;
 	font-weight: bold;
-	padding: 1rem 1rem;
+	padding: 0rem 1rem;
 }
 
 button.header-configurator-right-priceZone-buy {

@@ -5,6 +5,7 @@
 	height: 100%;
 	overflow-x: hidden;
 	overflow-y: hidden;
+	/* justify-content: center; */
 }
 
 .slider {
@@ -250,6 +251,7 @@ form.cart {
 @media (min-width : 1024px) {
 	.singlePageSection {
 		flex-direction: row;
+	/* 	max-width: 80vh; */
 	}
 	.slider {
 		width: 50%;

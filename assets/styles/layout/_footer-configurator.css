@@ -221,7 +221,7 @@ svg#menu_option {
 	cursor: pointer;
 	z-index: 10;
 	top: 50px;
-	right: 15px;
+	right: 0px;
 }
 
 .infos {
@@ -409,7 +409,7 @@ svg#menu_option {
 	}
 	.export {
 		top: 75%;
-		right: 15px;
+
 	}
 	.positionExportLogo {
     top: 35vh !important;
@@ -456,7 +456,7 @@ svg#menu_option {
     height: 80px;
 	}
 	.buttonChoice {	
-		margin: 1rem; 
+		margin: 0.6rem; 
 	}
 	.patternList::-webkit-scrollbar, .colorList::-webkit-scrollbar, .colorListType::-webkit-scrollbar, .sizeChoice::-webkit-scrollbar, .certifChoice::-webkit-scrollbar {
 		height: 3px;
@@ -631,7 +631,7 @@ and (min-width : 1824px) {
 .buttonChoice:hover, .SizebuttonChoice:hover {
   background:var(--color-second);
   color: var(--color-principal);
-	border: 3px solid var(--color-principal);
+	border: 2px solid var(--color-principal);
 }
 
 .buttonChoice, .buttonAdd, .SizebuttonChoice {	
@@ -642,12 +642,13 @@ and (min-width : 1824px) {
 	text-transform: uppercase;
 	font-size: 0.8rem;
 	width: 100px;
-	margin: 1rem;
+/* 	margin: 1rem; */
+	font-weight: 600;
 }
 
 .buttonChoice, .SizebuttonChoice {
   color: #a5a4a4;
-	border: 3px solid var(--color-border-bottom-header);
+	border: 2px solid var(--color-border-bottom-header);
 }
 
 .buttonAdd {
@@ -665,7 +666,7 @@ and (min-width : 1824px) {
 .activeButton {
   background:var(--color-second);
   color: var(--color-principal);
-	border: 3px solid var(--color-principal);
+	border: 2px solid var(--color-principal);
 }
 
 .elementChoice {
