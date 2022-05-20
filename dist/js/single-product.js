@@ -6,9 +6,9 @@ const singleProduct = {
  },
  initElements: function(e) {
 	singleProduct.slides = document.querySelectorAll(".slide");
-	singleProduct.btnFirst = document.querySelector('.btn-first');
-	singleProduct.btnSecond = document.querySelector('.btn-second');
-	singleProduct.btnThird = document.querySelector('.btn-third');
+	singleProduct.btnFirst = document.querySelector('.button-first');
+	singleProduct.btnSecond = document.querySelector('.button-second');
+	singleProduct.btnThird = document.querySelector('.button-third');
 	singleProduct.singlePageSection = document.querySelector('.singlePageSection');
  },
  initFunctions: function() {
@@ -30,12 +30,12 @@ const singleProduct = {
 	singleProduct.btnThird.addEventListener('click', singleProduct.slideBtnChoice);
  },
  slideBtnChoice: function (e) {
-	 const activeBtn = document.querySelector('.btn-slider-active');
+	 const activeBtn = document.querySelector('.button-slider-active');
 	 let curSlide = 0;
-	 activeBtn.classList.remove('btn-slider-active');
+	 activeBtn.classList.remove('button-slider-active');
 	 switch(e.target.classList[1]) {
-		case 'btn-first':
-			singleProduct.btnFirst.classList.add('btn-slider-active');
+		case 'button-first':
+			singleProduct.btnFirst.classList.add('button-slider-active');
 			curSlide = 0;
 			singleProduct.slides[0].style.display = 'flex';
 			singleProduct.slides[1].style.display = 'flex';
@@ -49,8 +49,8 @@ const singleProduct = {
 				}
 			});
 			break;
-		case 'btn-second':
-			singleProduct.btnSecond.classList.add('btn-slider-active');
+		case 'button-second':
+			singleProduct.btnSecond.classList.add('button-slider-active');
 			curSlide = 1;
 			singleProduct.slides[0].style.display = 'flex';
 			singleProduct.slides[1].style.display = 'flex';
@@ -64,8 +64,8 @@ const singleProduct = {
 				}
 			});
 			break;
-		case 'btn-third':
-			singleProduct.btnThird.classList.add('btn-slider-active');
+		case 'button-third':
+			singleProduct.btnThird.classList.add('button-slider-active');
 			curSlide = 2;
 			singleProduct.slides[0].style.display = 'flex';
 			singleProduct.slides[1].style.display = 'flex';

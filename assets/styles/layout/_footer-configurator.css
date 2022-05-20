@@ -15,11 +15,11 @@
 }
 
 .sd-tabs > .sd-tab-label {
-  padding: 5px 5px 10px 10px;
+  padding: 10px;
   display: flex;
   align-items: center;
   min-width: 0;
-  border-radius: 25px 25px 0 0;
+  border-radius: 20px 20px 0 0;
   position: relative;
   z-index: 2;
   max-height: var(--tabs-height);
@@ -56,7 +56,7 @@
 }
 
 .sd-tabs > .sd-tab-radio:checked + .sd-tab-label::before {
-	border-radius: 0 0 25px 0;
+	border-radius: 0 0 10px 0;
   opacity: 1;
 }
 
@@ -65,7 +65,7 @@
 }
 
 .sd-tabs > .sd-tab-radio:checked + .sd-tab-label::after {
-  border-radius: 0 0 0 25px;
+  border-radius: 0 0 0 10px;
   opacity: 1;
 }
 
@@ -76,7 +76,7 @@
 .sd-tabs > .sd-tab-radio:checked + .sd-tab-label {
   background-color: var(--tabs-selected-bg-color);
   color: var(--tabs-selected-text-color);
-	border-radius: 25px 25px 0 0;
+	border-radius: 20px 20px 0 0;
   z-index: 4;
 }
 
@@ -89,7 +89,8 @@
   border-radius: 0 0 5px 5px;
 	overflow-x: hidden;
 	overflow-y: auto;
-	height: 600px;
+	height: 15vh;
+	transition: all 1s ease-in-out;
 }
 
 .sd-tabs > .sd-tab-radio:checked + .sd-tab-label + .sd-tab-content {
@@ -162,6 +163,7 @@
 footer.footer-configurator {
 	position: absolute;
 	width: 100vw;
+	bottom: 0;
 }
 
 .eye_on {
@@ -284,7 +286,7 @@ svg#menu_option {
 		right: -10%;
 	}
 	footer.footer-configurator {
-		top: 55vh;
+		/* top: 55vh; */
 	}
 	svg#eye, #eye {
 		right: 45px;
@@ -367,6 +369,9 @@ svg#menu_option {
 	ul > li > ul {
 		width: 200px;
 	}
+	.sd-tabs > .sd-tab-content {
+		height: 40vh;
+	}
 }
 @media (min-width: 576px) { 
 	.sd-tabs > .sd-tab-label::after,
@@ -404,8 +409,11 @@ svg#menu_option {
 		left: 0px;
 		margin: 0.5rem 2rem;
 	}
-	.openIt {
-		bottom: -30% !important;
+	.openIt > .sd-tabs > .sd-tab-content {
+		height: 40vh !important;
+	}
+	.sd-tabs > .sd-tab-content {
+		height: 15vh;
 	}
 	.export {
 		top: 75%;
@@ -421,8 +429,8 @@ svg#menu_option {
 }
 @media (min-width : 1024px) {
 	footer.footer-configurator {
-	 	top: 80vh;
-		transition: all 1s ease-in-out;
+	 	/* top: 80vh; */
+		
 	}
 	.sd-tabs > .sd-tab-label::after,
 	.sd-tabs > .sd-tab-label::before {
@@ -435,7 +443,7 @@ svg#menu_option {
 		right: -150%;
 	}
 	.openIt {
-		top: 40vh !important;
+	/* 	top: 40vh !important; */
 		transition: all 1s ease-in-out;
 	}
 	.infos{
@@ -532,10 +540,10 @@ svg#menu_option {
 @media only screen 
 and (min-width : 1824px) {
 	footer.footer-configurator {
-		top: 90vh;
+		/* top: 90vh; */
 	}
 	.openIt {
-		top: 60vh !important;
+		/* top: 60vh !important; */
 	}
 	.menu_option {
 		bottom: 15vh;
@@ -641,7 +649,7 @@ and (min-width : 1824px) {
 	cursor: pointer;
 	text-transform: uppercase;
 	font-size: 0.8rem;
-	width: 100px;
+	width: 150px;
 /* 	margin: 1rem; */
 	font-weight: 600;
 }

@@ -60,10 +60,10 @@ if ( ! $short_description ) {
 			echo $html;
 		}
 				?>
-			<div class="btn-slider-container">
-				<span class="btn btn-first btn-slider-active"></span>
-				<span class="btn btn-second"></span>
-				<span class="btn btn-third"></span>
+			<div class="button-slider-container">
+				<span class="buttons button-first button-slider-active"></span>
+				<span class="buttons button-second"></span>
+				<span class="buttons button-third"></span>
 			</div>
 		</div>
 		<div class="custom-singleProduct-page--right">
