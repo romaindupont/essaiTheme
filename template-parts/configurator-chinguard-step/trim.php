@@ -1,3 +1,4 @@
+<?php require_once $_SERVER['DOCUMENT_ROOT'].'/essai/wp/wp-load.php'; ?>
 <div class="varnishList">
 	<div class="allScrew">
 		<svg version="1.1" id="black_leather"	viewBox="0 0 62 54">

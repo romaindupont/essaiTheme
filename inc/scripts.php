@@ -11,6 +11,7 @@ function veldt_theme_enqueue_scripts() {
 		'https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap', 
 		false
 	);
+	/* wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' ); */
 /* 	wp_enqueue_script(
 		'veldt-addToCart-script',
 		get_theme_file_uri('dist/js/add_to_cart.js'),
@@ -97,15 +98,14 @@ function veldt_theme_enqueue_scripts() {
 			true
 		);
 	}
-	if(!is_singular( 'product' )) {
+/* 	if(!is_singular( 'product' )) {
 		wp_enqueue_style( 
 			'child-style', 
 			get_stylesheet_uri(),
 			array( 'parenthandle' )
 	);
+} */
 }
-}
-
 add_action( 'wp_enqueue_scripts', 'veldt_theme_enqueue_scripts', 20);
 
 /* add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
@@ -118,3 +118,15 @@ function my_theme_enqueue_styles() {
     );
 	}
 } */
+/* add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
+function my_theme_enqueue_styles() {
+    wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
+    wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array( 'parent-style' ), wp_get_theme()->get('Version') );
+} */
+
+/* if ( ! function_exists( 'themeslug_child_enqueue_scripts' ) ) :
+	function themeslug_child_enqueue_scripts() {
+			wp_enqueue_style( 'themeslug-parent-styles', trailingslashit( get_template_directory_uri() ) . 'style.css', array(), '1.0.0' );
+	}
+endif;
+add_action( 'wp_enqueue_scripts', 'themeslug_child_enqueue_scripts' ); */

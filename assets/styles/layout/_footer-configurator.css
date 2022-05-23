@@ -103,13 +103,13 @@
 
 .sd-tabs > .sd-tab-label .sd-tab-desc {
   display: block;
-  margin: 7px 5px 5px 2px;
+  margin: auto;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   position: relative;
   font-size: 1rem;
-  flex: 1 1 0%;
+  /* flex: 1 1 0%; */
 	text-transform: uppercase;
 	font-weight: 600;
 }
@@ -165,7 +165,16 @@ footer.footer-configurator {
 	width: 100vw;
 	bottom: 0;
 }
-
+.footer-configurator-header {
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	top: 50px;
+	/* z-index: 99; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 .eye_on {
 	fill:var(--main-fillSvg-color);
 }
@@ -192,6 +201,7 @@ svg#down {
 	transform: rotate(180deg);
 	cursor: pointer;
 	transition: all 1s ease-in-out;
+	left: 0;
 }
 
 #down:hover {
@@ -222,7 +232,7 @@ svg#menu_option {
 	position: absolute;
 	cursor: pointer;
 	z-index: 10;
-	top: 50px;
+	/* top: 50px; */
 	right: 0px;
 }
 
@@ -300,15 +310,16 @@ svg#menu_option {
 		display: none;
 	}
 	.export {
-		top: 0px;
-		right: 0px;
-		margin: 2rem;
+		top: -150px;
+    right: 0px;
+    margin: 2rem;
 	}
 	svg#menu_option {
 		display: none;
 	}
 	.helmet{
-		display: block;
+		display: flex;
+		flex-direction: column;
 	}
 	.direction {
 		margin: 1rem 2rem;
@@ -319,7 +330,8 @@ svg#menu_option {
 	}
 	.allScrew {
 		width: 60px;
-    height: 60px;
+    height: 100px;
+		margin: 0.5rem;
 	}
 	.buttonChoice {	
 		margin: 0; 
@@ -338,20 +350,27 @@ svg#menu_option {
     width: 30px;
     height: 30px;
     position: absolute;
-    top: -50px;
-    left: 0px;
-		margin: 0 2rem;
+    /* top: -50px; */
+    /* left: 0px; */
+	/* 	margin: 0 2rem; */
+	}
+/* 	.template {
+		margin: 1rem;
+	} */
+	.numberWindows {
+		top: 120px;
 	}
 	.exportWindow {
 		flex-direction: column;
 		align-items: center;
-		bottom: 40vh;
+		bottom: -100px;
 	}
 	.menuImageToShare > img {
 		width: 80%;
 	}
 	.patternList, .colorList {
 		transform: translate3d(50%, 0px, 0px);
+		margin-top: 1rem;
 	}
 	.colorListType {
 		transform: translate3d(0%, 0px, 0px);
@@ -397,17 +416,17 @@ svg#menu_option {
 		right: -50%;
 	}
 	svg#eye, #eye {
-		right: 5px;
-		top: 5px;
+		right: 3px;
+		top: 3px;
 	}
 	.sd-tabs > .sd-tab-label:first-of-type {
     margin-left: 14px;
 	}
 	svg#down {
 		display: block;
-		top: 50px;
-		left: 0px;
-		margin: 0.5rem 2rem;
+		/* top: 50px;
+		left: 0px; */
+		margin-left: 2rem;
 	}
 	.openIt > .sd-tabs > .sd-tab-content {
 		height: 40vh !important;
@@ -415,16 +434,16 @@ svg#menu_option {
 	.sd-tabs > .sd-tab-content {
 		height: 15vh;
 	}
-	.export {
+/* 	.export {
 		top: 75%;
 
-	}
-	.positionExportLogo {
+	} */
+/* 	.positionExportLogo {
     top: 35vh !important;
-	}
+	} */
 	svg#menu_option {
 		display: block;
-		margin: 0.5rem 2rem;
+		margin-right: 2rem;
 	}
 }
 @media (min-width : 1024px) {
@@ -450,10 +469,26 @@ svg#menu_option {
 		display: none;
 	}
 	.openIt > div > div > .helmet {
-		display: block !important;
+		display: flex !important;
+		position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 45px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+	}
+	.numberWindows {
+		top: 50px;
+	}
+	.export {
+		top: -100px;
 	}
 	.direction {
 		margin: 1rem 5rem;
+	}
+	.template {
+		margin: 0rem;
 	}
 	.elementPicker {
 		text-align: center;
@@ -461,16 +496,18 @@ svg#menu_option {
 	}
 	.allScrew {
 		width: 80px;
-    height: 80px;
+   /*  height: 80px; */
+		margin: 0;
 	}
 	.buttonChoice {	
-		margin: 0.6rem; 
+		/* margin: 0.6rem;  */
 	}
 	.patternList::-webkit-scrollbar, .colorList::-webkit-scrollbar, .colorListType::-webkit-scrollbar, .sizeChoice::-webkit-scrollbar, .certifChoice::-webkit-scrollbar {
 		height: 3px;
 	}
 	.patternList, .colorList {
 		transform: translate3d(0px, 0px, 0px);
+		margin-top: 0rem;
 	}
 	.patternList {
 		flex-wrap: wrap;
@@ -481,24 +518,24 @@ svg#menu_option {
 	}
 	.info_logo {
 		display: block;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-		top: 50px;
+/*     width: 30px;
+    height: 30px; */
+/*     position: absolute;
+		top: 50px; */
     left: 200px;
     z-index: 51;
-		margin: 0.5rem 2rem;
+		/* margin: 0.5rem 2rem; */
 	}
 	.logoAppear {
 		display: block;
 	}
 	.exportWindow {
-		bottom: 70vh;
+		bottom: -100px;
 		flex-direction: row;
 		align-items: start;
 	}
  .openExportMenu {
-		bottom: 30vh;
+		bottom: -100px;
 	}
 	.menuImageToShare > img {
 		width: 50%;
@@ -510,7 +547,7 @@ svg#menu_option {
 		justify-content: center;
 	}
 	.menu_option {
-		bottom: 70vh;
+		bottom: -100px;
 	}
 }
 @media (min-width : 1224px) {
@@ -525,15 +562,15 @@ svg#menu_option {
 		right: -250%;
 	}
 	.menu_option {
-		bottom: 70vh;
+		bottom: -100px;
 	}
 }
 @media (min-width : 1400px) {
 	.menu_option {
-		bottom: 50vh;
+		bottom: -100px;
 	}
 	.exportWindow{
-		bottom: 50vh;
+		bottom: -100px;
 	}
 }
 /* Large screens ----------- */
@@ -546,19 +583,19 @@ and (min-width : 1824px) {
 		/* top: 60vh !important; */
 	}
 	.menu_option {
-		bottom: 15vh;
+		bottom: -100px;
 	}
-	.export {
+/* 	.export {
     top: 85%;	
-	}
+	} */
 	.positionExportLogo {
     top: 70vh !important;
 	}
 	.exportWindow {
-    bottom: 20vh;
+    bottom: -100px;
 	}
 	.openExportMenu {
-    bottom: 40vh !important;
+    bottom: -100px !important;
 	}
 .colorList {
     transform: translate3d(0%, 0px, 0px);
@@ -586,7 +623,7 @@ and (min-width : 1824px) {
 	justify-content: center;
 	display: flex;
 	flex-direction: column;
-	margin: 0;
+	/* margin: 0; */
 }
 
 .pickerScrew, .varnishList, .metalParts {
@@ -596,25 +633,26 @@ and (min-width : 1824px) {
 .aerationList, .pickerScrew, .patternList, .shellColor, .varnishList, .metalParts {
 	width: 100%;
 	display: flex;
-	margin: 2rem 0;
+	/* margin: 2rem 0; */
 }
 
 .patternList, .colorList {
 	overflow-x: scroll;
 	overflow-y: hidden;
 	display: flex;
-	margin: 2rem 0;
+	/* margin: 2rem 0; */
 }
 
 .colorList {
 	height: 100px;
+	/* width: 90vw; */
 }
 
 .colorListType, .sizeChoice, .certifChoice {
 	overflow-x: scroll;
 	overflow-y: hidden;
 	display: flex;
-	margin: 1rem 0;
+	/* margin: 1rem 0; */
 }
 
 .chooseStyleNumber {
@@ -643,8 +681,8 @@ and (min-width : 1824px) {
 }
 
 .buttonChoice, .buttonAdd, .SizebuttonChoice {	
-	border-radius: 25px 25px 25px 25px;
-	padding: 10px 1rem;
+	border-radius: 25px;
+	padding: 10px 0rem;
 	text-align: center;
 	cursor: pointer;
 	text-transform: uppercase;
@@ -662,13 +700,13 @@ and (min-width : 1824px) {
 .buttonAdd {
 	background:  var(--color-principal);
   color:  var(--color-second);
-	margin: 1rem;
+	/* margin: 1rem; */
 }
 
 .numberChoice {
 	display: flex;
 	justify-content: center;
-	margin: 2rem 0;
+	/* margin: 2rem 0; */
 }
 
 .activeButton {
@@ -706,6 +744,7 @@ and (min-width : 1824px) {
 	position: relative;
 	cursor: pointer;
 	align-items: center;
+	/* margin: 0.5rem; */
 }
 
 .textAction {
@@ -716,43 +755,49 @@ and (min-width : 1824px) {
 	visibility: visible;
 	}
 
-.varnishList > .allScrew:hover > .textAction::after {
+.varnishList > .allScrew:hover /* > .textAction */::after {
 	content: "";
-	bottom: -4px;
+	bottom: -5px;
 }
 
-.allScrew:hover > .textAction::after {
+/* .allScrew:hover ::after {
 	content: "";
-	height: 4px;
+	height: 2px;
 	position: absolute;
-	bottom: 0px;
+	bottom: -5px;
 	background: var(--color-principal);
-	left: 5%;
+	left: 25%;
 	animation: widthLine 200ms forwards ease-in-out;
-}
+	width: 50%;
+} */
 
 .colorP > .textAction {
-	position: relative;
+	position: absolute;
 	font-size: 0.8rem;
+	top: 50px;
+	width: 120px;
 }
 
 .activeImage > .textAction {
 	visibility: visible !important;
 }
 
-.activeImage > .textAction::after {
+.activeImage /*>  .textAction */::after {
 	content: "";
-	height: 4px;
+	height: 2px;
 	position: absolute;
-	bottom: 0px;
+	bottom: -5px;
 	background: var(--color-principal);
-	left: 5%;
-	width: 90%;
+	left: 25%;
+	width: 50%;
 }
 
 .allScrew > .textAction {
 	text-align: center;
 	visibility: hidden;
+	position: absolute;
+	top: 60px;
+	width: 120px;
 }
 @keyframes widthLine {
 	0% {
@@ -891,37 +936,42 @@ background: #000;
 .colorP {
 	display: flex;
 	flex-direction: column;
+	position: relative;
 	align-items: center;
+	height: 100px;
+	width: 40px;
 }
-
+.colorP:first-of-type {
+	margin-left: 0.5rem;
+}
 .roundColor {
 	width: 30px;
 	height: 30px;
 	border-radius: 50%;
 	cursor: pointer;
-	margin: 1rem;
+	margin: 0.5rem;
 }
 
 .roundColor:hover + .textAction {
 	visibility: visible;
-	position: relative;
+/* 	position: relative; */
 }
 
-.roundColor:hover + .textAction::after {
+/* .roundColor:hover + .textAction::after {
 	content: "";
 	width: 90%;
-	height: 4px;
+	height: 2px;
 	position: absolute;
-	bottom: -4px;
+	bottom: -5px;
 	background: var(--color-principal);
 	left: 5%;
 	animation: widthLine 200ms forwards ease-in-out;
-}
+} */
 
 .roundColor + .textAction {
 	text-align: center;
 	visibility: hidden;
-	width: 90%;
+	/* width: 90%; */
 }
 
 .activeColor {
@@ -935,8 +985,8 @@ background: #000;
 	border: 1px solid var(--color-principal);
 	content: '';
 	position: absolute;
-	top: -6px;
-	left: -6px;
+	top: -5px;
+	left: -5px;
 }
 
 .activeColor + .textAction {
@@ -945,23 +995,25 @@ background: #000;
 
 .activeColor + .textAction::after {
 	content: "";
-	height: 4px;
+	height: 2px;
 	position: absolute;
-	bottom: -4px;
+	bottom: -5px;
 	background: var(--color-principal);
-	left: 5%;
-	width: 90%;
+	left: 25%;
+	width: 50%;
 }
 
 .numberWindows {
 	display: none;
 	background: var(--color-second);
 	width: 100%;
-	height: 100%;
+	height: 30vh;
 	position: absolute;
-	top: 100px;
+/* 	top: 50px; */
 	flex-direction: column;
 	align-items: center;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 .infosNumber {
@@ -977,20 +1029,23 @@ background: #000;
 .chooseWindows {
 	display: flex;
 	flex-direction: column;
-	margin: 2rem 0;
+	margin: 0.5rem 0;
 }
 
 .chooseWindows_input {
 	display: flex;
 	flex-direction: column;
-	margin: 0.5rem 1rem;
+	/* margin: 0.5rem 1rem; */
 }
 
 input#numberSelection {
 	height: 40px;
 	text-align: center;
 }
-
+input#textSelection {
+	height: 40px;
+	text-align: center;
+}
 .selectButtonNumber {
 	width: 100%;
 	display: flex;
@@ -1001,7 +1056,12 @@ input#numberSelection {
 .peak_visor_page > .colorListType,.peak_visor_page > .colorList {
 	margin: 0;
 }
-
+.peak_visor_page > .colorListType {
+	margin-top: 0.5rem;
+}
+.peak_visor_page > .colorList > .colorP:first-of-type {
+	margin-left: 2rem;
+}
 .chinguard > div > .colorList, .chinguard > div > .colorListType {
 	margin: 0;
 }
@@ -1041,7 +1101,7 @@ input#numberSelection {
 
 .long_visor_page, .short_visor_page, .peak_visor_page {
 	display: none;
-	margin: 1rem 5px;
+	/* margin: 1rem 5px; */
 	justify-content: center;
 	width: 100%;
 }
@@ -1066,7 +1126,7 @@ input#numberSelection {
 	display: none;
 	background: var(--background-menu);
 	width: 100vw;
-	height: 50vh;
+	height: 100vh;
 	position: absolute;
 	z-index: 94;
 	grid-template-columns: repeat(3, 1fr);
@@ -1079,7 +1139,7 @@ input#numberSelection {
 	display: none;
 	background: var(--background-menu);
 	width: 100vw;
-	height: 50vh;
+	height: 100vh;
 	position: absolute;
 	z-index: 102;
 	justify-items: center;
@@ -1087,7 +1147,7 @@ input#numberSelection {
 }
 
 .openMenuOption {
-	bottom: 30vh;
+	bottom: -100px;
 }
 
 .menu_option > div > h3 {
@@ -1190,7 +1250,7 @@ svg#link, svg#download {
 	cursor: pointer;
 	text-transform: uppercase;
 	font-size: 0.8rem;
-	width: 80px;
+	width: 150px;
 	background:  var(--color-principal);
   color:  var(--color-second);
 	margin: 1rem auto;

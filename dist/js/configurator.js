@@ -195,6 +195,7 @@ const configurator = {
 		}));
 		if (configurator.buttonAdd) {
 			configurator.buttonAdd.addEventListener('click', (e) => {
+				configurator.buttonAdd.style.display = 'none';
 				const numberWindows = document.querySelector('.numberWindows');
 				numberWindows.style.display = 'flex';
 			});
