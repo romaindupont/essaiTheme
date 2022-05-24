@@ -120,7 +120,9 @@ input[type=radio] {
 	z-index: 39;
 	width: 33%;
 }
-
+.Option > div > .woocommerce-attribute-input {
+	width: 50%;
+}
 .woocommerce-attribute-input > label {
 	cursor: pointer;
 /* 	width: 100%; */
@@ -176,6 +178,8 @@ form.cart {
 	text-transform: uppercase;
 	border: 1px solid var(--color-principal);
 	cursor: pointer;
+	font-size: 0.8rem;
+	letter-spacing: normal;
 }
 
 .buttonZone > .personnalize {
@@ -186,6 +190,8 @@ form.cart {
 	border: 1px solid var(--color-principal);
 	cursor: pointer;
 	z-index: 39;
+	font-size: 0.8rem;
+	letter-spacing: normal;
 }
 
 .buttonZone > .personnalize > a {
@@ -220,8 +226,8 @@ form.cart {
 		margin: 2rem;
 	}
 	.custom-singleProduct-page--right {
-    width: 70%;
-    padding: 5rem 2rem;
+		width: 90vw;
+    margin: 5rem 1rem;
 	}
 	.woocommerce-price-container {
 		flex-direction: column;
@@ -240,7 +246,7 @@ form.cart {
 	}
 	.buttonZone > .personnalize {
 		width: 200px !important;
-		font-size: 1rem;
+		font-size: 0.8rem;
 		border-radius: 25px;
 		background-size: 15%;
 	}

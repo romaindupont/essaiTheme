@@ -74,6 +74,7 @@ if ( ! $short_description ) {
 			<div class="woocommerce-price-container">
 				<p class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price' ) ); ?>"><?php echo $product->get_price_html(); ?></p>
 				<p class="deliveryMessage"><?php echo _e( "Free delivery") ?> <span>- 10 <?php echo _e( "weeks") ?></span></p>
+				<p class="stock"></p>
 			</div>
 			<form class="cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="get">
 				<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>

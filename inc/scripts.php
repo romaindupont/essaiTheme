@@ -33,8 +33,6 @@ function veldt_theme_enqueue_scripts() {
 		'20220413',
 		true
 	);
-
-
 }
 	if(is_page('configurator')){
 		wp_enqueue_script(
@@ -98,13 +96,6 @@ function veldt_theme_enqueue_scripts() {
 			true
 		);
 	}
-/* 	if(!is_singular( 'product' )) {
-		wp_enqueue_style( 
-			'child-style', 
-			get_stylesheet_uri(),
-			array( 'parenthandle' )
-	);
-} */
 }
 add_action( 'wp_enqueue_scripts', 'veldt_theme_enqueue_scripts', 20);
 
@@ -118,11 +109,6 @@ function my_theme_enqueue_styles() {
     );
 	}
 } */
-/* add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
-function my_theme_enqueue_styles() {
-    wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
-    wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array( 'parent-style' ), wp_get_theme()->get('Version') );
-} */
 
 /* if ( ! function_exists( 'themeslug_child_enqueue_scripts' ) ) :
 	function themeslug_child_enqueue_scripts() {
@@ -130,3 +116,4 @@ function my_theme_enqueue_styles() {
 	}
 endif;
 add_action( 'wp_enqueue_scripts', 'themeslug_child_enqueue_scripts' ); */
+

@@ -17,7 +17,6 @@
 @import url('../styles/pages/_contact.css');
 
 @import url('../styles/themes/_theme.css');
-
 body {
 	overflow-x: hidden;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
