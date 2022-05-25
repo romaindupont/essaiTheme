@@ -8,5 +8,7 @@ export const langage = {
 	textErase: 'borrar',
 	textAdd: '+ Agregar',
 	titleMenuMark1: 'Mark 1 - Casco de Moto',
-	titleMenuMark2: 'Mark 2 - Casco de Bicicleta'
+	titleMenuMark2: 'Mark 2 - Casco de Bicicleta',
+	deliveryMessageInStock: 'En stock, entrega en 24 horas, click&collect disponible en la tienda de Paris Veldt',
+	deliveryMessageOutOfStock: 'Entrega gratuita - 10 semanas'
 }

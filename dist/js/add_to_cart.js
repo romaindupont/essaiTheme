@@ -1,6 +1,7 @@
 const addToCart = {
 	init: function() {
     addToCart.initElements();
+		addToCart.langImportFile();
   },
 	initElements: function() {
 		addToCart.inputSku = document.querySelector('.sku');
@@ -17,7 +18,9 @@ const addToCart = {
 		addToCart.dataJson = JSON.parse(addToCart.variationTable);
 		addToCart.personsMap = new Map(Object.entries(addToCart.dataJson));
 		addToCart.inputVariableId = document.querySelector('.variation_id');
-		
+		addToCart.dataLang;
+		addToCart.localHosting = 'localhost:8080';
+		/* addToCart.localHosting = 'localhost:80'; */
 		addToCart.inputCertif.forEach(element => { 
 			element.addEventListener('change', (e) => {
 				e.preventDefault();
@@ -49,6 +52,29 @@ const addToCart = {
 			})
 		})
 	},	
+	langImportFile: function() {
+		let langName = 'en';
+		switch (navigator.language.substring(0, 2)) {
+			case 'fr':
+				langName = 'fr';
+				break;
+			case 'es':
+				langName = 'es';
+				break;
+			case 'en':
+				langName = 'en';
+				break;
+			default:
+				langName = 'en';
+		}
+		const json = `http://${addToCart.localHosting}/essai/content/themes/veldt/dist/js/lang.${langName}.js`;
+    import(json)
+			.then(module => {
+				addToCart.dataLang = module.langage;
+				addToCart.initElements();
+			})
+			.catch(error => console.log(error));
+	},
 	addToCartAction : function () {
 		const results = [];
 		const searchSkuField = addToCart.sizeChoose.replace('-', '');
@@ -68,7 +94,17 @@ const addToCart = {
 		}
 		addToCart.inputVariableId.value = results[0]['variation_id'];
 		const stockMessage = results[0]['availability_html'];
-		console.log(stockMessage)
+		const variationPrice =  results[0]['display_price'];
+		const stockHtml = document.querySelector('.deliveryMessage');
+		const price = document.querySelector('.price');
+		if(stockMessage.includes('in-stock')) {
+			stockHtml.textContent = addToCart.dataLang.deliveryMessageInStock;
+			price.textContent = variationPrice;
+		}
+		else {
+			stockHtml.textContent = addToCart.dataLang.deliveryMessageOutOfStock;
+			price.textContent = variationPrice;
+		}
 	},
 }
 

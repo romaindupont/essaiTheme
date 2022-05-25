@@ -80,6 +80,7 @@ p.deliveryMessage {
 	font-size: 1rem;
 	text-transform: uppercase;
 	color: var(--comments-price-config-color);
+	text-align: center;
 }
 
 p.deliveryMessage > span {
@@ -197,7 +198,11 @@ form.cart {
 .buttonZone > .personnalize > a {
 	color: var(--color-principal) !important;
 }
-
+.symbol, .price {
+	font-size: 1.2rem;
+	color: var(--color-principal);
+	font-weight: 600;
+}
 @media (min-width : 320px) {
 	.singlePageSection {
 		flex-direction: column;
@@ -332,3 +337,4 @@ form.cart {
     width: 100%;
 	}
 }
+
