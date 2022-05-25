@@ -111,6 +111,7 @@ p.deliveryMessage > span {
 	flex-direction: row;
 	width: 100%;
 	justify-content: space-evenly;
+	align-items: flex-end;
 }
 
 input[type=radio] {
@@ -120,9 +121,11 @@ input[type=radio] {
 .woocommerce-attribute-input {
 	z-index: 39;
 	width: 33%;
+	text-align: left;
 }
 .Option > div > .woocommerce-attribute-input {
 	width: 50%;
+	text-align: left;
 }
 .woocommerce-attribute-input > label {
 	cursor: pointer;
