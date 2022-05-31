@@ -89,7 +89,7 @@
   border-radius: 0 0 5px 5px;
 	overflow-x: hidden;
 	overflow-y: auto;
-	height: 15vh;
+	/* height: 15vh; */
 	transition: all 1s ease-in-out;
 }
 
@@ -172,7 +172,7 @@ footer.footer-configurator {
 	top: 50px;
 	/* z-index: 99; */
 	display: flex;
-	align-items: center;
+	/* align-items: center; */
 	justify-content: center;
 }
 .eye_on {
@@ -432,7 +432,7 @@ svg#menu_option {
 		height: 40vh !important;
 	}
 	.sd-tabs > .sd-tab-content {
-		height: 15vh;
+		height: 60px;
 	}
 /* 	.export {
 		top: 75%;
@@ -473,7 +473,7 @@ svg#menu_option {
 		position: absolute;
     width: 100%;
     height: 50px;
-    top: 45px;
+    /* top: 45px; */
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -1111,7 +1111,7 @@ input#textSelection {
 }
 
 .menu_option > div {
-	height: 100%;
+	height: 90%;
 }
 
 .menu_option > div > div {
@@ -1126,11 +1126,11 @@ input#textSelection {
 	display: none;
 	background: var(--background-menu);
 	width: 100vw;
-	height: 100vh;
+	height: 80vh;
 	position: absolute;
 	z-index: 94;
 	grid-template-columns: repeat(3, 1fr);
-	align-items: start;
+	align-items: center;
 	justify-items: center;
 	padding: 4rem 0;
 }
