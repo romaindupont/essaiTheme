@@ -19,8 +19,8 @@ const addToCart = {
 		addToCart.personsMap = new Map(Object.entries(addToCart.dataJson));
 		addToCart.inputVariableId = document.querySelector('.variation_id');
 		addToCart.dataLang;
-		addToCart.localHosting = 'localhost:8080';
-		/* addToCart.localHosting = 'localhost:80'; */
+		/* addToCart.localHosting = 'localhost:8080'; */
+		addToCart.localHosting = 'localhost:80';
 		addToCart.inputCertif.forEach(element => { 
 			element.addEventListener('change', (e) => {
 				e.preventDefault();

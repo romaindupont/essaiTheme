@@ -23,7 +23,7 @@
 }
 
 .slide img {
-	opacity: 0;
+/* 	opacity: 0; */
 	object-fit: contain;
 }
 
@@ -110,7 +110,7 @@ p.deliveryMessage > span {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-	justify-content: space-evenly;
+	/* justify-content: space-evenly; */
 	align-items: flex-end;
 }
 
@@ -123,7 +123,7 @@ input[type=radio] {
 	width: 33%;
 	text-align: left;
 }
-.Option > div > .woocommerce-attribute-input {
+.option > div > .woocommerce-attribute-input {
 	width: 50%;
 	text-align: left;
 }
@@ -209,10 +209,12 @@ form.cart {
 @media (min-width : 320px) {
 	.singlePageSection {
 		flex-direction: column;
+		top: 10vh;
 	}
 	.slider {
 		width: 100vw;
     height: 100%;
+
 	}
 	.slide img {
 		width: 60%;

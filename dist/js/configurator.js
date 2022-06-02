@@ -77,8 +77,8 @@ const configurator = {
 		configurator.patternList = document.querySelectorAll('.patternList');
 		configurator.colorList = document.querySelectorAll('.colorList');
 		configurator.colorListType = document.querySelectorAll('.colorListType');
-		configurator.localHosting = 'localhost:8080';
-   /* configurator.localHosting = 'localhost:80'; */
+/* 		configurator.localHosting = 'localhost:8080'; */
+    configurator.localHosting = 'localhost:80';
   },
 	langImportFile: function() {
 		let langName = 'en';

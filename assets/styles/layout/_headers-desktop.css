@@ -6,7 +6,8 @@
 	flex-direction: column;
 	width: 100vw;
 	border-top: 10px solid var(--color-principal);
-	position: sticky;
+/* 	position: fixed; */
+	height: 10vh;
 	top: 0;
 	z-index: 40;
 	background-color: var(--header-background);
@@ -24,7 +25,11 @@
 	display: none;
 	z-index: 41;
 }
-
+@media (min-width : 320px) {
+	.main-header {
+		position: sticky;
+	}
+}
 @media (min-width : 1024px) {
 	.main-header > .first_menu-configurator {
 		display: none !important;
@@ -39,5 +44,8 @@
     padding: 0rem !important;
 		flex-direction: row !important;
 		height: 100% !important;
+	}
+	.main-header {
+		position: fixed;
 	}
 }
