@@ -7,7 +7,7 @@
 	width: 100vw;
 	border-top: 10px solid var(--color-principal);
 /* 	position: fixed; */
-	height: 10vh;
+	/* height: 10vh; */
 	top: 0;
 	z-index: 40;
 	background-color: var(--header-background);

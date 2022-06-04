@@ -1,4 +1,4 @@
-nav > ul > li > ul {
+.custom_menu_class > ul > li > ul {
 	display: none;
 	position: fixed;
 	width: 100%;
