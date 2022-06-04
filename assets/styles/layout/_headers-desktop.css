@@ -1,8 +1,8 @@
 .main-header {
 	display: flex;
 	align-items: center;
-	padding-top: 1rem;
-	padding-bottom: 0px;
+/* 	padding-top: 1rem;
+	padding-bottom: 0px; */
 	flex-direction: column;
 	width: 100vw;
 	border-top: 10px solid var(--color-principal);
@@ -19,6 +19,7 @@
 	height: auto;
 	max-width: 150px;
   width: 100%;
+	margin: 30px;
 }
 
 .main-header__menu-mobile-logo {
@@ -36,7 +37,8 @@
 	}
 	.custom_menu_class > #menu-main-menu {
 		display: flex !important;
-		width: 70% !important;
+		/* width: 70% !important; */
+		max-width: 800px;
 		margin: 0 auto !important;
 		justify-content: space-evenly !important;
 		align-items: flex-end !important;
