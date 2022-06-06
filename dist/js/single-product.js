@@ -13,7 +13,7 @@ const singleProduct = {
  },
  initFunctions: function() {
 	singleProduct.slides[0].style.display = 'flex';
-	singleProduct.slides[1].style.display = 'flex';
+	singleProduct.slides[1].style.display = 'none';
 	singleProduct.slides[2].style.display = 'none';
 	singleProduct.slides.forEach((slide, indx) => {
 		if(singleProduct.singlePageSection.getBoundingClientRect().width < 878){
@@ -41,7 +41,7 @@ const singleProduct = {
 			singleProduct.btnFirst.classList.add('button-slider-active');
 			curSlide = 0;
 			singleProduct.slides[0].style.display = 'flex';
-			singleProduct.slides[1].style.display = 'flex';
+			singleProduct.slides[1].style.display = 'none';
 			singleProduct.slides[2].style.display = 'none';
 			singleProduct.slides.forEach((slide, indx) => {
 				if(singleProduct.singlePageSection.getBoundingClientRect().width < 878){
@@ -55,9 +55,9 @@ const singleProduct = {
 		case 'button-second':
 			singleProduct.btnSecond.classList.add('button-slider-active');
 			curSlide = 1;
-			singleProduct.slides[0].style.display = 'flex';
+			singleProduct.slides[0].style.display = 'none';
 			singleProduct.slides[1].style.display = 'flex';
-			singleProduct.slides[2].style.display = 'flex';
+			singleProduct.slides[2].style.display = 'none';
 			singleProduct.slides.forEach((slide, indx) => {
 				if(singleProduct.singlePageSection.getBoundingClientRect().width < 878){
 					slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
@@ -70,8 +70,8 @@ const singleProduct = {
 		case 'button-third':
 			singleProduct.btnThird.classList.add('button-slider-active');
 			curSlide = 2;
-			singleProduct.slides[0].style.display = 'flex';
-			singleProduct.slides[1].style.display = 'flex';
+			singleProduct.slides[0].style.display = 'none';
+			singleProduct.slides[1].style.display = 'none';
 			singleProduct.slides[2].style.display = 'flex';
 			singleProduct.slides.forEach((slide, indx) => {
 				if(singleProduct.singlePageSection.getBoundingClientRect().width < 878){
