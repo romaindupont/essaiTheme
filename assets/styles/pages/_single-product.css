@@ -296,7 +296,16 @@ form.cart {
 @media (min-width : 1024px) {
 	.singlePageSection {
 		flex-direction: row;
-	/* 	max-width: 80vh; */
+		top: 10vh;
+	}
+	.woocommerce-product-details__short-description {
+		padding-bottom: 2rem;
+	}
+	p {
+    font-size: 1.3rem;
+	}
+	.woocommerce-price-container {
+		padding-bottom: 2rem;
 	}
 	.slider {
 		width: 50%;
@@ -327,12 +336,19 @@ form.cart {
 	}
 	p.deliveryMessage {
 		margin-top:0;
+		font-size: 1rem;
 	}
 	.buttonZone > .personnalize {
 		background-position: 5px 5px !important;
 	}
 	.buttonZone > .personnalize > a {
 		padding-left: 0.5rem;
+	}
+	.woocommerce-attribute-title > strong {
+		font-size: 1.3rem;
+	}
+	.woocommerce-attribute-input > label {
+		font-size: 1.3rem;
 	}
 }
 @media (min-width : 1224px) {
