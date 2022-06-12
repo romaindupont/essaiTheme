@@ -135,7 +135,13 @@ ul#menu-footer-menu::after {
 	height: 5px;
 	/* margin: 0 auto; */
 }
-
+.footer-block--newsletter {
+	background: white;
+	height: 5vh;
+	width: 100vw;
+	position: absolute;
+	bottom: 200px;
+}
 @media (min-width : 320px) {
 	nav.footer-container {
 		align-items: flex-start;

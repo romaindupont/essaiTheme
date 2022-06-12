@@ -83,6 +83,7 @@ if ( ! $short_description ) {
 					{
 						$term_names = get_terms( array( 'taxonomy' => 'pa_' . $values->attribute_name, 'fields' => 'names' ) );
 						echo '<li class="woocommerce-attribute-title '. $values->attribute_label .'"><strong>'. $values->attribute_label .'</strong><div class="woocommerce-attribute-choiceList">';
+						
 						for ($i = 0; $i < count($term_names); $i++)
 						{
 							echo '<div class="woocommerce-attribute-input"><input type="radio" id='. $term_names[$i] .' name="attribute_pa_'. $values->attribute_name .'" value='. $term_names[$i] .'><label for='. $term_names[$i] .'>'. $term_names[$i] .'</label></div>';

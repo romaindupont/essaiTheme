@@ -40,7 +40,10 @@
     justify-content: center;
 	}
 	.main-header > .first_menu-configurator > .first_menu-configurator-nav-title > .configurator-header__heading-menu {
-		width: 30%;
+/* 		width: 30%; */
+		height: auto;
+    max-width: 150px;
+    width: 100%;
 	}
 	.main-header > .first_menu-configurator > .first_menu-configurator-nav-title > #closeLogo {
 		width: 40px;

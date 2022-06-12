@@ -1,6 +1,6 @@
 <footer class="homepage-footer">
-	<div class="footer-block--newsletter"></div>
 	<div class="footer__real">
+		<div class="footer-block--newsletter"></div>
 		<svg version="1.1" id="main-logo" viewBox="0 0 105 16">
 			<g>
 				<g>
@@ -16,15 +16,16 @@
 			</g>
 		</svg>
 		<div>
-		<?php wp_nav_menu( 
-						array( 
-								'theme_location' => 'footer',
-								'container' => 'nav',
-								'container_class' => 'footer-container',
-								'walker' => new My_Walker_Footer()
-						) 
+			<?php wp_nav_menu( 
+				array( 
+					'theme_location' => 'footer',
+					'container' => 'nav',
+					'container_class' => 'footer-container',
+					'walker' => new My_Walker_Footer()
+					) 
 				); ?>
-				</div>
+		</div>
+
 	</div>
 </footer>
 <?php wp_footer(); ?>

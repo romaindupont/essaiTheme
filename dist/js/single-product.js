@@ -28,9 +28,9 @@ const singleProduct = {
 	singleProduct.btnFirst.addEventListener('click', singleProduct.slideBtnChoice);
 	singleProduct.btnSecond.addEventListener('click', singleProduct.slideBtnChoice);
 	singleProduct.btnThird.addEventListener('click', singleProduct.slideBtnChoice);
-	singleProduct.slides.forEach(image=> { image.addEventListener('touchstart', (e) => {
+/* 	singleProduct.slides.forEach(image=> { image.addEventListener('touchstart', (e) => {
 		console.log(e);
-	})})
+	})}) */
  },
  slideBtnChoice: function (e) {
 	 const activeBtn = document.querySelector('.button-slider-active');

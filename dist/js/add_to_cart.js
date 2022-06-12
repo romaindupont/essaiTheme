@@ -2,6 +2,7 @@ const addToCart = {
 	init: function() {
     addToCart.initElements();
 		addToCart.langImportFile();
+
   },
 	initElements: function() {
 		addToCart.inputSku = document.querySelector('.sku');
@@ -19,8 +20,9 @@ const addToCart = {
 		addToCart.personsMap = new Map(Object.entries(addToCart.dataJson));
 		addToCart.inputVariableId = document.querySelector('.variation_id');
 		addToCart.dataLang;
-		/* addToCart.localHosting = 'localhost:8080'; */
+/* 		addToCart.localHosting = 'localhost:8080'; */
 		addToCart.localHosting = 'localhost:80';
+		
 		addToCart.inputCertif.forEach(element => { 
 			element.addEventListener('change', (e) => {
 				e.preventDefault();
@@ -72,14 +74,24 @@ const addToCart = {
 			.then(module => {
 				addToCart.dataLang = module.langage;
 				addToCart.initElements();
+				addToCart.standardValueSelection();
 			})
 			.catch(error => console.log(error));
+	},
+	standardValueSelection: function () {
+		addToCart.certifDefaultValue = document.getElementById('ECE').checked = true;
+		addToCart.sizeDefaultValue = document.getElementById('M-L').checked = true;
+		addToCart.optionDefaultValue = document.getElementById('Standard').checked = true;
+		addToCart.certifChoose = document.querySelector('input[name=attribute_pa_certification]:checked').value;
+		addToCart.sizeChoose = document.querySelector('input[name=attribute_pa_size]:checked').value;
+		addToCart.optionChoose = document.querySelector('input[name=attribute_pa_option]:checked').value;	
+		addToCart.addToCartAction();
 	},
 	addToCartAction : function () {
 		const results = [];
 		const searchSkuField = addToCart.sizeChoose.replace('-', '');
 		let option = 's';
-		if(addToCart.optionChoose === 'standard') {
+		if(addToCart.optionChoose === 'Standard') {
 			option = 's';
 		}
 		else {
@@ -92,6 +104,7 @@ const addToCart = {
 						results.push(addToCart.dataJson[i]);
 				}
 		}
+		console.log(results)
 		addToCart.inputVariableId.value = results[0]['variation_id'];
 		const stockMessage = results[0]['availability_html'];
 		const variationPrice =  results[0]['display_price'];
