@@ -1,6 +1,5 @@
 <footer class="homepage-footer">
-	<div class="footer__real">
-		<div class="footer-block--newsletter"></div>
+	<div class="footer__real">	
 		<svg version="1.1" id="main-logo" viewBox="0 0 105 16">
 			<g>
 				<g>
@@ -15,7 +14,7 @@
 				</g>
 			</g>
 		</svg>
-		<div>
+		<div class='footer-block'>
 			<?php wp_nav_menu( 
 				array( 
 					'theme_location' => 'footer',
@@ -24,8 +23,8 @@
 					'walker' => new My_Walker_Footer()
 					) 
 				); ?>
+				<div class="footer-block--newsletter"></div>
 		</div>
-
 	</div>
 </footer>
 <?php wp_footer(); ?>

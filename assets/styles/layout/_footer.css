@@ -4,6 +4,10 @@
   justify-content: center;
   align-items: flex-end;
   margin-top: 3rem;
+	background: white;
+	height: 5vh;
+	width: 100vw;
+	position: absolute;
 }
 
 .footer__real > #main-logo {
@@ -29,6 +33,8 @@
 	 width: 100vw;
 	 position: relative;
 	 z-index: 38;
+	 top: 0;
+	 height: 100vh;
  }
 
  .footer__real {
@@ -41,8 +47,13 @@
 	animation: animateFooter 600ms ease-in-out;
 	text-align: center;
 	padding-top: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
-
+nav.footer-container {
+	height: 80%;
+}
 @keyframes animateFooter {
 	from {
 		opacity: 0;
@@ -135,13 +146,7 @@ ul#menu-footer-menu::after {
 	height: 5px;
 	/* margin: 0 auto; */
 }
-.footer-block--newsletter {
-	background: white;
-	height: 5vh;
-	width: 100vw;
-	position: absolute;
-	bottom: 200px;
-}
+
 @media (min-width : 320px) {
 	nav.footer-container {
 		align-items: flex-start;
@@ -196,6 +201,9 @@ ul#menu-footer-menu::after {
 	}
 	ul.sub-menu.menu-depth-footer1 {
 		margin-top: 0.5rem;
+	}
+	.footer-block--newsletter {
+		bottom: 20%;
 	}
 }
 @media (min-width: 576px) {}
@@ -258,6 +266,9 @@ ul#menu-footer-menu::after {
 	}
 	ul.sub-menu.menu-depth-footer1 {
 		margin-top: 0;
+	}
+	.footer-block--newsletter {
+		bottom: 22%;
 	}
 }
 @media (min-width : 1224px) {}
